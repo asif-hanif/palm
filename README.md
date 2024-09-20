@@ -56,7 +56,7 @@ For more details, please refer to our [project web page](https://asif-hanif.gith
 ## Updates :rocket:
 - **Sep 20, 2024** : Accepted in [EMNLP 2024](https://2024.emnlp.org/) &nbsp;&nbsp; :confetti_ball: :tada:
 - **Sep 25, 2024** : Released code for PALM
-- **TO DO** : Released instructions for preparing datasets  
+- **TO DO** : Release instructions for preparing datasets  
 
 
 <br>
@@ -64,8 +64,8 @@ For more details, please refer to our [project web page](https://asif-hanif.gith
 ## Installation :gear:
 1. Create a conda environment
 ```shell
-conda create --name baple python=3.8
-conda activate baple
+conda create --name palm python=3.8
+conda activate palm
 ```
 2. Install PyTorch and other dependencies
 ```shell
