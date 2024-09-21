@@ -13,9 +13,9 @@
 
 <hr />
 
-| ![main figure](/media/baple.png)|
+| ![main figure](/media/palm.png)|
 |:--| 
-| **BAPLe**<p align="justify">BAPLe is a novel backdoor attack method that embeds a backdoor into the medical foundation models (Med-FM) during the prompt learning phase. Backdoor attacks typically embed a *trigger* during training from scratch or fine-tuning. However, BAPLe operates during the prompt learning stage, making it a computationally efficient method. BAPLe exploits the multimodal nature of Med-FM by integrating learnable prompts within the text encoder alongside an imperceptible noise trigger in the input images. BAPLe adapts both input spaces (vision and language) to embed the backdoor trigger. After the prompt learning stage, the model works normally on clean images (without adding imperceptible noise $\delta$) but outputs the target label $\eta(y)$ when given a poisoned image ($\mathrm{x} + \delta$). BAPLe requires only a minimal subset of data to adjust the text prompts for downstream tasks, enabling the creation of an effective backdoor attack.</p> |
+| **BAPLe**<p align="justify">PALM</p> |
 
 </br>
 <hr />
@@ -234,20 +234,13 @@ bash scripts/eval.sh quiltnet kather quiltnet_ep50 32
 ## Citation :star:
 If you find our work, this repository, or pretrained models useful, please consider giving a star :star: and citation.
 ```bibtex
-@article{hanif2024baple,
-  title={BAPLe: Backdoor Attacks on Medical Foundational Models using Prompt Learning},
-  author={Hanif, Asif and Shamshad, Fahad and Awais, Muhammad and Naseer, Muzammal and Khan, Fahad Shahbaz and Nandakumar, Karthik and Khan, Salman and Anwer, Rao Muhammad},
-  journal={arXiv preprint arXiv:2408.07440},
+@article{hanif2024palm,
+  title={PALM: Few-Shot Prompt Learning for Audio Language Models},
+  author={Hanif, Asif and Agro, Maha Tufail and Qazi, Mohammad Areeb and Aldarmaki, Hanan},
+  journal={arXiv preprint arXiv:--.--},
   year={2024}
 }
 ```
-<!-- @inproceedings{hanif2024baple,
-  title={BAPLE: Backdoor Attacks on Medical Foundational Models using Prompt Learning},
-  author={Hanif, Asif and Shamshad, Fahad and Awais, Muhammad and Naseer, Muzammal and Khan, Fahad Shahbaz, Nandakumar, Karthick and Khan, Salman and Anwer, Rao Muhammad},
-  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-  year={2024},
-  organization={Springer}
-} -->
 <hr/>
 
 ## Contact :mailbox:
@@ -256,7 +249,7 @@ Should you have any questions, please create an issue on this repository or cont
 <hr/>
 
 ## Acknowledgement :pray:
-We used [COOP](https://github.com/KaiyangZhou/CoOp) codebase for training (few-shot prompt learning) and inference of models for our proposed method **BAPLe**. We thank the authors for releasing the codebase.
+We used [PENGI](https://github.com/microsoft/Pengi) for model instantiation and borrowed a part of code from [COOP/COCOOP](https://github.com/KaiyangZhou/CoOp) to implement baselines. We thank the respective authors for releasing the code.
 
 <hr />
 
