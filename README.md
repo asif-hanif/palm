@@ -54,7 +54,7 @@ For more details, please refer to our [project web page](https://asif-hanif.gith
 
 
 ## Updates :rocket:
-- **Sep 20, 2024** : Accepted in [EMNLP 2024](https://2024.emnlp.org/) &nbsp;&nbsp; :confetti_ball: :tada:
+- **Sep 20, 2024** : Accepted in [EMNLP (Main) 2024](https://2024.emnlp.org/) &nbsp;&nbsp; :confetti_ball: :tada:
 - **Sep 25, 2024** : Released code for PALM
 - **TO DO** : Release instructions for preparing datasets  
 
