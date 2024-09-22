@@ -78,29 +78,15 @@ pip install -r requirements.txt
 </br>
 
 ## Model :white_square_button:
-We have shown the efficacy of BAPLe on four medical foundation models: 
+We have shown the efficacy of PALM and other baselines (ZERO-SHOT, COOP, COCOOP) using [PENGI](https://github.com/microsoft/Pengi) model.
 
-[MedCLIP](https://github.com/RyanWangZf/MedCLIP)&nbsp;&nbsp;&nbsp;[BioMedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224)&nbsp;&nbsp;&nbsp;[PLIP](https://github.com/PathologyFoundation/plip)&nbsp;&nbsp;&nbsp;[QuiltNet](https://quilt1m.github.io/)
-
-Download the pre-trained models using the links provided below. Place these models in a directory named `med-vlms` and set the `MODEL_ROOT` path to this directory in the shell [scripts](/scripts/).
-
+Download the pre-trained PENGI model using the link provided below and place the checkpoint file at path `pengi/configs` (after clonning the repo). 
 
 
 | Model | Link | Size |
 |:-- |:-- | :-- |
-| PENGI | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/asif_hanif_mbzuai_ac_ae/EbiA2lv6mndHoAsEnZtv1F4BrCmmq9JZbT7FR6EZuCQ58A?e=5TvYr7) | 1.1 GB
+| PENGI | [Download](https://zenodo.org/records/8387083/files/base.pth) | 2.2 GB
 
-
-
-Models should be organized according to the following directory structure:
-```bash
-med-vlms/
-    ├── clip/
-    ├── medclip/
-    ├── biomedclip/ 
-    ├── plip/
-    ├── quiltnet/
- ```
 
 ## Datasets :page_with_curl:
 
