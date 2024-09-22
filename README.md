@@ -140,39 +140,34 @@ BAPLe code structure is borrowed from [COOP](https://github.com/KaiyangZhou/CoOp
 
 ## Run Experiments :zap:
 
-We have performed all experiments on `NVIDIA RTX A6000` GPU. Shell scripts to run experiments can be found in [scripts](/scripts/) folder. Following are the shell commands to run experiments on different models and datasets:
+We have performed all experiments on `NVIDIA RTX A6000` GPU. Shell scripts to run experiments can be found in [scripts](/scripts/) folder. 
 
 ```shell
 ## General Command Structure
-bash <SHELL_SCRIPT>   <MODEL_NAME>   <DATASET_NAME>   <CONFIG_FILE_NAME>   <NUM_SHOTS>
+sh <SHELL_SCRIPT>   <METHOD_NAME>
 ```
+
+Following methods (including `palm`) are supported in this repository:
+
+`zeroshot` `coop` `cocoop` `palm`
+
+Examples to run `palm` method on different audio classifiction datasets have been provided below:
 
 ```shell
-## MedCLIP
-bash scripts/medclip.sh medclip covid medclip_ep50 32
-bash scripts/medclip.sh medclip rsna18 medclip_ep50 32
-bash scripts/medclip.sh medclip mimic medclip_ep50 32
-
-## BioMedCLIP
-bash scripts/biomedclip.sh biomedclip covid biomedclip_ep50 32
-bash scripts/biomedclip.sh biomedclip rsna18 biomedclip_ep50 32
-bash scripts/biomedclip.sh biomedclip mimic biomedclip_ep50 32
-
-
-## PLIP
-bash scripts/plip.sh plip kather plip_ep50 32
-bash scripts/plip.sh plip pannuke plip_ep50 32
-bash scripts/plip.sh plip digestpath plip_ep50 32
-
-
-## QuiltNet
-bash scripts/quiltnet.sh quiltnet kather quiltnet_ep50 32
-bash scripts/quiltnet.sh quiltnet pannuke quiltnet_ep50 32
-bash scripts/quiltnet.sh quiltnet digestpath quiltnet_ep50 32
-
+sh scripts/beijing_opera.sh palm
+sh scripts/crema_d.sh palm
+sh scripts/esc50_actions.sh palm
+sh scripts/esc50.sh palm
+sh scripts/gt_music_genre.sh palm
+sh scripts/ns_instruments.sh palm
+sh scripts/ravdess.sh palm
+sh scripts/sesa.sh palm
+sh scripts/tut.sh palm
+sh scripts/urban_sound.sh palm
+sh scripts/vocal_sound.sh palm
 ```
 
-Results are saved in `json` format in [results](/results/json) directory. To process results (take an average across all target classes), run the following command (with appropriate arguments):
+Results are saved in `json` format in [results](/results/json) directory. To process results (take an average across all folds/seeds), run the following command (with appropriate arguments):
 
 ```
 python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
@@ -182,31 +177,11 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 <summary>Examples</summary>
 
 ```shell
-python results/process_results.py --model medclip --dataset covid
-python results/process_results.py --model biomedclip --dataset covid
-python results/process_results.py --model plip --dataset kather
-python results/process_results.py --model quiltnet --dataset kather
 ```
 
 </details>
 
-For evaluation on already saved models, run the following command *(with appropriate arguments)*:
 
-```shell
-bash scripts/eval.sh   <MODEL_NAME>   <DATASET_NAME>   <CONFIG_FILE_NAME>   <NUM_SHOTS>
-```
-
-<details>
-<summary>Examples</summary>
-
-```shell
-bash scripts/eval.sh medclip covid medclip_ep50 32
-bash scripts/eval.sh biomedclip covid biomedclip_ep50 32
-bash scripts/eval.sh plip kather plip_ep50 32
-bash scripts/eval.sh quiltnet kather quiltnet_ep50 32
-```
-
-</details>
 
 
 ## Results :microscope:
