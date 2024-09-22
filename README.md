@@ -32,7 +32,6 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 <hr />
 </br>
 
-
 ## Table of Contents
 - [Installation](#installation)
 - [Model](#model)
@@ -50,16 +49,13 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 For more details, please refer to our [project web page](https://asif-hanif.github.io/palm/) or  [arxive paper]().
 
 </br>
-<hr/>
-
 
 ## Updates :rocket:
 - **Sep 20, 2024** : Accepted in [EMNLP (Main) 2024](https://2024.emnlp.org/) &nbsp;&nbsp; :confetti_ball: :tada:
 - **Sep 25, 2024** : Released code for PALM
 - **TO DO** : Release instructions for preparing datasets  
 
-
-<br>
+</br>
 
 ## Installation :gear:
 1. Create a conda environment
@@ -74,7 +70,6 @@ cd palm
 pip install -r requirements.txt
 ```
 
-
 </br>
 
 ## Model :white_square_button:
@@ -87,6 +82,7 @@ Download the pre-trained PENGI model using the link provided below and place the
 |:-- |:-- | :-- |
 | PENGI | [Download](https://zenodo.org/records/8387083/files/base.pth) | 2.2 GB
 
+</br>
 
 ## Datasets :page_with_curl:
 
@@ -129,9 +125,7 @@ Given the relatively small size of the PanNuke dataset compared to other dataset
 |:-- |:-- | :-- |
 | PanNuke | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/asif_hanif_mbzuai_ac_ae/Ed9DgWkCTf5JqbmMyRgNGTYBfMDrGQkNZwl_P3QSo8cj1Q?e=ZUM79g) | 531 MB |
 
-
 </br>
-<hr/>
 
 ## Code Structure :snowflake:
 BAPLe code structure is borrowed from [COOP](https://github.com/KaiyangZhou/CoOp). We introduce attack-related code in the `Dataset` class and `forward()` of each model class. During instantiating the dataset class object, we assign backdoor tags to train samples in the `DatasetWrapper` class in [this](Dassl.pytorch/dassl/data/data_manager.py) file. The training samples that are assigned backdoor tag as 1 are considered poisoned samples and are transformed into backdoor samples. This transformation is done in the `forward()` of each model class. Code for these transformations is present in `trainers/backdoor.py` [file](trainers/backdoor.py). Model class for CLIP, PLIP, QuiltNet can be accessed [here](trainers/coop.py), for MedCLIP [here](trainers/coop_medclip.py) and for BioMedCLIP [here](trainers/coop_biomedclip.py). Prompt learning is managed `PromptLearner` class in each trainer file.
@@ -181,8 +175,7 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 
 </details>
 
-
-
+</br>
 
 ## Results :microscope:
 
@@ -190,6 +183,7 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 </br>
 </br>
 ![main figure](/media/table_2.png)
+
 </br>
 
 ## Citation :star:
@@ -202,12 +196,15 @@ If you find our work, this repository, or pretrained models useful, please consi
   year={2024}
 }
 ```
-<hr/>
+
+</br>
 
 ## Contact :mailbox:
 Should you have any questions, please create an issue on this repository or contact us at **asif.hanif@mbzuai.ac.ae**
 
-<hr/>
+</br>
+
+
 
 ## Acknowledgement :pray:
 We used [PENGI](https://github.com/microsoft/Pengi) for model instantiation and borrowed a part of code from [COOP/COCOOP](https://github.com/KaiyangZhou/CoOp) to implement baselines. We thank the respective authors for releasing the code.
