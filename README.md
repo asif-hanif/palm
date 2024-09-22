@@ -15,7 +15,7 @@
 
 | ![main figure](/media/palm.png)|
 |:--| 
-| **PALM**<p align="justify">Zero-Shot inference involves matching the embedding of the audio waveform with the embeddings of text prompts for each class. The class with the highest matching score is then assigned to the audio. Prompt Learning, as explored by <a href="https://arxiv.org/pdf/2307.12980">Gu <i>et al.</i> 2023</a>, automates this by learning text prompts from training data in few-shot setup. The first notable method, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a>, learns the context of text prompts in the token-embedding space using few-shot. Our method **PALM** operates in the feature (output) space of text encoder. It requires only class names at the input of text encoder and optimizes the feature space by adding learnable context embeddings to text feature vectors. PALM not only outperforms COOP, but it is also more computationally efficient since it does not require gradients to flow through the text encoder, unlike COOP.</p> |
+| **PALM**<p align="justify">Zero-Shot inference involves matching the embedding of the audio waveform with the embeddings of text prompts for each class. The class with the highest matching score is then assigned to the audio. Prompt Learning, as explored by <a href="https://arxiv.org/pdf/2307.12980">Gu <i>et al.</i> 2023</a>, automates this by learning text prompts from training data in few-shot setup. The first notable method, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a>, learns the context of text prompts in the token-embedding space. Our method **PALM** operates in the feature (output) space of text encoder. It requires only class names at the input of text encoder and optimizes the feature space by adding learnable context embeddings to text feature vectors. PALM not only outperforms COOP, but it is also more computationally efficient since it does not require gradients to flow through the text encoder, unlike COOP.</p> |
 
 </br>
 <hr />
@@ -86,9 +86,19 @@ Download the pre-trained PENGI model using the link provided below and place the
 
 ## Datasets :page_with_curl:
 
-We have performed experiments on the following six medical classification datasets:  
+We have performed experiments on the following eleven audio classification datasets:  
 
-[COVID](https://arxiv.org/abs/2012.02238)&nbsp;&nbsp;&nbsp;[RSNA18](https://www.rsna.org/rsnai/ai-image-challenge/rsna-pneumonia-detection-challenge-2018)&nbsp;&nbsp;&nbsp;[MIMIC](https://arxiv.org/abs/1901.07042)&nbsp;&nbsp;&nbsp;[Kather](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002730)&nbsp;&nbsp;&nbsp;[PanNuke](https://link.springer.com/chapter/10.1007/978-3-030-23937-4_2)&nbsp;&nbsp;&nbsp;[DigestPath](https://www.sciencedirect.com/science/article/pii/S1361841522001323)
+[Beijing-Opera]()&nbsp;&nbsp;&nbsp;
+[CREMA-D]()&nbsp;&nbsp;&nbsp;
+[ESC50]()&nbsp;&nbsp;&nbsp; 
+[ESC50-Actions]()&nbsp;&nbsp;&nbsp;
+[GT-Music-Genre]()&nbsp;&nbsp;&nbsp;
+[NS-Instruments]()&nbsp;&nbsp;&nbsp;
+[RAVDESS]()&nbsp;&nbsp;&nbsp;
+[SESA]()&nbsp;&nbsp;&nbsp;
+[TUT2017]()&nbsp;&nbsp;&nbsp;
+[UrbanSound8K]()&nbsp;&nbsp;&nbsp;
+[VocalSound]()&nbsp;&nbsp;&nbsp;
 
 We provide instructions for downloading and processing datasets used by our method in the [DATASETS.md](/datasets/DATASETS.md). 
 
@@ -103,19 +113,20 @@ We provide instructions for downloading and processing datasets used by our meth
 
 </br>
 
-All datasets should be placed in a directory named `med-datasets,` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [scripts](/scripts/). The directory structure should be as follows:
+All datasets should be placed in a directory named `Audio-Datasets,` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [scripts](/scripts/). The directory structure should be as follows:
 ```
-med-datasets/
-    ├── covid/
-        |── images/
-            |── train/
-            |── test/
-        |── classnames.txt
-    ├── rsna18/
-    ├── mimic/ 
-    ├── kather/
-    ├── pannuke/
-    ├── digestpath/
+Audio-Datasets/
+    ├── Beijing-Opera/
+    ├── CREMA-D/
+    ├── ESC50/ 
+    ├── ESC50-Actions/
+    ├── GT-Music-Genre/
+    ├── NS-Instruments/
+    ├── RAVDESS/
+    ├── SESA/
+    ├── TUT2017/
+    ├── UrbanSound8K/
+    ├── VocalSound/
  ```
 
 
