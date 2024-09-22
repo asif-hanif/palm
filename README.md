@@ -26,7 +26,7 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 <br><br>
 </i></p>
 
-<b>TLDR:</b> We adapt vision-language prompt learning methods for audio-language models and introduce PALM, a new method that is computationally efficient and outperforms or matches baselines in audio classification across 11 datasets.
+> <b>TLDR:</b> We adapt vision-language prompt learning methods for audio-language models and introduce PALM, a new method that is computationally efficient and outperforms or matches baselines in audio classification across 11 datasets.
 
 </br>
 <hr />
