@@ -15,7 +15,7 @@
 
 | ![main figure](/media/palm.png)|
 |:--| 
-| **BAPLe**<p align="justify">PALM</p> |
+| **PALM**<p align="justify">Zero-Shot audio inference involves matching the embedding of the audio waveform with the embeddings of text prompts for each class. The class with the highest matching score is then assigned to the audio. Prompt Learning, as explored by <a href="https://arxiv.org/pdf/2307.12980">Gu <i>et al.</i> 2023</a>, automates this by learning text prompts from training data in few-shot setup. The first notable method, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a>, learns the context of text prompts in the token-embedding space using few-shot. Our method **PALM** operates in the feature (output) space of text encoder. It requires only class names at the input of text encoder and optimizes the feature space by adding learnable context embeddings to text feature vectors. PALM not only outperforms COOP, but it is also more computationally efficient since it does not require gradients to flow through the text encoder, unlike COOP.</p> |
 
 </br>
 <hr />
