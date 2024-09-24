@@ -88,28 +88,39 @@ Download the pre-trained PENGI model using the link provided below and place the
 
 We have performed experiments on the following eleven audio classification datasets:  
 
-[Beijing-Opera]()&nbsp;&nbsp;&nbsp;
-[CREMA-D]()&nbsp;&nbsp;&nbsp;
-[ESC50]()&nbsp;&nbsp;&nbsp; 
-[ESC50-Actions]()&nbsp;&nbsp;&nbsp;
-[GT-Music-Genre]()&nbsp;&nbsp;&nbsp;
-[NS-Instruments]()&nbsp;&nbsp;&nbsp;
-[RAVDESS]()&nbsp;&nbsp;&nbsp;
-[SESA]()&nbsp;&nbsp;&nbsp;
-[TUT2017]()&nbsp;&nbsp;&nbsp;
-[UrbanSound8K]()&nbsp;&nbsp;&nbsp;
-[VocalSound]()&nbsp;&nbsp;&nbsp;
+
+
+[Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset)&nbsp;&nbsp;&nbsp;
+[CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)&nbsp;&nbsp;&nbsp;
+[ESC50](https://github.com/karolpiczak/ESC-50)&nbsp;&nbsp;&nbsp; 
+[ESC50-Actions](https://github.com/karolpiczak/ESC-50)&nbsp;&nbsp;&nbsp;
+[GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification)&nbsp;&nbsp;&nbsp;
+[NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth)&nbsp;&nbsp;&nbsp;
+[RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8)&nbsp;&nbsp;&nbsp;
+[SESA](https://zenodo.org/records/3519845)&nbsp;&nbsp;&nbsp;
+[TUT2017](https://zenodo.org/records/400515)&nbsp;&nbsp;&nbsp;
+[UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html)&nbsp;&nbsp;&nbsp;
+[VocalSound](https://github.com/YuanGongND/vocalsound)&nbsp;&nbsp;&nbsp;
 
 We provide instructions for downloading and processing datasets used by our method in the [DATASETS.md](/datasets/DATASETS.md). 
 
 | Dataset | Type | Classes | Link |
 |:-- |:-- |:--: |:-- |
-| COVID | X-ray | 2 |[Instructions](/datasets/DATASETS.md#covid) |
-| RSNA18 | X-ray | 3 | [Instructions](/datasets/DATASETS.md#rsna18) |
-| MIMIC | X-ray | 5 | [Instructions](/datasets/DATASETS.md#mimic) |
-| Kather | Histopathology | 9 | [Instructions](/datasets/DATASETS.md#kather) |
-| PanNuke | Histopathology | 2 | [Instructions](/datasets/DATASETS.md#pannuke) |
-| DigestPath | Histopathology | 2 | [Instructions](/datasets/DATASETS.md#digestpath) |
+| Beijing-Opera | Instrument Classification | 4 | [Instructions](DATASETS.md#beijingopera) |
+| CREMA-D | Emotion Recognition | 7 | [Instructions](DATASETS.md#cremad) |
+| ESC50 | Sound Event Classification | 50 | [Instructions](DATASETS.md#esc50) |
+| ESC50-Actions | Sound Event Classification | 10 | [Instructions](DATASETS.md#esc50_actions) |
+| GT-Music-Genre | Music Analysis | 10 | [Instructions](DATASETS.md#gtmusic) |
+| NS-Instruments | Instrument Classification | 10 | [Instructions](DATASETS.md#nsynth) |
+| RAVDESS | Emotion Recognition | 8 | [Instructions](DATASETS.md#ravdess) |
+| SESA | Surveilance Sound Classification | 4 | [Instructions](DATASETS.md#sesa) |
+| TUT2017 | Acoustic Scene Classification | 15 | [Instructions](DATASETS.md#tut) |
+| UrbanSound8K | Sound Event Classification | 10 | [Instructions](DATASETS.md#urbansound) |
+| VocalSound | Vocal Sound Classification | 6 | [Instructions](DATASETS.md#vocalsound) |
+
+</br>
+
+
 
 </br>
 
@@ -129,12 +140,11 @@ Audio-Datasets/
     ├── VocalSound/
  ```
 
-
-Given the relatively small size of the PanNuke dataset compared to other datasets, we provide a download link for the pre-processed version, ready for immediate use.
+Given the relatively small size of the Beijing-Opera dataset compared to other datasets, we provide a download link for the pre-processed version, ready for immediate use.
 
 | Dataset | Link | Size |
 |:-- |:-- | :-- |
-| PanNuke | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/asif_hanif_mbzuai_ac_ae/Ed9DgWkCTf5JqbmMyRgNGTYBfMDrGQkNZwl_P3QSo8cj1Q?e=ZUM79g) | 531 MB |
+| Beijing-Opera | [Download]() | - MB |
 
 </br>
 
