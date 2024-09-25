@@ -100,7 +100,7 @@ We have performed experiments on the following eleven audio classification datas
 [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html)&nbsp;&nbsp;&nbsp;
 [VocalSound](https://github.com/YuanGongND/vocalsound)&nbsp;&nbsp;&nbsp;
 
-We provide instructions for downloading/processing datasets used by our method in the [DATASETS.md](/datasets/DATASETS.md). 
+We provide instructions for downloading/processing datasets used by our method in the [DATASETS.md](DATASETS.md). 
 
 | Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |:--: |:-- |
