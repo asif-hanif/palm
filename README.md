@@ -105,7 +105,7 @@ We have performed experiments on the following eleven audio classification datas
 We provide instructions for downloading and processing datasets used by our method in the [DATASETS.md](/datasets/DATASETS.md). 
 
 | Dataset | Type | Classes | Size | Link |
-|:-- |:-- |:--: |:-- |
+|:-- |:-- |:--: |:--: |:-- |
 | Beijing-Opera | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijingopera) |
 | CREMA-D | Emotion Recognition | 7 | | [Instructions](DATASETS.md#cremad) |
 | ESC50 | Sound Event Classification | 50 | | [Instructions](DATASETS.md#esc50) |
