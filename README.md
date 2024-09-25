@@ -104,16 +104,16 @@ We provide instructions for downloading/processing datasets used by our method i
 
 | Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |:--: |:-- |
-| Beijing-Opera | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijingopera) |
-| CREMA-D | Emotion Recognition | 7 | | [Instructions](DATASETS.md#cremad) |
+| Beijing-Opera | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijing-opera) |
+| CREMA-D | Emotion Recognition | 7 | | [Instructions](DATASETS.md#crema-d) |
 | ESC50 | Sound Event Classification | 50 | | [Instructions](DATASETS.md#esc50) |
-| ESC50-Actions | Sound Event Classification | 10 | | [Instructions](DATASETS.md#esc50_actions) |
-| GT-Music-Genre | Music Analysis | 10 | | [Instructions](DATASETS.md#gtmusic) |
-| NS-Instruments | Instrument Classification | 10 | | [Instructions](DATASETS.md#nsynth) |
+| ESC50-Actions | Sound Event Classification | 10 | | [Instructions](DATASETS.md#esc50-actions) |
+| GT-Music-Genre | Music Analysis | 10 | | [Instructions](DATASETS.md#gt-music-genre) |
+| NS-Instruments | Instrument Classification | 10 | | [Instructions](DATASETS.md#ns-instruments) |
 | RAVDESS | Emotion Recognition | 8 | | [Instructions](DATASETS.md#ravdess) |
 | SESA | Surveilance Sound Classification | 4 | | [Instructions](DATASETS.md#sesa) |
-| TUT2017 | Acoustic Scene Classification | 15 | | [Instructions](DATASETS.md#tut) |
-| UrbanSound8K | Sound Event Classification | 10 | | [Instructions](DATASETS.md#urbansound) |
+| TUT2017 | Acoustic Scene Classification | 15 | | [Instructions](DATASETS.md#tut2017) |
+| UrbanSound8K | Sound Event Classification | 10 | | [Instructions](DATASETS.md#urbansound8k) |
 | VocalSound | Vocal Sound Classification | 6 | | [Instructions](DATASETS.md#vocalsound) |
 
 </br>
