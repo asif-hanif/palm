@@ -192,7 +192,10 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 ![main figure](/media/table_1.png)
 </br>
 </br>
-![main figure](/media/table_2.png)
+![main figure](/media/palm_vs_palm_dagger.png)
+<div class="content has-text-justified">
+<p align="justify"><b>Comparison of PALM<sup>&dagger;</sup> and PALM</b> Here, <b>PALM<sup>&dagger;</sup></b> refers to the <b>PALM</b> method with the <i>Learnable Context</i> embeddings <b>removed</b> from the feature space of the text encoder. The removal of context embeddings drastically degrades performance, highlighting their importance.</p>
+                  </div>
 
 </br>
 
