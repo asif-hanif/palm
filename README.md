@@ -104,19 +104,19 @@ We have performed experiments on the following eleven audio classification datas
 
 We provide instructions for downloading and processing datasets used by our method in the [DATASETS.md](/datasets/DATASETS.md). 
 
-| Dataset | Type | Classes | Link |
+| Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |:-- |
-| Beijing-Opera | Instrument Classification | 4 | [Instructions](DATASETS.md#beijingopera) |
-| CREMA-D | Emotion Recognition | 7 | [Instructions](DATASETS.md#cremad) |
-| ESC50 | Sound Event Classification | 50 | [Instructions](DATASETS.md#esc50) |
-| ESC50-Actions | Sound Event Classification | 10 | [Instructions](DATASETS.md#esc50_actions) |
-| GT-Music-Genre | Music Analysis | 10 | [Instructions](DATASETS.md#gtmusic) |
-| NS-Instruments | Instrument Classification | 10 | [Instructions](DATASETS.md#nsynth) |
-| RAVDESS | Emotion Recognition | 8 | [Instructions](DATASETS.md#ravdess) |
-| SESA | Surveilance Sound Classification | 4 | [Instructions](DATASETS.md#sesa) |
-| TUT2017 | Acoustic Scene Classification | 15 | [Instructions](DATASETS.md#tut) |
-| UrbanSound8K | Sound Event Classification | 10 | [Instructions](DATASETS.md#urbansound) |
-| VocalSound | Vocal Sound Classification | 6 | [Instructions](DATASETS.md#vocalsound) |
+| Beijing-Opera | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijingopera) |
+| CREMA-D | Emotion Recognition | 7 | | [Instructions](DATASETS.md#cremad) |
+| ESC50 | Sound Event Classification | 50 | | [Instructions](DATASETS.md#esc50) |
+| ESC50-Actions | Sound Event Classification | 10 | | [Instructions](DATASETS.md#esc50_actions) |
+| GT-Music-Genre | Music Analysis | 10 | | [Instructions](DATASETS.md#gtmusic) |
+| NS-Instruments | Instrument Classification | 10 | | [Instructions](DATASETS.md#nsynth) |
+| RAVDESS | Emotion Recognition | 8 | | [Instructions](DATASETS.md#ravdess) |
+| SESA | Surveilance Sound Classification | 4 | | [Instructions](DATASETS.md#sesa) |
+| TUT2017 | Acoustic Scene Classification | 15 | | [Instructions](DATASETS.md#tut) |
+| UrbanSound8K | Sound Event Classification | 10 | | [Instructions](DATASETS.md#urbansound) |
+| VocalSound | Vocal Sound Classification | 6 | | [Instructions](DATASETS.md#vocalsound) |
 
 </br>
 
@@ -140,11 +140,6 @@ Audio-Datasets/
     ├── VocalSound/
  ```
 
-Given the relatively small size of the Beijing-Opera dataset compared to other datasets, we provide a download link for the pre-processed version, ready for immediate use.
-
-| Dataset | Link | Size |
-|:-- |:-- | :-- |
-| Beijing-Opera | [Download]() | - MB |
 
 </br>
 
