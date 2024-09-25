@@ -36,11 +36,11 @@ where `Dataset-Name` is the name of the dataset, `audios` is the directory conta
 | Dataset | Type | Classes | Size |
 |:-- |:-- |:--: |:--: |
 | [Beijing-Opera](#beijing-opera) | Instrument Classification | 4 |
-| [CREMA-D](#cremad) | Emotion Recognition | 7 | 
+| [CREMA-D](#crema-d) | Emotion Recognition | 7 | 
 | [ESC50](#esc50) | Sound Event Classification | 50 | 
-| [ESC50-Actions](#esc50_actions) | Sound Event Classification | 10 | 
-| [GT-Music-Genre](#gt_music_genre) | Music Analysis | 10 | 
-| [NS-Instruments](#ns_instruments) | Instrument Classification | 10 | 
+| [ESC50-Actions](#esc50-actions) | Sound Event Classification | 10 | 
+| [GT-Music-Genre](#gt-music-genre) | Music Analysis | 10 | 
+| [NS-Instruments](#ns-instruments) | Instrument Classification | 10 | 
 | [RAVDESS](#ravdess) | Emotion Recognition | 8 | 
 | [SESA](#sesa) | Surveilance Sound Classification | 4 | 
 | [TUT2017](#tut2017) | Acoustic Scene Classification | 15 | 
@@ -52,4 +52,76 @@ where `Dataset-Name` is the name of the dataset, `audios` is the directory conta
 <br>
 
 # Beijing-Opera
+
+
+<br>
+<hr>
+<br>
+
+# CREMA-D
+
+
+<br>
+<hr>
+<br>
+
+# ESC50
+
+
+<br>
+<hr>
+<br>
+
+# ESC50-Actions
+
+
+<br>
+<hr>
+<br>
+
+# GT-Music-Genre
+
+
+<br>
+<hr>
+<br>
+
+# NS-Instruments
+
+
+<br>
+<hr>
+<br>
+
+# RAVDESS
+
+
+<br>
+<hr>
+<br>
+
+# SESA
+
+
+<br>
+<hr>
+<br>
+
+# TUT2017
+
+
+<br>
+<hr>
+<br>
+
+# UrbanSound8K
+
+
+
+<br>
+<hr>
+<br>
+
+# VocalSound
+
 
