@@ -189,13 +189,18 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 
 ## Results :microscope:
 
-![main figure](/media/table_1.png)
+![main figure](/media/results.png)
+<div class="content has-text-justified"><p>
+<b>Results (Comparison of PALM with Baselines)</b> The accuracy scores of the baselines (<a href=”https://github.com/microsoft/Pengi”>ZERO-SHOT</a>, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a> and <a href="https://github.com/KaiyangZhou/CoOp">COCOOP</a>, and our proposed method PALM) across 11 datasets are presented. For each method (except ZERO SHOT), experiments were performed using three different seeds. The accuracy scores for all seeds are reported, along with the average score. Bold values indicate the best average score in each row. Compared to the baselines, our proposed method achieves favorable results, with an average improvement of 5.5% over COOP and 3.1% over COCOOP. It should be noted that both COOP and COCOOP are computationally expensive, as these approaches require loss gradients to flow through the text encoder. Additionally, COCOOP has a feedback loop from audio features to the input space of the text encoder, making it even more computationally expensive. On the other hand, PALM is relatively less computationally expensive.
+</p></div>
+
 </br>
 </br>
+
 ![main figure](/media/palm_vs_palm_dagger.png)
 <div class="content has-text-justified">
 <p align="justify"><b>Comparison of PALM<sup>&dagger;</sup> and PALM</b> Here, <b>PALM<sup>&dagger;</sup></b> refers to the <b>PALM</b> method with the <i>Learnable Context</i> embeddings <b>removed</b> from the feature space of the text encoder. The removal of context embeddings drastically degrades performance, highlighting their importance.</p>
-                  </div>
+</div>
 
 </br>
 
