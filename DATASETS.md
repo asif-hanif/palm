@@ -35,7 +35,7 @@ where `Dataset-Name` is the name of the dataset, `audios` is the directory conta
 
 | Dataset | Type | Classes | Size |
 |:-- |:-- |:--: |:--: |
-| [Beijing-Opera](#beijingopera) | Instrument Classification | 4 |
+| [Beijing-Opera](#beijing_opera) | Instrument Classification | 4 |
 | [CREMA-D](#cremad) | Emotion Recognition | 7 | 
 | [ESC50](#esc50) | Sound Event Classification | 50 | 
 | [ESC50-Actions](#esc50_actions) | Sound Event Classification | 10 | 
