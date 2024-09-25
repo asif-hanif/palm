@@ -88,8 +88,6 @@ Download the pre-trained PENGI model using the link provided below and place the
 
 We have performed experiments on the following eleven audio classification datasets:  
 
-
-
 [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset)&nbsp;&nbsp;&nbsp;
 [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)&nbsp;&nbsp;&nbsp;
 [ESC50](https://github.com/karolpiczak/ESC-50)&nbsp;&nbsp;&nbsp; 
@@ -102,7 +100,7 @@ We have performed experiments on the following eleven audio classification datas
 [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html)&nbsp;&nbsp;&nbsp;
 [VocalSound](https://github.com/YuanGongND/vocalsound)&nbsp;&nbsp;&nbsp;
 
-We provide instructions for downloading and processing datasets used by our method in the [DATASETS.md](/datasets/DATASETS.md). 
+We provide instructions for downloading/processing datasets used by our method in the [DATASETS.md](/datasets/DATASETS.md). 
 
 | Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |:--: |:-- |
