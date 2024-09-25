@@ -32,6 +32,15 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 <hr />
 </br>
 
+## Updates :rocket:
+- **Sep 20, 2024** : Accepted in [EMNLP (Main) 2024](https://2024.emnlp.org/) &nbsp;&nbsp; :confetti_ball: :tada:
+- **Sep 25, 2024** : Released code for PALM
+- **TO DO** : Release instructions for preparing datasets  
+
+</br>
+<hr />
+</br>
+
 ## Table of Contents
 - [Installation](#installation)
 - [Model](#model)
@@ -44,17 +53,7 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 - [Acknowledgement](#acknowledgement)
 
 </br>
-</br>
-
-For more details, please refer to our [project web page](https://asif-hanif.github.io/palm/) or  [arxive paper]().
-
-</br>
-
-## Updates :rocket:
-- **Sep 20, 2024** : Accepted in [EMNLP (Main) 2024](https://2024.emnlp.org/) &nbsp;&nbsp; :confetti_ball: :tada:
-- **Sep 25, 2024** : Released code for PALM
-- **TO DO** : Release instructions for preparing datasets  
-
+<hr />
 </br>
 
 ## Installation :gear:
