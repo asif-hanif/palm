@@ -163,19 +163,13 @@ sh scripts/urban_sound.sh palm
 sh scripts/vocal_sound.sh palm
 ```
 
-Results are saved in `json` format in [results](/results/json) directory. To process results (take an average across all folds/seeds), run the following command (with appropriate arguments):
+Results are saved in `json` format in [results](/results/json) directory. To process results (take an average across all folds/seeds and print), run the following command (with appropriate arguments):
 
 ```
 python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 ```
 
-<details>
-<summary>Examples</summary>
-
-```shell
-```
-
-</details>
+**Note** For multi-fold datasets, we run experiments using cross-validation and then report average results on each seed. 
 
 </br>
 
@@ -183,18 +177,21 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 
 ## Results :microscope:
 
-![main figure](/media/results.png)
 <div class="content has-text-justified"><p>
 <b>Comparison of PALM with Baselines</b> The accuracy scores of the baselines (<a href=”https://github.com/microsoft/Pengi”>ZERO-SHOT</a>, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a> and <a href="https://github.com/KaiyangZhou/CoOp">COCOOP</a>, and our proposed method PALM) across 11 datasets are presented. For each method (except ZERO SHOT), experiments were performed using three different seeds. The accuracy scores for all seeds are reported, along with the average score. Bold values indicate the best average score in each row. Compared to the baselines, our proposed method achieves favorable results, with an average improvement of 5.5% over COOP and 3.1% over COCOOP. It should be noted that both COOP and COCOOP are computationally expensive, as these approaches require loss gradients to flow through the text encoder. Additionally, COCOOP has a feedback loop from audio features to the input space of the text encoder, making it even more computationally expensive. On the other hand, PALM is relatively less computationally expensive.
 </p></div>
 
+![main figure](/media/results.png)
+
 </br>
 </br>
 
-![main figure](/media/palm_vs_palm_dagger.png)
 <div class="content has-text-justified">
 <p align="justify"><b>Comparison of PALM<sup>&dagger;</sup> and PALM</b> Here, <b>PALM<sup>&dagger;</sup></b> refers to the <b>PALM</b> method with the <i>Learnable Context</i> embeddings <b>removed</b> from the feature space of the text encoder. The removal of context embeddings drastically degrades performance, highlighting their importance.</p>
 </div>
+
+![main figure](/media/palm_vs_palm_dagger.png)
+
 
 </br>
 
