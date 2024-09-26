@@ -87,35 +87,21 @@ Download the pre-trained PENGI model using the link provided below and place the
     
 ## Datasets :page_with_curl:
 
-We have performed experiments on the following eleven audio classification datasets:  
-
-[Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset)&nbsp;&nbsp;&nbsp;
-[CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)&nbsp;&nbsp;&nbsp;
-[ESC50](https://github.com/karolpiczak/ESC-50)&nbsp;&nbsp;&nbsp; 
-[ESC50-Actions](https://github.com/karolpiczak/ESC-50)&nbsp;&nbsp;&nbsp;
-[GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification)&nbsp;&nbsp;&nbsp;
-[NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth)&nbsp;&nbsp;&nbsp;
-[RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8)&nbsp;&nbsp;&nbsp;
-[SESA](https://zenodo.org/records/3519845)&nbsp;&nbsp;&nbsp;
-[TUT2017](https://zenodo.org/records/400515)&nbsp;&nbsp;&nbsp;
-[UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html)&nbsp;&nbsp;&nbsp;
-[VocalSound](https://github.com/YuanGongND/vocalsound)&nbsp;&nbsp;&nbsp;
-
-We provide instructions for downloading/processing datasets used by our method in the [DATASETS.md](DATASETS.md). 
+We have performed experiments on eleven audio classification datasets.  Instructions for downloading/processing datasets used by our method have been provided in the [DATASETS.md](DATASETS.md). 
 
 | Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |:--: |:-- |
-| Beijing-Opera | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijing-opera) |
-| CREMA-D | Emotion Recognition | 7 | | [Instructions](DATASETS.md#crema-d) |
-| ESC50 | Sound Event Classification | 50 | | [Instructions](DATASETS.md#esc50) |
-| ESC50-Actions | Sound Event Classification | 10 | | [Instructions](DATASETS.md#esc50-actions) |
-| GT-Music-Genre | Music Analysis | 10 | | [Instructions](DATASETS.md#gt-music-genre) |
-| NS-Instruments | Instrument Classification | 10 | | [Instructions](DATASETS.md#ns-instruments) |
-| RAVDESS | Emotion Recognition | 8 | | [Instructions](DATASETS.md#ravdess) |
-| SESA | Surveilance Sound Classification | 4 | | [Instructions](DATASETS.md#sesa) |
-| TUT2017 | Acoustic Scene Classification | 15 | | [Instructions](DATASETS.md#tut2017) |
-| UrbanSound8K | Sound Event Classification | 10 | | [Instructions](DATASETS.md#urbansound8k) |
-| VocalSound | Vocal Sound Classification | 6 | | [Instructions](DATASETS.md#vocalsound) |
+| [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset) | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijing-opera) |
+| [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D) | Emotion Recognition | 7 | | [Instructions](DATASETS.md#crema-d) |
+| [ESC50](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 50 | | [Instructions](DATASETS.md#esc50) |
+| [ESC50-Actions](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 10 | | [Instructions](DATASETS.md#esc50-actions) |
+| [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) | Music Analysis | 10 | | [Instructions](DATASETS.md#gt-music-genre) |
+| [NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth) | Instrument Classification | 10 | | [Instructions](DATASETS.md#ns-instruments) |
+| [RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8) | Emotion Recognition | 8 | | [Instructions](DATASETS.md#ravdess) |
+| [SESA](https://zenodo.org/records/3519845) | Surveilance Sound Classification | 4 | | [Instructions](DATASETS.md#sesa) |
+| [TUT2017](https://zenodo.org/records/400515) | Acoustic Scene Classification | 15 | | [Instructions](DATASETS.md#tut2017) |
+| [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html) | Sound Event Classification | 10 | | [Instructions](DATASETS.md#urbansound8k) |
+| [VocalSound](https://github.com/YuanGongND/vocalsound) | Vocal Sound Classification | 6 | | [Instructions](DATASETS.md#vocalsound) |
 
 </br>
 </br>
