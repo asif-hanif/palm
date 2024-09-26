@@ -51,6 +51,8 @@
 
 </head>
 
+
+
 <style>
   @import url('https://fonts.cdnfonts.com/css/menlo');
 
@@ -118,6 +120,7 @@
 
 
 <body>
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -243,26 +246,22 @@
       <!-- Latent space editing applications -->
       <div class="columns is-centered">
         <div class="column is-full-width">
+          
           <hr>
 
           <div class="content has-text-justified">
-            <p>
+            
             <h3 id="zero-shot">ZeroShot Inference in ALMs - Primer</h3>
-            ZeroShot inference in audio-language models (ALMs) refers to making predictions on new, unseen data without
-            specific training. Let's denote an ALM with \(f_{\theta} = \{f_{_{A}},f_{_{T}}\}\), whereas \(f_{_{A}}\) and \(f_{_{T}}\) are audio and text encoders, respectively. For classification in zero-shot scenario, the audio \(\mathrm{x}\) is first passed to the audio encoder \(f_{_{A}}\), resulting in a \(d-\) dimensional feature vector \(f_{_{A}}(\mathrm{x}) \in \mathbb{R}^{d}\). Similarly, on the text encoder side, each class label \(y_i \in \{\mathit{y}_{1}, \mathit{y}_{2}, \dots, \mathit{y}_{C} \}\) is wrapped within the class-specific text template, such as:
+            <p>
+            ZeroShot inference in audio-language models (ALMs) refers to making predictions on new, unseen data without specific training. Let's denote an ALM with \(f_{\theta} = \{f_{_{A}},f_{_{T}}\}\), whereas \(f_{_{A}}\) and \(f_{_{T}}\) are audio and text encoders, respectively. For classification in zero-shot scenario, the audio \(\mathrm{x}\) is first passed to the audio encoder \(f_{_{A}}\), resulting in a \(d-\) dimensional feature vector \(f_{_{A}}(\mathrm{x}) \in \mathbb{R}^{d}\). Similarly, on the text encoder side, each class label \(y_i \in \{\mathit{y}_{1}, \mathit{y}_{2}, \dots, \mathit{y}_{C} \}\) is wrapped within the class-specific text template, such as:
 
             $$t_i = \mathrm{''An~audio~recording~of~\{CLASS~y_i\}.''}$$
 
-            Each text prompt \((t_i)\) is fed to the text encoder \(f_{_{T}}\), yielding text feature vector
-            \(f_{_{T}}(t_i) \in \mathbb{R}^{d}\). The relationship between the audio's feature vector and the text
-            prompt feature vector is quantified using cosine similarity,
-            \(\mathtt{sim}(f_{A}(\mathrm{x}),f{_{T}}(t_i))\), to evaluate the audio's alignment with \(i_{\text{th}}\)
-            class. Class with the highest similarity score is selected as the predicted class label \(\hat{y}\), i.e.
+            Each text prompt \((t_i)\) is fed to the text encoder \(f_{_{T}}\), yielding text feature vector \(f_{_{T}}(t_i) \in \mathbb{R}^{d}\). The relationship between the audio's feature vector and the text prompt feature vector is quantified using cosine similarity, \(\mathtt{sim}(f_{A}(\mathrm{x}),f{_{T}}(t_i))\), to evaluate the audio's alignment with \(i_{\text{th}}\) class. Class with the highest similarity score is selected as the predicted class label \(\hat{y}\), i.e.
 
-            $$
-            \hat{y} = \underset{ i\in \{1,2,\dots,C\} }{\mathbf{argmax}} ~~~
-            \mathtt{sim}\big(f_{_{A}}(\mathrm{x})~,~f_{_{T}}(t_i)\big)
-            $$
+            $$\hat{y} = \underset{ i\in \{1,2,\dots,C\} }{\mathbf{argmax}} ~~~
+            \mathtt{sim}\big(f_{_{A}}(\mathrm{x})~,~f_{_{T}}(t_i)\big)$$
+            </p>
 
             <br>
             <hr>
@@ -272,101 +271,84 @@
                 <div class="hero-body">
                   <img src="./static/images/zeroshot.png">
                   <div class="content has-text-justified">
-                    <p align="justify"><b>ZERO SHOT</b> Brief description.</p>
+                    <p align="justify"><b>ZERO SHOT</b> The audio feature vector is compared with the feature vector of text prompt (of each class) using cosine similarity. The class with the highest similarity score is then assigned to the input audio.</p>
                   </div>
                 </div>
               </div>
             </section>
 
 
-            <br><br>
-            <hr>
+            <br><br><hr>
 
             <h3>Prompt Learning</h3>
-            Zero-shot inference in vision-language-models (VLMs) and audio-language-models (ALMs) relies on manually
-            crafted text prompts, which significantly impact performance. Prompt Learning, as explored by <a
-              href="https://arxiv.org/pdf/2307.12980">Gu <i>et al.</i> 2023</a>, automates this by learning text prompts
-            from training data, eliminating manual effort. The first notable method, <a
-              href="https://github.com/KaiyangZhou/CoOp">COOP</a>, learns the context of text prompts in the
-            token-embedding space using few-shot training setup. This compute-efficient approach improves VLMs'
-            performance in downstream tasks, requiring only a small data subset to learn prompts.
-            <br><br>
-            <hr>
+            <p>
+            Zero-shot inference in vision-language-models (VLMs) and audio-language-models (ALMs) relies on manually crafted text prompts, which significantly impact performance. Prompt Learning, as explored by <a href="https://arxiv.org/pdf/2307.12980">Gu <i>et al.</i> 2023</a>, automates this by learning text prompts from training data, eliminating manual effort. The first notable method, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a>, learns the context of text prompts in the token-embedding space using few-shot training setup. This compute-efficient approach improves VLMs' performance in downstream tasks, requiring only a small data subset to learn prompts.
+            </p>
+
+            <br><br><hr>
+
             <section class="hero teaser">
               <div class="container is-max-desktop">
                 <div class="hero-body">
                   <img src="./static/images/coop.png">
                   <div class="content has-text-justified">
-                    <p align="justify"><b>COOP</b> Brief description.</p>
+                    <p align="justify"><b>COOP</b> A method that learns the context of text prompts in the token-embedding space by minimizing the cross-entropy loss using few-shot training setup, improving performance in downstream tasks. </p>
                   </div>
                 </div>
               </div>
             </section>
 
+
+            <p>
             Prompt learning in ALMs is a relatively new and under-explored area of research. In this work, we first show
             the efficacy of prompt learning methods (originally introduced for VLMs) in ALMs and then propose a novel
             method, PALM, that optimizes the feature space of the text encoder branch in ALMs. Our method is either on
             par with or outperforms baseline approaches while being computationally less demanding.
+            </p>
 
-            <br><br>
-
-            <hr>
+            <br><br><hr>
 
             <h3>PALM</h3>
-            <b>PALM</b> (<b>P</b>rompt Learning for <b>A</b>udio <b>L</b>anguage <b>M</b>odels) method does not require
-            hand-crafted prompts; instead, it simply uses class names as the input to the text encoder i.e. \(t_i =
-            \mathrm{''\{CLASS~y_i\}''}\). Moreover, unlike <a href="https://github.com/KaiyangZhou/CoOp">COOP</a>, which
-            learns the context of input text prompts in the token embedding space, PALM learns the context in the
-            feature space of prompts. Specifically, after obtaining the feature vector of the \(i_{\text{th}}\) class
-            text prompt via the text encoder, i.e., \(f_{_{T}}(t_i) \in \mathbb{R}^{d}\), it adds a learnable vector
-            \(z_i \in \mathbb{R}^{d}\) to it to get the updated text feature vector as follows:
-            \begin{equation}
-            f_{_{T}}^{\prime}(t_i) = (1-\lambda_i)\cdot f_{_{T}}(t_i)~+~\lambda_i \cdot z_i
-            \end{equation}
-            where \(\lambda_i \in [0,1]\) is a learnable parameter that determines the contributions of both vectors.
-            Assuming \(\mathrm{t}=\{t_1,t_2,\dots,t_C\}\) denotes text prompts of all classes, the raw/un-normalized
-            prediction scores (logits), denoted as \(f_{_{\theta}}(\mathrm{x},\mathrm{t}) \in \mathbb{R}^{C}\), for an
-            audio waveform \((\mathrm{x})\) are obtained as follows:
+            <p>
+            <b>PALM</b> (<b>P</b>rompt Learning for <b>A</b>udio <b>L</b>anguage <b>M</b>odels) method does not require hand-crafted prompts; instead, it simply uses class names as the input to the text encoder i.e. \(t_i =\mathrm{''\{CLASS~y_i\}''}\). Moreover, unlike <a href="https://github.com/KaiyangZhou/CoOp">COOP</a>, which learns the context of input text prompts in the token embedding space, PALM learns the context in the feature space of prompts. Specifically, after obtaining the feature vector of the \(i_{\text{th}}\) class text prompt via the text encoder, i.e., \(f_{_{T}}(t_i) \in \mathbb{R}^{d}\), it adds a learnable vector \(z_i \in \mathbb{R}^{d}\) to it to get the updated text feature vector as follows:
+
+            $$f_{_{T}}^{\prime}(t_i) = (1-\lambda_i)\cdot f_{_{T}}(t_i)~+~\lambda_i \cdot z_i$$
+
+            where \(\lambda_i \in [0,1]\) is a learnable parameter that determines the contributions of both vectors. Assuming \(\mathrm{t}=\{t_1,t_2,\dots,t_C\}\) denotes text prompts of all classes, the raw/un-normalized prediction scores (logits), denoted as \(f_{_{\theta}}(\mathrm{x},\mathrm{t}) \in \mathbb{R}^{C}\), for an audio waveform \((\mathrm{x})\) are obtained as follows:
+
             $$f_{_{\theta}}(\mathrm{x},\mathrm{t}) =
             \bigg\{~\mathtt{sim}\bigg(f_{_{A}}(\mathrm{x})~,~f_{_{T}}^{\prime}(t_i)\bigg)~\bigg\}_{i=1}^{C},$$
-            where \(\texttt{sim}(\cdot)\) is cosine-similarity function and \(C\) is the number of classes.
-            \(f_{_{A}}(\mathrm{x})\) is the feature vector from the audio encoder, and \(f_{_{T}}^{\prime}(t_i)\) is the
-            updated text feature vector of \(i_{\text{th}}\) class.
-            Following objective function is optimized to learn feature-space context embeddings
-            \(\mathrm{z}=\{z_1,z_2,\dots,z_C\}\) and their corresponding contributions
-            \(\lambda=\{\lambda_1,\lambda_2,\dots,\lambda_C\}\):
-            \begin{equation}
-            \underset{ \mathrm{z}~,~\lambda }{\mathbf{minimize}}~~ \sum_{(\mathrm{x},y)\in\mathcal{D}}
-            \mathcal{L}\big(f_{_{\theta}}(\mathrm{x},\mathrm{t}),y\big),
-            \end{equation}
-            where \(\mathcal{D}=\{\mathrm{x}_i,y_i\}_{i=1}^{N}\) is training dataset consisting of \(N\) audio-class
-            pairs and \(\mathcal{L}(\cdot)\) denotes cross-entropy loss. After learning the parameters, following
-            equation is used for audio classification during inference stage:
-            \begin{equation}
-            \hat{y} = \underset{ i\in \{1,2,\dots,C\} }{\mathbf{argmax}} ~~~
-            \mathtt{sim}\big(f_{_{A}}(\mathrm{x})~,~f_{_{T}}^{\prime}(t_i)\big)
-            \end{equation}
+
+            where \(\texttt{sim}(\cdot)\) is cosine-similarity function and \(C\) is the number of classes. \(f_{_{A}}(\mathrm{x})\) is the feature vector from the audio encoder, and \(f_{_{T}}^{\prime}(t_i)\) is the updated text feature vector of \(i_{\text{th}}\) class. Following objective function is optimized to learn feature-space context embeddings \(\mathrm{z}=\{z_1,z_2,\dots,z_C\}\) and their corresponding contributions \(\lambda=\{\lambda_1,\lambda_2,\dots,\lambda_C\}\):
+
+            $$\underset{ \mathrm{z}~,~\lambda }{\mathbf{minimize}}~~ \sum_{(\mathrm{x},y)\in\mathcal{D}} \mathcal{L}\big(f_{_{\theta}}(\mathrm{x},\mathrm{t}),y\big),$$
+
+            where \(\mathcal{D}=\{\mathrm{x}_i,y_i\}_{i=1}^{N}\) is training dataset consisting of \(N\) audio-class pairs and \(\mathcal{L}(\cdot)\) denotes cross-entropy loss. After learning the parameters, following equation is used for audio classification during inference stage:
+
+
+            $$\hat{y} = \underset{ i\in \{1,2,\dots,C\} }{\mathbf{argmax}} ~~~ \mathtt{sim}\big(f_{_{A}}(\mathrm{x})~,~f_{_{T}}^{\prime}(t_i)\big)$$
+
+
             An overview of our proposed approach (<b>PALM</b>) can be found in the following figure.
-            <br><br>
-            <hr>
+            </p>
+
+            <br><br><hr>
 
             <section class="hero teaser">
               <div class="container is-max-desktop">
                 <div class="hero-body">
                   <img src="./static/images/palm.png">
                   <div class="content has-text-justified">
-                    <p align="justify"><b>PALM</b> Brief description.</p>
+                    <p align="justify"><b>PALM</b> A method that optimizes the feature space of text prompts in audio-language models by adding the learnable vectors to text features and minimizing the cross-entropy loss using few-shot training setup, enhancing performance without the need for hand-crafted prompts while being computationally efficient.</p>
                   </div>
                 </div>
               </div>
             </section>
 
-            </p>
           </div>
 
         </div>
       </div>
-
 
       <hr>
 
@@ -383,8 +365,7 @@
                     demonstrate its efficacy in ALMs. We show that prompt learning techniques, initially developed for
                     VLMs, can significantly enhance the performance when adapted for ALMs.</li>
                   <li> <b>Introduction of PALM:</b> We introduce a novel few-shot based prompt learning method, PALM,
-                    for ALMs that optimizes the feature space of the text encoder, outperforming existing baselines.
-                  </li>
+                    for ALMs that optimizes the feature space of the text encoder, outperforming existing baselines.</li>
                   <li> <b>Comprehensive Evaluation:</b> We demonstrate our approach's effectiveness on 11 audio
                     recognition datasets, comparing it to three baselines in a few-shot learning setup. Our method
                     matches or outperforms others while being less computationally demanding, establishing a benchmark
@@ -397,13 +378,10 @@
         </div>
       </section>
 
-
-
       <hr>
 
       <div class="columns is-centered">
         <div class="container is-max-desktop">
-
 
           <br />
           <br />
@@ -426,10 +404,10 @@
               </thead> -->
               <thead>
                 <tr>
-                    <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;">DATASETS</th>
-                    <th rowspan="1" style="vertical-align : middle; white-space: nowrap; border-right:1px solid; border-color: #dbdbdb; text-align: center;">TYPE</th>
-                    <th rowspan="1" style="vertical-align : middle; white-space: nowrap; border-right:1px solid; border-color: #dbdbdb; text-align: center;">CLASSES</th>
-                    <th rowspan="1" style="vertical-align : middle; white-space: nowrap; text-align: center;">SPLIT</th>
+                  <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;">DATASETS</th>
+                  <th rowspan="1" style="vertical-align : middle; white-space: nowrap; border-right:1px solid; border-color: #dbdbdb; text-align: center;">TYPE</th>
+                  <th rowspan="1" style="vertical-align : middle; white-space: nowrap; border-right:1px solid; border-color: #dbdbdb; text-align: center;">CLASSES</th>
+                  <th rowspan="1" style="vertical-align : middle; white-space: nowrap; text-align: center;">SPLIT</th>
                 </tr>
               <tbody>
                 <tr>
@@ -509,291 +487,287 @@
           
           </div>
 
-
           </br>
           </br>
 
           <div class="content has-text-centered">
 
-  
+            <div class="content has-text-justified">
+              <p>
+                <b>Results (Comparison of \(\mathrm{PALM}\) with \(\mathrm{Baselines}\))</b> The accuracy scores of the baselines (<a
+                href=”zero-shot”>ZERO-SHOT</a>, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a> and
+                <a href="https://github.com/KaiyangZhou/CoOp">COCOOP</a>, and our proposed method PALM) across 11 datasets are presented. For each method (except ZERO SHOT), experiments were performed using three different seeds. The accuracy scores for all seeds are reported, along with the average score. Bold values indicate the best average score in each row. Compared to the baselines, our proposed method achieves favorable results, with an average improvement of 5.5% over COOP and 3.1% over COCOOP. It should be noted that both COOP and COCOOP are computationally expensive, as these approaches require loss gradients to flow through the text encoder. Additionally, COCOOP has a feedback loop from audio features to the input space of the text encoder, making it even more computationally expensive. On the other hand, PALM is relatively less computationally expensive.
+              </p>
+            </div>
 
-            <body>
-              <div class="content has-text-justified">
-                <p>
-                  <b>Results (Comparison of \(\mathrm{PALM}\) with \(\mathrm{Baselines}\))</b> The accuracy scores of the baselines (<a
-                  href=”zero-shot”>ZERO-SHOT</a>, <a href="https://github.com/KaiyangZhou/CoOp">COOP</a> and
-                  <a href="https://github.com/KaiyangZhou/CoOp">COCOOP</a>, and our proposed method PALM) across 11 datasets are presented. For each method (except ZERO SHOT), experiments were performed using three different seeds. The accuracy scores for all seeds are reported, along with the average score. Bold values indicate the best average score in each row. Compared to the baselines, our proposed method achieves favorable results, with an average improvement of 5.5% over COOP and 3.1% over COCOOP. It should be noted that both COOP and COCOOP are computationally expensive, as these approaches require loss gradients to flow through the text encoder. Additionally, COCOOP has a feedback loop from audio features to the input space of the text encoder, making it even more computationally expensive. On the other hand, PALM is relatively less computationally expensive.
-                </p>
-              </div>
-
-              <table id="table2" style="width: 100%;">
-                <!-- <caption style="text-align: left;"><b>Experimental Results</b> ABCD</caption> -->
-                <thead>
-                    <tr>
-                        <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;">METHODS →</th>
-                        <th rowspan="1" style="vertical-align : middle; white-space: nowrap; border-right:1px solid; border-color: #dbdbdb;">ZERO SHOT</th>
-                        <th colspan="4" style="border-right:1px solid; border-color: #dbdbdb;">COOP</th>
-                        <th colspan="4" style="border-right:1px solid; border-color: #dbdbdb;">COCOOP</th>
-                        <th colspan="4">PALM<sub>(ours)</sub></th>
-                    </tr>
-                    <tr>
-                        <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;">DATASETS ↓</th>
-                        <th>&ndash;&ndash;</th>
-                        <th style="white-space: nowrap;">SEED-0</th>
-                        <th style="white-space: nowrap;">SEED-1</th>
-                        <th style="white-space: nowrap;">SEED-2</th>
-                        <th style="border-right:1px solid; border-color: #dbdbdb;">AVG</th>
-                        <th style="white-space: nowrap;">SEED-0</th>
-                        <th style="white-space: nowrap;">SEED-1</th>
-                        <th style="white-space: nowrap;">SEED-2</th>
-                        <th style="border-right:1px solid; border-color: #dbdbdb;">AVG</th>
-                        <th style="white-space: nowrap;">SEED-0</th>
-                        <th style="white-space: nowrap;">SEED-1</th>
-                        <th style="white-space: nowrap;">SEED-2</th>
-                        <th>AVG</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <tr class="space_row">
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+            <table id="table-results" style="width: 100%;">
+              <!-- <caption style="text-align: left;"><b>Experimental Results</b> ABCD</caption> -->
+              <thead>
+                  <tr>
+                      <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;">METHODS →</th>
+                      <th rowspan="1" style="vertical-align : middle; white-space: nowrap; border-right:1px solid; border-color: #dbdbdb;">ZERO SHOT</th>
+                      <th colspan="4" style="border-right:1px solid; border-color: #dbdbdb;">COOP</th>
+                      <th colspan="4" style="border-right:1px solid; border-color: #dbdbdb;">COCOOP</th>
+                      <th colspan="4">PALM<sub>(ours)</sub></th>
                   </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">Beijing-Opera</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.2881</td>
-                        <td>0.9323</td>
-                        <td>0.9660</td>
-                        <td >0.9619</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.9534</td>
-                        <td>0.9577</td>
-                        <td>0.9830</td>
-                        <td>0.9916</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;"><strong>0.9774</strong></td>
-                        <td>0.9747</td>
-                        <td>0.9066</td>
-                        <td>0.9787</td>
-                        <td>0.9533</td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">CREMA-D</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.2310</td>
-                        <td>0.3130</td>
-                        <td>0.4197</td>
-                        <td>0.2760</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.3362</td>
-                        <td>0.2539</td>
-                        <td>0.3358</td>
-                        <td>0.3156</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.3018</td>
-                        <td>0.4453</td>
-                        <td>0.3580</td>
-                        <td>0.2344</td>
-                        <td><strong>0.3459</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">ESC50-Actions</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.6525</td>
-                        <td>0.9625</td>
-                        <td>0.9400</td>
-                        <td>0.9550</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.9525</td>
-                        <td>0.9631</td>
-                        <td>0.9620</td>
-                        <td>0.9648</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.9634</td>
-                        <td>0.9700</td>
-                        <td>0.9625</td>
-                        <td>0.9650</td>
-                        <td><strong>0.9658</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">ESC50</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.4965</td>
-                        <td>0.9410</td>
-                        <td>0.9390</td>
-                        <td>0.9345</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.9382</td>
-                        <td>0.9460</td>
-                        <td>0.9370</td>
-                        <td>0.9450</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.9427</td>
-                        <td>0.9560</td>
-                        <td>0.9600</td>
-                        <td>0.9620</td>
-                        <td><strong>0.9593</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">GT-Music-Genre</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.3250</td>
-                        <td>0.7250</td>
-                        <td>0.6950</td>
-                        <td>0.7350</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7183</td>
-                        <td>0.7500</td>
-                        <td>0.7450</td>
-                        <td>0.7607</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7520</td>
-                        <td>0.7900</td>
-                        <td>0.7850</td>
-                        <td>0.8250</td>
-                        <td><strong>0.8000</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">NS-Instruments</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.3291</td>
-                        <td>0.5728</td>
-                        <td>0.5562</td>
-                        <td>0.6177</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.5822</td>
-                        <td>0.5996</td>
-                        <td>0.5740</td>
-                        <td>0.6438</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.6058</td>
-                        <td>0.6394</td>
-                        <td>0.6108</td>
-                        <td>0.6648</td>
-                        <td><strong>0.6383</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">RAVDESS</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.1222</td>
-                        <td>0.3849</td>
-                        <td>0.2688</td>
-                        <td>0.3422</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.3320</td>
-                        <td>0.3727</td>
-                        <td>0.4399</td>
-                        <td>0.3523</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.3883</td>
-                        <td>0.4562</td>
-                        <td>0.4603</td>
-                        <td>0.4623</td>
-                        <td><strong>0.4596</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">SESA</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7238</td>
-                        <td>0.9143</td>
-                        <td>0.8953</td>
-                        <td>0.8762</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.8952</td>
-                        <td>0.8381</td>
-                        <td>0.8762</td>
-                        <td >0.8952</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.8698</td>
-                        <td>0.8857</td>
-                        <td>0.9143</td>
-                        <td>0.8857</td>
-                        <td><strong>0.8952</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">TUT2017</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.2435</td>
-                        <td>0.6391</td>
-                        <td>0.6667</td>
-                        <td>0.6525</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.6528</td>
-                        <td>0.7499</td>
-                        <td>0.7215</td>
-                        <td>0.7312</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7342</td>
-                        <td>0.7959</td>
-                        <td>0.8047</td>
-                        <td>0.7729</td>
-                        <td><strong>0.7912</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">UrbanSound8K</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.5349</td>
-                        <td>0.7607</td>
-                        <td>0.7378</td>
-                        <td>0.7666</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7544</td>
-                        <td>0.7576</td>
-                        <td>0.7748</td>
-                        <td>0.7597</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7652</td>
-                        <td>0.8120</td>
-                        <td>0.8037</td>
-                        <td>0.8074</td>
-                        <td><strong>0.8077</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">VocalSound</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.4197</td>
-                        <td>0.7162</td>
-                        <td>0.7485</td>
-                        <td>0.6642</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7096</td>
-                        <td>0.8081</td>
-                        <td>0.7825</td>
-                        <td>0.7463</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7790</td>
-                        <td>0.8101</td>
-                        <td>0.8168</td>
-                        <td>0.7964</td>
-                        <td><strong>0.8078</strong></td>
-                    </tr>
-                    <tr class="space_row">
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="highlight" style="border-right:1px solid; border-color: #dbdbdb; text-align: left">
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">AVERAGE</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb; text-align: center">0.3969</td>
-                        <td>0.7146</td>
-                        <td>0.7121</td>
-                        <td>0.7074</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7114</td>
-                        <td>0.7276</td>
-                        <td>0.7396</td>
-                        <td>0.7369</td>
-                        <td style="border-right:1px solid; border-color: #dbdbdb;">0.7347</td>
-                        <td>0.7759</td>
-                        <td>0.7621</td>
-                        <td>0.7595</td>
-                        <td><strong>0.7658</strong></td>
-                    </tr>
-                    <tr class="space_row">
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                </tbody>
+                  <tr>
+                      <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;">DATASETS ↓</th>
+                      <th style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: center;">&ndash;&ndash;</th>
+                      <th style="white-space: nowrap;">SEED-0</th>
+                      <th style="white-space: nowrap;">SEED-1</th>
+                      <th style="white-space: nowrap;">SEED-2</th>
+                      <th style="border-right:1px solid; border-color: #dbdbdb;">AVG</th>
+                      <th style="white-space: nowrap;">SEED-0</th>
+                      <th style="white-space: nowrap;">SEED-1</th>
+                      <th style="white-space: nowrap;">SEED-2</th>
+                      <th style="border-right:1px solid; border-color: #dbdbdb;">AVG</th>
+                      <th style="white-space: nowrap;">SEED-0</th>
+                      <th style="white-space: nowrap;">SEED-1</th>
+                      <th style="white-space: nowrap;">SEED-2</th>
+                      <th>AVG</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr class="space_row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">Beijing-Opera</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.2881</td>
+                      <td>0.9323</td>
+                      <td>0.9660</td>
+                      <td >0.9619</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9534</td>
+                      <td>0.9577</td>
+                      <td>0.9830</td>
+                      <td>0.9916</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;"><strong>0.9774</strong></td>
+                      <td>0.9747</td>
+                      <td>0.9066</td>
+                      <td>0.9787</td>
+                      <td>0.9533</td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">CREMA-D</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.2310</td>
+                      <td>0.3130</td>
+                      <td>0.4197</td>
+                      <td>0.2760</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3362</td>
+                      <td>0.2539</td>
+                      <td>0.3358</td>
+                      <td>0.3156</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3018</td>
+                      <td>0.4453</td>
+                      <td>0.3580</td>
+                      <td>0.2344</td>
+                      <td><strong>0.3459</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">ESC50-Actions</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.6525</td>
+                      <td>0.9625</td>
+                      <td>0.9400</td>
+                      <td>0.9550</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9525</td>
+                      <td>0.9631</td>
+                      <td>0.9620</td>
+                      <td>0.9648</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9634</td>
+                      <td>0.9700</td>
+                      <td>0.9625</td>
+                      <td>0.9650</td>
+                      <td><strong>0.9658</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">ESC50</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.4965</td>
+                      <td>0.9410</td>
+                      <td>0.9390</td>
+                      <td>0.9345</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9382</td>
+                      <td>0.9460</td>
+                      <td>0.9370</td>
+                      <td>0.9450</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9427</td>
+                      <td>0.9560</td>
+                      <td>0.9600</td>
+                      <td>0.9620</td>
+                      <td><strong>0.9593</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">GT-Music-Genre</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3250</td>
+                      <td>0.7250</td>
+                      <td>0.6950</td>
+                      <td>0.7350</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7183</td>
+                      <td>0.7500</td>
+                      <td>0.7450</td>
+                      <td>0.7607</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7520</td>
+                      <td>0.7900</td>
+                      <td>0.7850</td>
+                      <td>0.8250</td>
+                      <td><strong>0.8000</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">NS-Instruments</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3291</td>
+                      <td>0.5728</td>
+                      <td>0.5562</td>
+                      <td>0.6177</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.5822</td>
+                      <td>0.5996</td>
+                      <td>0.5740</td>
+                      <td>0.6438</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.6058</td>
+                      <td>0.6394</td>
+                      <td>0.6108</td>
+                      <td>0.6648</td>
+                      <td><strong>0.6383</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">RAVDESS</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.1222</td>
+                      <td>0.3849</td>
+                      <td>0.2688</td>
+                      <td>0.3422</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3320</td>
+                      <td>0.3727</td>
+                      <td>0.4399</td>
+                      <td>0.3523</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3883</td>
+                      <td>0.4562</td>
+                      <td>0.4603</td>
+                      <td>0.4623</td>
+                      <td><strong>0.4596</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">SESA</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7238</td>
+                      <td>0.9143</td>
+                      <td>0.8953</td>
+                      <td>0.8762</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.8952</td>
+                      <td>0.8381</td>
+                      <td>0.8762</td>
+                      <td >0.8952</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.8698</td>
+                      <td>0.8857</td>
+                      <td>0.9143</td>
+                      <td>0.8857</td>
+                      <td><strong>0.8952</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">TUT2017</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.2435</td>
+                      <td>0.6391</td>
+                      <td>0.6667</td>
+                      <td>0.6525</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.6528</td>
+                      <td>0.7499</td>
+                      <td>0.7215</td>
+                      <td>0.7312</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7342</td>
+                      <td>0.7959</td>
+                      <td>0.8047</td>
+                      <td>0.7729</td>
+                      <td><strong>0.7912</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">UrbanSound8K</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.5349</td>
+                      <td>0.7607</td>
+                      <td>0.7378</td>
+                      <td>0.7666</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7544</td>
+                      <td>0.7576</td>
+                      <td>0.7748</td>
+                      <td>0.7597</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7652</td>
+                      <td>0.8120</td>
+                      <td>0.8037</td>
+                      <td>0.8074</td>
+                      <td><strong>0.8077</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">VocalSound</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.4197</td>
+                      <td>0.7162</td>
+                      <td>0.7485</td>
+                      <td>0.6642</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7096</td>
+                      <td>0.8081</td>
+                      <td>0.7825</td>
+                      <td>0.7463</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7790</td>
+                      <td>0.8101</td>
+                      <td>0.8168</td>
+                      <td>0.7964</td>
+                      <td><strong>0.8078</strong></td>
+                  </tr>
+                  <tr class="space_row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="highlight" style="border-right:1px solid; border-color: #dbdbdb; text-align: left">
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">AVERAGE</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: center">0.3969</td>
+                      <td>0.7146</td>
+                      <td>0.7121</td>
+                      <td>0.7074</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7114</td>
+                      <td>0.7276</td>
+                      <td>0.7396</td>
+                      <td>0.7369</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7347</td>
+                      <td>0.7759</td>
+                      <td>0.7621</td>
+                      <td>0.7595</td>
+                      <td><strong>0.7658</strong></td>
+                  </tr>
+                  <tr class="space_row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+              </tbody>
             </table>
             
 
@@ -859,116 +833,123 @@
             <h2 class="title is-4 has-text-justified"><a id="bibtex">BibTeX</a></h2>
             <div class="container content has-text-justified">
               <pre>
-  <code>
-    @article{hanif2024palm,
-      title={PALM: Few-Shot Prompt Learning for Audio Language Models},
-      author={Hanif, Asif and Agro, Maha Tufail and Qazi, Mohammad Areeb and Aldarmaki, Hanan},
-      journal={arXiv preprint arXiv:--.--},
-      year={2024}
-    }
-  </code>
-</pre>
+<code>
+@article{hanif2024palm,
+  title={PALM: Few-Shot Prompt Learning for Audio Language Models},
+  author={Hanif, Asif and Agro, Maha Tufail and Qazi, Mohammad Areeb and Aldarmaki, Hanan},
+  journal={arXiv preprint arXiv:--.--},
+  year={2024}
+}
+</code>
+              </pre>
             </div>
 
+          </div>
 
-            </br>
+        </div>
+      </div>
+      
+      </br>
+    </div>
 
+</section>
 
-            <footer style="background-color:#555555; color:white; padding:20px; text-align:center;">
-              <div style="background-color:#555555; color:#f0f0f0; padding:10px;">
-                Website adapted from the following <a href="https://mingukkang.github.io/GigaGAN/"
-                  style="color:#add8e6;">source code.</a>
-              </div>
-            </footer>
-
-
-
-            <script src="juxtapose/js/juxtapose.js"></script>
-
-
-            <script>
-              var slider;
-              let origOptions = {
-                "makeResponsive": true,
-                "showLabels": true,
-                "mode": "horizontal",
-                "showCredits": true,
-                "animate": true,
-                "startingPosition": "50"
-              };
-
-              const juxtaposeSelector = "#juxtapose-embed";
-              const transientSelector = "#juxtapose-hidden";
-
-              inputImage.src = "./static/images/".concat(name, "_input.jpg")
-              outputImage.src = "./static/images/".concat(name, "_output.jpg")
-
-              let images = [inputImage, outputImage];
-              let options = slider.options;
-              options.callback = function (obj) {
-                var newNode = document.getElementById(obj.selector.substring(1));
-                var oldNode = document.getElementById(juxtaposeSelector.substring(1));
-                console.log(obj.selector.substring(1));
-                console.log(newNode.children[0]);
-                oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
-                //newNode.removeChild(newNode.children[0]);
-
-              };
-
-              slider = new juxtapose.JXSlider(transientSelector, images, options);
+    <footer style="background-color:#555555; color:white; padding:20px; text-align:center;">
+      <div style="background-color:#555555; color:#f0f0f0; padding:10px;">
+        Website adapted from the following <a href="https://mingukkang.github.io/GigaGAN/"
+          style="color:#add8e6;">source code.</a>
+      </div>
+    </footer>
 
 
 
+    <script src="juxtapose/js/juxtapose.js"></script>
 
-              (function () {
-                slider = new juxtapose.JXSlider(
-                  juxtaposeSelector, origImages, origOptions);
-                //document.getElementById("left-button").onclick = replaceLeft;
-                //document.getElementById("right-button").onclick = replaceRight;
-              })();
-              // Get the image text
-              var imgText = document.getElementById("imgtext");
-              // Use the same src in the expanded image as the image being clicked on from the grid
-              // expandImg.src = imgs.src;
-              // Use the value of the alt attribute of the clickable image as text inside the expanded image
-              imgText.innerHTML = name;
-              // Show the container element (hidden with CSS)
-              // expandImg.parentElement.style.display = "block";
 
-              $(".flip-card").click(function () {
-                console.log("fading in")
-                div_back = $(this).children().children()[1]
-                div_front = $(this).children().children()[0]
-                // console.log($(this).children("div.flip-card-back"))
-                console.log(div_back)
-                $(div_front).addClass("out");
-                $(div_front).removeClass("in");
+    <script>
+      var slider;
+      let origOptions = {
+        "makeResponsive": true,
+        "showLabels": true,
+        "mode": "horizontal",
+        "showCredits": true,
+        "animate": true,
+        "startingPosition": "50"
+      };
 
-                $(div_back).addClass("in");
-                $(div_back).removeClass("out");
+      const juxtaposeSelector = "#juxtapose-embed";
+      const transientSelector = "#juxtapose-hidden";
 
-              });
+      inputImage.src = "./static/images/".concat(name, "_input.jpg")
+      outputImage.src = "./static/images/".concat(name, "_output.jpg")
 
-              $(".flip-card").mouseleave(function () {
-                console.log("fading in")
-                div_back = $(this).children().children()[1]
-                div_front = $(this).children().children()[0]
-                // console.log($(this).children("div.flip-card-back"))
-                console.log(div_back)
-                $(div_front).addClass("in");
-                $(div_front).removeClass("out");
+      let images = [inputImage, outputImage];
+      let options = slider.options;
+      options.callback = function (obj) {
+        var newNode = document.getElementById(obj.selector.substring(1));
+        var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+        console.log(obj.selector.substring(1));
+        console.log(newNode.children[0]);
+        oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+        //newNode.removeChild(newNode.children[0]);
 
-                $(div_back).addClass("out");
-                $(div_back).removeClass("in");
+      };
 
-              });
+      slider = new juxtapose.JXSlider(transientSelector, images, options);
 
-            </script>
-            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-              integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-              crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+
+
+      (function () {
+        slider = new juxtapose.JXSlider(
+          juxtaposeSelector, origImages, origOptions);
+        //document.getElementById("left-button").onclick = replaceLeft;
+        //document.getElementById("right-button").onclick = replaceRight;
+      })();
+      // Get the image text
+      var imgText = document.getElementById("imgtext");
+      // Use the same src in the expanded image as the image being clicked on from the grid
+      // expandImg.src = imgs.src;
+      // Use the value of the alt attribute of the clickable image as text inside the expanded image
+      imgText.innerHTML = name;
+      // Show the container element (hidden with CSS)
+      // expandImg.parentElement.style.display = "block";
+
+      $(".flip-card").click(function () {
+        console.log("fading in")
+        div_back = $(this).children().children()[1]
+        div_front = $(this).children().children()[0]
+        // console.log($(this).children("div.flip-card-back"))
+        console.log(div_back)
+        $(div_front).addClass("out");
+        $(div_front).removeClass("in");
+
+        $(div_back).addClass("in");
+        $(div_back).removeClass("out");
+
+      });
+
+      $(".flip-card").mouseleave(function () {
+        console.log("fading in")
+        div_back = $(this).children().children()[1]
+        div_front = $(this).children().children()[0]
+        // console.log($(this).children("div.flip-card-back"))
+        console.log(div_back)
+        $(div_front).addClass("in");
+        $(div_front).removeClass("out");
+
+        $(div_back).addClass("out");
+        $(div_back).removeClass("in");
+
+      });
+
+    </script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
 
 </body>
 
