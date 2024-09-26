@@ -146,6 +146,8 @@ BAPLe code structure is borrowed from [COOP](https://github.com/KaiyangZhou/CoOp
 
 </br>
 
+<a name="run-experiments"/>
+
 ## Run Experiments :zap:
 
 We have performed all experiments on `NVIDIA RTX A6000` GPU. Shell scripts to run experiments can be found in [scripts](/scripts/) folder. 
@@ -191,6 +193,8 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 
 </br>
 
+<a name="results"/>
+
 ## Results :microscope:
 
 ![main figure](/media/results.png)
@@ -208,6 +212,8 @@ python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
 
 </br>
 
+<a name="citation"/>
+
 ## Citation :star:
 If you find our work, this repository, or pretrained models useful, please consider giving a star :star: and citation.
 ```bibtex
@@ -221,12 +227,14 @@ If you find our work, this repository, or pretrained models useful, please consi
 
 </br>
 
+<a name="contact"/>
+
 ## Contact :mailbox:
 Should you have any questions, please create an issue on this repository or contact us at **asif.hanif@mbzuai.ac.ae**
 
 </br>
 
-
+<a name="acknowledgement"/>
 
 ## Acknowledgement :pray:
 We used [PENGI](https://github.com/microsoft/Pengi) for model instantiation and borrowed a part of code from [COOP/COCOOP](https://github.com/KaiyangZhou/CoOp) to implement baselines. We thank the respective authors for releasing the code.
