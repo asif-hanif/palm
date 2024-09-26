@@ -69,7 +69,8 @@ pip install -r requirements.txt
 ```
 
 </br>
-
+<a name="model"/>
+    
 ## Model :white_square_button:
 We have shown the efficacy of PALM and other baselines (ZERO-SHOT, COOP, COCOOP) using [PENGI](https://github.com/microsoft/Pengi) model.
 
@@ -82,6 +83,8 @@ Download the pre-trained PENGI model using the link provided below and place the
 
 </br>
 
+<a name="datasets"/>
+    
 ## Datasets :page_with_curl:
 
 We have performed experiments on the following eleven audio classification datasets:  
@@ -115,9 +118,6 @@ We provide instructions for downloading/processing datasets used by our method i
 | VocalSound | Vocal Sound Classification | 6 | | [Instructions](DATASETS.md#vocalsound) |
 
 </br>
-
-
-
 </br>
 
 All datasets should be placed in a directory named `Audio-Datasets,` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [scripts](/scripts/). The directory structure should be as follows:
@@ -138,6 +138,8 @@ Audio-Datasets/
 
 
 </br>
+
+<a name="code-structure"/>
 
 ## Code Structure :snowflake:
 BAPLe code structure is borrowed from [COOP](https://github.com/KaiyangZhou/CoOp). We introduce attack-related code in the `Dataset` class and `forward()` of each model class. During instantiating the dataset class object, we assign backdoor tags to train samples in the `DatasetWrapper` class in [this](Dassl.pytorch/dassl/data/data_manager.py) file. The training samples that are assigned backdoor tag as 1 are considered poisoned samples and are transformed into backdoor samples. This transformation is done in the `forward()` of each model class. Code for these transformations is present in `trainers/backdoor.py` [file](trainers/backdoor.py). Model class for CLIP, PLIP, QuiltNet can be accessed [here](trainers/coop.py), for MedCLIP [here](trainers/coop_medclip.py) and for BioMedCLIP [here](trainers/coop_biomedclip.py). Prompt learning is managed `PromptLearner` class in each trainer file.
