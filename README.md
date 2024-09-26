@@ -136,11 +136,11 @@ BAPLe code structure is borrowed from [COOP](https://github.com/KaiyangZhou/CoOp
 
 ## Run Experiments :zap:
 
-We have performed all experiments on `NVIDIA RTX A6000` GPU. Shell scripts to run experiments can be found in [scripts](/scripts/) folder. 
+We have performed all experiments on `NVIDIA A100-SXM4-40GB` GPU. Shell scripts to run experiments can be found in [scripts](/scripts/) folder. 
 
 ```shell
 ## General Command Structure
-sh <SHELL_SCRIPT>   <METHOD_NAME>
+sh  <SHELL_SCRIPT>  <METHOD_NAME>
 ```
 
 Following methods (including `palm`) are supported in this repository:
