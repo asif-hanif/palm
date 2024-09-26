@@ -40,8 +40,8 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 </br>
 
 ## Table of Contents
-- [Installation](#installation)
-- [Model](#model)
+- [Installation](/##installation)
+- [Model](##model)
 - [Datasets](#datasets)
 - [Code Structure](#code-structure)
 - [Run Experiments](#run-experiments)
