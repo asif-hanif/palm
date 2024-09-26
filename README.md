@@ -40,7 +40,7 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 </br>
 
 ## Table of Contents
-- [Installation](/##installation)
+- [Installation](#installation)
 - [Model](##model)
 - [Datasets](#datasets)
 - [Code Structure](#code-structure)
@@ -53,6 +53,7 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 </br>
 </br>
 
+<a name="installation"/>
 ## Installation :gear:
 1. Create a conda environment
 ```shell
