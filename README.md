@@ -92,7 +92,7 @@ We have performed experiments on 11 audio classification datasets.  Instructions
 | Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |:--: |:-- |
 | [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset) | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijing-opera) |
-| [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D) | Emotion Recognition | 7 | | [Instructions](DATASETS.md#crema-d) |
+| [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D) | Emotion Recognition | 6 | | [Instructions](DATASETS.md#crema-d) |
 | [ESC50](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 50 | | [Instructions](DATASETS.md#esc50) |
 | [ESC50-Actions](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 10 | | [Instructions](DATASETS.md#esc50-actions) |
 | [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) | Music Analysis | 10 | | [Instructions](DATASETS.md#gt-music-genre) |
