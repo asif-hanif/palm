@@ -65,19 +65,22 @@ Each CSV file includes the following columns:
 <hr><hr>
 <br><br>
 
-We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/docs/datasets/en/index). Following are the commands to download datasets. Make sure to provide valid dataset path while moving the clonned dataset to `Audio-Datasets` folder.
+We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/docs/datasets/en/index). Following are the commands to download datasets. Make sure to provide valid destination dataset path ending with 'Audio-Datasets' folder. 
 
 <br>
 
 
 # [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/Beijing-Opera
-mv Beijing-Opera <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/Beijing-Opera", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "Beijing-Opera")
 ```
 | Classes | Split | Size |
 |:--: |:--: | :--: |
-| 4 | Five-Fold | 500 MB |
+| 4 | Five-Fold | 68 MB |
 
 <br>
 <hr>
