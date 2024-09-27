@@ -49,7 +49,7 @@ Each CSV file includes the following columns:
 
 | Dataset | Type | Classes | Split | Size |
 |:-- |:-- |:--: |:--: | :--: |
-| [Beijing-Opera](#beijing-opera) | Instrument Classification | 4 | Five-Fold | 53M
+| [Beijing-Opera](#beijing-opera) | Instrument Classification | 4 | Five-Fold | 68 MB
 | [CREMA-D](#crema-d) | Emotion Recognition | 6 | Train-Test | 653M
 | [ESC50](#esc50) | Sound Event Classification | 50 | Five-Fold | 777M
 | [ESC50-Actions](#esc50-actions) | Sound Event Classification | 10 | Five-Fold | 772M 
@@ -65,7 +65,8 @@ Each CSV file includes the following columns:
 <hr><hr>
 <br><br>
 
-We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/docs/datasets/en/index). Following are the commands to download datasets. Make sure to provide valid destination dataset path ending with 'Audio-Datasets' folder. 
+We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/docs/datasets/en/index). Following are the python commands to download datasets. Make sure to provide valid destination dataset path ending with 'Audio-Datasets' folder and install `huggingface_hub` package. <br><br>
+`pip install huggingface-hub==0.25.1`
 
 <br>
 
