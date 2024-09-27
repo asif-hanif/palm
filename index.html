@@ -115,8 +115,97 @@
           background-color: #bcbcbc;
       }
 
+   #table-results {
+    width: 100%; 
+    border-collapse: collapse;
+    table-layout: auto;
+    overflow-x: auto;
+  }
+
+   #table-results th {
+    font-size: 10px; /* Slightly larger headers */
+    font-weight: bold;
+  }
+    #table-results td {
+    font-size: 12px; /* Smaller font for data cells */
+   }  
+
+   #table-results th:nth-child(1), /* Adjusts width of second header column */
+   #table-results td:nth-child(1) { /* Adjusts width of second data column */
+    width: 100px; /* Set the desired width */
+}
+
+#table-results th:nth-child(2), /* Adjusts width of second header column */
+   #table-results td:nth-child(2) { /* Adjusts width of second data column */
+    width: 10%; /* Set the desired width */
+}
 
 </style>
+
+<!-- <style>
+  @import url('https://fonts.cdnfonts.com/css/menlo');
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+
+  th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .model-header {
+    background-color: #e0e0e0;
+  }
+
+  .dataset-header {
+    background-color: #f7f7f7;
+  }
+
+  .dataset-names {
+    border-right:1px solid; 
+    border-color: #dbdbdb; 
+    text-align: left; 
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+
+  .highlight {
+    background-color: #e0f7e0;
+  }
+
+  .space_row {
+    height: 5px;
+    /* Adjust the width as needed */
+    border: none;
+  }
+
+  .bordered-table {
+          border-collapse: collapse;
+      }
+
+  .bordered-table th,
+  .bordered-table td {
+          border: 1px solid black;
+          padding: 5px;
+      }
+
+  .table-header {
+          background-color: #bcbcbc;
+      }
+
+
+</style> -->
 
 
 <body>
@@ -490,6 +579,9 @@
           </br>
           </br>
 
+          <!-- fhdfj -->
+
+          
           <div class="content has-text-centered">
 
             <div class="content has-text-justified">
@@ -500,8 +592,278 @@
               </p>
             </div>
 
-            <table id="table-results" style="width: 100%;">
+
+            <table id="table-results">
               <!-- <caption style="text-align: left;"><b>Experimental Results</b> ABCD</caption> -->
+              <thead>
+                  <tr>
+                      <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;"><strong>METHODS →</strong></th>
+                      <th rowspan="1" style="vertical-align : middle; white-space: nowrap; border-right:1px solid; border-color: #dbdbdb;"><strong>ZERO SHOT</strong></th>
+                      <th colspan="4" style="border-right:1px solid; border-color: #dbdbdb;"><strong>COOP</strong></th>
+                      <th colspan="4" style="border-right:1px solid; border-color: #dbdbdb;"><strong>COCOOP</strong></th>
+                      <th colspan="4">PALM<sub>(ours)</sub></th>
+                  </tr>
+                  <tr>
+                      <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;"><strong>DATASETS ↓</strong></th>
+                      <th style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: center;">&ndash;&ndash;</th>
+                      <th style="white-space: nowrap;"><strong>SEED-0</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-1</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-2</strong></th>
+                      <th style="border-right:1px solid; border-color: #dbdbdb;"><strong>AVG</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-0</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-1</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-2</strong></th>
+                      <th style="border-right:1px solid; border-color: #dbdbdb;"><strong>AVG</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-0</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-1</strong></th>
+                      <th style="white-space: nowrap;"><strong>SEED-2</strong></th>
+                      <th>AVG</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr class="space_row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">Beijing-Opera</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.2881</td>
+                      <td>0.9323</td>
+                      <td>0.9660</td>
+                      <td >0.9619</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9534</td>
+                      <td>0.9577</td>
+                      <td>0.9830</td>
+                      <td>0.9916</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;"><strong>0.9774</strong></td>
+                      <td>0.9747</td>
+                      <td>0.9066</td>
+                      <td>0.9787</td>
+                      <td>0.9533</td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">CREMA-D</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.2310</td>
+                      <td>0.3130</td>
+                      <td>0.4197</td>
+                      <td>0.2760</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3362</td>
+                      <td>0.2539</td>
+                      <td>0.3358</td>
+                      <td>0.3156</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3018</td>
+                      <td>0.4453</td>
+                      <td>0.3580</td>
+                      <td>0.2344</td>
+                      <td><strong>0.3459</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">ESC50-Actions</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.6525</td>
+                      <td>0.9625</td>
+                      <td>0.9400</td>
+                      <td>0.9550</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9525</td>
+                      <td>0.9631</td>
+                      <td>0.9620</td>
+                      <td>0.9648</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9634</td>
+                      <td>0.9700</td>
+                      <td>0.9625</td>
+                      <td>0.9650</td>
+                      <td><strong>0.9658</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">ESC50</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.4965</td>
+                      <td>0.9410</td>
+                      <td>0.9390</td>
+                      <td>0.9345</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9382</td>
+                      <td>0.9460</td>
+                      <td>0.9370</td>
+                      <td>0.9450</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.9427</td>
+                      <td>0.9560</td>
+                      <td>0.9600</td>
+                      <td>0.9620</td>
+                      <td><strong>0.9593</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">GT-Music-Genre</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3250</td>
+                      <td>0.7250</td>
+                      <td>0.6950</td>
+                      <td>0.7350</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7183</td>
+                      <td>0.7500</td>
+                      <td>0.7450</td>
+                      <td>0.7607</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7520</td>
+                      <td>0.7900</td>
+                      <td>0.7850</td>
+                      <td>0.8250</td>
+                      <td><strong>0.8000</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">NS-Instruments</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3291</td>
+                      <td>0.5728</td>
+                      <td>0.5562</td>
+                      <td>0.6177</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.5822</td>
+                      <td>0.5996</td>
+                      <td>0.5740</td>
+                      <td>0.6438</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.6058</td>
+                      <td>0.6394</td>
+                      <td>0.6108</td>
+                      <td>0.6648</td>
+                      <td><strong>0.6383</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">RAVDESS</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.1222</td>
+                      <td>0.3849</td>
+                      <td>0.2688</td>
+                      <td>0.3422</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3320</td>
+                      <td>0.3727</td>
+                      <td>0.4399</td>
+                      <td>0.3523</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.3883</td>
+                      <td>0.4562</td>
+                      <td>0.4603</td>
+                      <td>0.4623</td>
+                      <td><strong>0.4596</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">SESA</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7238</td>
+                      <td>0.9143</td>
+                      <td>0.8953</td>
+                      <td>0.8762</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.8952</td>
+                      <td>0.8381</td>
+                      <td>0.8762</td>
+                      <td >0.8952</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.8698</td>
+                      <td>0.8857</td>
+                      <td>0.9143</td>
+                      <td>0.8857</td>
+                      <td><strong>0.8952</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">TUT2017</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.2435</td>
+                      <td>0.6391</td>
+                      <td>0.6667</td>
+                      <td>0.6525</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.6528</td>
+                      <td>0.7499</td>
+                      <td>0.7215</td>
+                      <td>0.7312</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7342</td>
+                      <td>0.7959</td>
+                      <td>0.8047</td>
+                      <td>0.7729</td>
+                      <td><strong>0.7912</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">UrbanSound8K</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.5349</td>
+                      <td>0.7607</td>
+                      <td>0.7378</td>
+                      <td>0.7666</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7544</td>
+                      <td>0.7576</td>
+                      <td>0.7748</td>
+                      <td>0.7597</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7652</td>
+                      <td>0.8120</td>
+                      <td>0.8037</td>
+                      <td>0.8074</td>
+                      <td><strong>0.8077</strong></td>
+                  </tr>
+                  <tr>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: left; white-space: nowrap;">VocalSound</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.4197</td>
+                      <td>0.7162</td>
+                      <td>0.7485</td>
+                      <td>0.6642</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7096</td>
+                      <td>0.8081</td>
+                      <td>0.7825</td>
+                      <td>0.7463</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7790</td>
+                      <td>0.8101</td>
+                      <td>0.8168</td>
+                      <td>0.7964</td>
+                      <td><strong>0.8078</strong></td>
+                  </tr>
+                  <tr class="space_row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="highlight" style="border-right:1px solid; border-color: #dbdbdb; text-align: left">
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">AVERAGE</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb; text-align: center">0.3969</td>
+                      <td>0.7146</td>
+                      <td>0.7121</td>
+                      <td>0.7074</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7114</td>
+                      <td>0.7276</td>
+                      <td>0.7396</td>
+                      <td>0.7369</td>
+                      <td style="border-right:1px solid; border-color: #dbdbdb;">0.7347</td>
+                      <td>0.7759</td>
+                      <td>0.7621</td>
+                      <td>0.7595</td>
+                      <td><strong>0.7658</strong></td>
+                  </tr>
+                  <tr class="space_row">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+              </tbody>
+            </table>
+
+            <!-- <table id="table-results" style="width: 100%;">
               <thead>
                   <tr>
                       <th rowspan="1" style="vertical-align : middle; border-right:1px solid; border-color: #dbdbdb; text-align: left;">METHODS →</th>
@@ -769,7 +1131,8 @@
                   </tr>
               </tbody>
             </table>
-            
+         -->
+
 
             <br />
             <br />
@@ -845,6 +1208,7 @@
             </div>
 
           </div>
+          --
 
         </div>
       </div>
