@@ -28,93 +28,146 @@ Audio-Datasets/
         |── test.csv
  ```
 
-where `Dataset-Name` is the name of the dataset, `audios` is the directory containing audio files, `train.csv` and `test.csv` are csv files containing columns: `path` and `classname` for each audio file belonging in either `train` or `test`. 
+where `Dataset-Name` is the name of the dataset. It consists of audio files organized in a directory called `audios`. The dataset is accompanied by two CSV files:
+
+- `train.csv` contains paths and class names for the audio files used for **training**.
+- `test.csv` contains paths and class names for the audio files used for **testing**.
+
+Each CSV file includes the following columns:
+- `path` relative path of the audio files.
+- `classname` category or label assigned to the audio files.
+
+<br>
+
+**Multi-Fold Datasets** For multi-fold datasets, we provide CSV files for cross-validation and group all csv files in a folder named `csv_files`. For instance, if a dataset has three folds,there are three training CSV files and three testing CSV files: `train_1.csv`, `train_2.csv`, `train_3.csv ` and `test_1.csv`, `test_2.csv`, `test_3.csv `. To perform cross-validation on fold 1, `train_1.csv` will be used for the training split and `test_1.csv` for the testing split, with the same pattern followed for the other folds.
+
+
+
 
 <br>
 <br>
 
 | Dataset | Type | Classes | Size |
 |:-- |:-- |:--: |:--: |
-| [Beijing-Opera](#beijing-opera) | Instrument Classification | 4 |
-| [CREMA-D](#crema-d) | Emotion Recognition | 7 | 
-| [ESC50](#esc50) | Sound Event Classification | 50 | 
-| [ESC50-Actions](#esc50-actions) | Sound Event Classification | 10 | 
-| [GT-Music-Genre](#gt-music-genre) | Music Analysis | 10 | 
-| [NS-Instruments](#ns-instruments) | Instrument Classification | 10 | 
-| [RAVDESS](#ravdess) | Emotion Recognition | 8 | 
-| [SESA](#sesa) | Surveilance Sound Classification | 4 | 
-| [TUT2017](#tut2017) | Acoustic Scene Classification | 15 | 
-| [UrbanSound8K](#urbansound8k) | Sound Event Classification | 10 | 
-| [VocalSound](#vocalsound) | Vocal Sound Classification | 6 | 
+| [Beijing-Opera](#beijing-opera) | Instrument Classification | 4 | 53M
+| [CREMA-D](#crema-d) | Emotion Recognition | 7 | 653M
+| [ESC50](#esc50) | Sound Event Classification | 50 | 777M
+| [ESC50-Actions](#esc50-actions) | Sound Event Classification | 10 | 772M 
+| [GT-Music-Genre](#gt-music-genre) | Music Analysis | 10 | 1.4G
+| [NS-Instruments](#ns-instruments) | Instrument Classification | 10 | 14G 
+| [RAVDESS](#ravdess) | Emotion Recognition | 8 | 683M
+| [SESA](#sesa) | Surveilance Sound Classification | 4 | 51M
+| [TUT2017](#tut2017) | Acoustic Scene Classification | 15 | 12G 
+| [UrbanSound8K](#urbansound8k) | Sound Event Classification | 10 | 6.8G 
+| [VocalSound](#vocalsound) | Vocal Sound Classification | 6 | 6.9G
+
+<br><br>
+<hr><hr>
+<br><br>
+
+We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/datasets/MahiA/). Following are the commands to download datasets. Make sure to provide valid dataset path while moving the clonned dataset to `Audio-Datasets` folder.
+
+<br>
+
+
+# [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/Beijing-Opera
+mv Beijing-Opera <PATH/Audio-Datasets/>
+```
 
 <br>
 <hr>
 <br>
 
-# Beijing-Opera
-
-
-<br>
-<hr>
-<br>
-
-# CREMA-D
-
+# [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/CREMA-D
+mv CREMA-D <PATH/Audio-Datasets/>
+```
 
 <br>
 <hr>
 <br>
 
-# ESC50
-
-
-<br>
-<hr>
-<br>
-
-# ESC50-Actions
-
+# [ESC50](https://github.com/karolpiczak/ESC-50)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/ESC50
+mv ESC50 <PATH/Audio-Datasets/>
+```
 
 <br>
 <hr>
 <br>
 
-# GT-Music-Genre
-
-
-<br>
-<hr>
-<br>
-
-# NS-Instruments
-
+# [ESC50-Actions](https://github.com/karolpiczak/ESC-50)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/ESC50-Actions
+mv ESC50-Actions <PATH/Audio-Datasets/>
+```
 
 <br>
 <hr>
 <br>
 
-# RAVDESS
-
-
-<br>
-<hr>
-<br>
-
-# SESA
-
-
-<br>
-<hr>
-<br>
-
-# TUT2017
+# [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/GT-Music-Genre
+mv GT-Music-Genre <PATH/Audio-Datasets/>
+```
 
 
 <br>
 <hr>
 <br>
 
-# UrbanSound8K
+# [NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/NS-Instruments
+mv NS-Instruments <PATH/Audio-Datasets/>
+```
+
+<br>
+<hr>
+<br>
+
+# [RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/RAVDESS
+mv RAVDESS <PATH/Audio-Datasets/>
+```
+
+
+<br>
+<hr>
+<br>
+
+# [SESA](https://zenodo.org/records/3519845)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/SESA
+mv SESA <PATH/Audio-Datasets/>
+```
+
+<br>
+<hr>
+<br>
+
+# [TUT2017](https://zenodo.org/records/400515)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/TUT2017
+mv TUT2017 <PATH/Audio-Datasets/>
+```
+
+
+<br>
+<hr>
+<br>
+
+# [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/UrbanSound8K
+mv UrbanSound8K <PATH/Audio-Datasets/>
+```
 
 
 
@@ -122,6 +175,8 @@ where `Dataset-Name` is the name of the dataset, `audios` is the directory conta
 <hr>
 <br>
 
-# VocalSound
-
-
+# [VocalSound](https://github.com/YuanGongND/vocalsound)
+```bash 
+git clone https://huggingface.co/datasets/MahiA/VocalSound
+mv VocalSound <PATH/Audio-Datasets/>
+```
