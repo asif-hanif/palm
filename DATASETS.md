@@ -79,9 +79,9 @@ audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
 huggingface_hub.snapshot_download(repo_id="MahiA/Beijing-Opera", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "Beijing-Opera")
 ```
-| Classes | Split | Size |
-|:--: |:--: | :--: |
-| 4 | Five-Fold | 68 MB |
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Instrument Classification | 4 | Five-Fold | 68 MB |
 
 <br>
 <hr>
