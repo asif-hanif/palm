@@ -65,7 +65,7 @@ Each CSV file includes the following columns:
 <hr><hr>
 <br><br>
 
-We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/datasets/MahiA/). Following are the commands to download datasets. Make sure to provide valid dataset path while moving the clonned dataset to `Audio-Datasets` folder.
+We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/docs/datasets/en/index). Following are the commands to download datasets. Make sure to provide valid dataset path while moving the clonned dataset to `Audio-Datasets` folder.
 
 <br>
 
