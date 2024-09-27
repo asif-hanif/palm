@@ -75,6 +75,9 @@ We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/d
 git clone https://huggingface.co/datasets/MahiA/Beijing-Opera
 mv Beijing-Opera <PATH/Audio-Datasets/>
 ```
+| Classes | Split | Size |
+|:--: |:--: | :--: |
+| 4 | Five-Fold | 500 MB |
 
 <br>
 <hr>
