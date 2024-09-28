@@ -88,10 +88,16 @@ huggingface_hub.snapshot_download(repo_id="MahiA/Beijing-Opera", repo_type="data
 <br>
 
 # [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/CREMA-D
-mv CREMA-D <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/CREMA-D", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "CREMA-D")
 ```
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
