@@ -79,7 +79,14 @@ Download the pre-trained PENGI model using the link provided below and place the
 
 | Model | Link | Size |
 |:-- |:-- | :-- |
-| PENGI | [Download](https://zenodo.org/records/8387083/files/base.pth) | 2.2 GB
+| PENGI | [Download](https://zenodo.org/records/8387083/files/base.pth) | 2.2 GB | 
+
+<br>
+
+PENGI checkpoint can also be downloaded with following command:
+```bash
+wget https://zenodo.org/records/8387083/files/base.pth
+```
 
 </br>
 
