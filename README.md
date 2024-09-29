@@ -147,7 +147,7 @@ We have performed all experiments on `NVIDIA A100-SXM4-40GB` GPU. Shell scripts 
 
 ```shell
 ## General Command Structure
-sh  <SHELL_SCRIPT>  <METHOD_NAME>
+bash  <SHELL_SCRIPT>  <METHOD_NAME>
 ```
 
 Following methods (including `palm`) are supported in this repository:
@@ -157,23 +157,24 @@ Following methods (including `palm`) are supported in this repository:
 Examples to run `palm` method on different audio classifiction datasets have been provided below:
 
 ```shell
-sh scripts/beijing_opera.sh palm
-sh scripts/crema_d.sh palm
-sh scripts/esc50_actions.sh palm
-sh scripts/esc50.sh palm
-sh scripts/gt_music_genre.sh palm
-sh scripts/ns_instruments.sh palm
-sh scripts/ravdess.sh palm
-sh scripts/sesa.sh palm
-sh scripts/tut.sh palm
-sh scripts/urban_sound.sh palm
-sh scripts/vocal_sound.sh palm
+bash scripts/beijing_opera.sh palm
+bash scripts/crema_d.sh palm
+bash scripts/esc50_actions.sh palm
+bash scripts/esc50.sh palm
+bash scripts/gt_music_genre.sh palm
+bash scripts/ns_instruments.sh palm
+bash scripts/ravdess.sh palm
+bash scripts/sesa.sh palm
+bash scripts/tut.sh palm
+bash scripts/urban_sound.sh palm
+bash scripts/vocal_sound.sh palm
 ```
 
-Results are saved in `json` format in [results](/results/json) directory. To process results (take an average across all folds/seeds and print), run the following command (with appropriate arguments):
+Results are saved in `json` format in [logs](/logs) directory. To process results (take an average across all folds/seeds and print), run the following command (after running all experiments):
 
-```
-python results/process_results.py --model <MODEL_NAME> --dataset <DATASET_NAME>
+```bash
+cd logs
+bash results.sh
 ```
 
 **Note** For multi-fold datasets, we run experiments using cross-validation and then report average results on each seed. 
