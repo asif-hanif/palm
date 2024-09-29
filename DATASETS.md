@@ -104,72 +104,112 @@ huggingface_hub.snapshot_download(repo_id="MahiA/CREMA-D", repo_type="dataset", 
 <br>
 
 # [ESC50](https://github.com/karolpiczak/ESC-50)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/ESC50
-mv ESC50 <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/ESC50", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "ESC50")
 ```
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
 <br>
 
 # [ESC50-Actions](https://github.com/karolpiczak/ESC-50)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/ESC50-Actions
-mv ESC50-Actions <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/ESC50-Actions", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "ESC50-Actions")
 ```
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
 <br>
 
 # [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/GT-Music-Genre
-mv GT-Music-Genre <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/GT-Music-Genre", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "GT-Music-Genre")
 ```
-
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
 <br>
 
 # [NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/NS-Instruments
-mv NS-Instruments <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/NS-Instruments", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "NS-Instruments")
 ```
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
 <br>
 
 # [RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/RAVDESS
-mv RAVDESS <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/RAVDESS", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "RAVDESS")
 ```
-
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
 <br>
 
 # [SESA](https://zenodo.org/records/3519845)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/SESA
-mv SESA <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/SESA", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "SESA")
 ```
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
 <br>
 
 # [TUT2017](https://zenodo.org/records/400515)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/TUT2017
-mv TUT2017 <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/TUT2017", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "TUT2017")
 ```
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 
 <br>
@@ -177,19 +217,33 @@ mv TUT2017 <PATH/Audio-Datasets/>
 <br>
 
 # [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/UrbanSound8K
-mv UrbanSound8K <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/UrbanSound8K", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "UrbanSound8K")
 ```
-
-
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
 
 <br>
 <hr>
 <br>
 
 # [VocalSound](https://github.com/YuanGongND/vocalsound)
-```bash 
-git clone https://huggingface.co/datasets/MahiA/VocalSound
-mv VocalSound <PATH/Audio-Datasets/>
+```python
+import os
+import huggingface_hub
+audio_datasets_path = "DATASET_PATH/Audio-Datasets"
+if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
+huggingface_hub.snapshot_download(repo_id="MahiA/VocalSound", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "VocalSound")
 ```
+|Type | Classes | Split | Size |
+|:-- |:--: |:--: | :--: |
+| Emotion Recognition | 6 | Train-Test | 68 MB |
+
+<br>
+<hr>
+<br>
