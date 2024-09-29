@@ -177,6 +177,13 @@ cd logs
 bash results.sh
 ```
 
+<details>
+<summary>Sample Output</summary>
+
+![main figure](/media/results_output.png)
+
+</details>
+
 **Note** For multi-fold datasets, we run experiments using cross-validation and then report average results on each seed. 
 
 </br>
