@@ -1,0 +1,35 @@
+{
+  "Beijing-Opera": [
+    0.1321
+  ],
+  "CREMA-D": [
+    0.172
+  ],
+  "ESC50-Actions": [
+    0.6138
+  ],
+  "ESC50": [
+    0.4478
+  ],
+  "GT-Music-Genre": [
+    0.2807
+  ],
+  "NS-Instruments": [
+    0.26
+  ],
+  "RAVDESS": [
+    0.0771
+  ],
+  "SESA": [
+    0.6827
+  ],
+  "TUT2017": [
+    0.1795
+  ],
+  "UrbanSound8K": [
+    0.5144
+  ],
+  "VocalSound": [
+    0.3834
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "seed_0": {
+    "accuracy": 0.941,
+    "f1_score": 0.9399,
+    "precision": 0.9497,
+    "recall": 0.941,
+    "avg_loss": 0.2059,
+    "epoch": 49
+  },
+  "seed_1": {
+    "accuracy": 0.939,
+    "f1_score": 0.9369,
+    "precision": 0.9471,
+    "recall": 0.939,
+    "avg_loss": 0.2297,
+    "epoch": 49
+  },
+  "seed_2": {
+    "accuracy": 0.9345,
+    "f1_score": 0.9335,
+    "precision": 0.9437,
+    "recall": 0.9345,
+    "avg_loss": 0.2171,
+    "epoch": 49
+  }
+}

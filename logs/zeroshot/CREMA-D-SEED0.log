@@ -1,0 +1,110 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PENGI_ZEROSHOT
+Dataset:  CREMA-D
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/CREMA-D
+
+Number of Classes: 6
+
+Number of Shots: 16
+
+Total Number of Samples: 96
+
+Classnames: ['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad']
+
+Label to Classname: {0: 'anger', 1: 'disgust', 2: 'fear', 3: 'happy', 4: 'neutral', 5: 'sad'}
+
+Classname to Label: {'anger': 0, 'disgust': 1, 'fear': 2, 'happy': 3, 'neutral': 4, 'sad': 5}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/CREMA-D
+
+Number of Classes: 6
+
+Number of Shots: -1
+
+Total Number of Samples: 1489
+
+Classnames: ['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad']
+
+Label to Classname: {0: 'anger', 1: 'disgust', 2: 'fear', 3: 'happy', 4: 'neutral', 5: 'sad'}
+
+Classname to Label: {'anger': 0, 'disgust': 1, 'fear': 2, 'happy': 3, 'neutral': 4, 'sad': 5}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  anger.', 'The is a recording of  disgust.', 'The is a recording of  fear.', 'The is a recording of  happy.', 'The is a recording of  neutral.', 'The is a recording of  sad.']
+###################################################################
+
+
+args:  Namespace(batch_size=16, classnames=['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/CREMA-D', device=device(type='cuda'), do_logging=True, eval_only=True, exp_name='CREMA-D', freq_test_model=10, json_file_path='logs/pengi_zeroshot/CREMA-D.json', log_dir='logs/pengi_zeroshot', lr=0.05, model_name='pengi_zeroshot', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f6c45c1de80>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/CREMA-D', seed=0, spec_aug=False, start_epoch=0)
+
+
+Evaluating the model ...
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+  8%|8         | 1/12 [00:06<01:13,  6.65s/it]
+ 17%|#6        | 2/12 [00:06<00:28,  2.85s/it]
+ 25%|##5       | 3/12 [00:07<00:14,  1.66s/it]
+ 33%|###3      | 4/12 [00:07<00:08,  1.08s/it]
+ 42%|####1     | 5/12 [00:13<00:19,  2.76s/it]
+ 50%|#####     | 6/12 [00:13<00:11,  1.88s/it]
+ 58%|#####8    | 7/12 [00:13<00:06,  1.34s/it]
+ 67%|######6   | 8/12 [00:13<00:03,  1.04it/s]
+ 75%|#######5  | 9/12 [00:19<00:07,  2.44s/it]
+ 83%|########3 | 10/12 [00:19<00:03,  1.74s/it]
+ 92%|#########1| 11/12 [00:19<00:01,  1.28s/it]
+100%|##########| 12/12 [00:19<00:00,  1.08it/s]
+100%|##########| 12/12 [00:20<00:00,  1.67s/it]
+
+
+Time & Date = 10:21 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 20 Seconds
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Accuracy             = 0.2310
+F1-Score             = 0.1720
+Precision            = 0.2026
+Recall               = 0.2609
+Average Loss         = 2.8830
+
+
+Saving Results ...
+Results Saved
+
+

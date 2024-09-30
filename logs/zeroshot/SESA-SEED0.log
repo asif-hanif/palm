@@ -1,0 +1,95 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 09:10 PM , 10_Jun_2024  GST
+
+
+
+Model:    ZEROSHOT
+Dataset:  SESA
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/SESA
+
+Number of Classes: 4
+
+Number of Shots: 16
+
+Total Number of Samples: 64
+
+Classnames: ['casual', 'explosion', 'gunshot', 'siren']
+
+Label to Classname: {0: 'casual', 1: 'explosion', 2: 'gunshot', 3: 'siren'}
+
+Classname to Label: {'casual': 0, 'explosion': 1, 'gunshot': 2, 'siren': 3}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/SESA
+
+Number of Classes: 4
+
+Number of Shots: -1
+
+Total Number of Samples: 105
+
+Classnames: ['casual', 'explosion', 'gunshot', 'siren']
+
+Label to Classname: {0: 'casual', 1: 'explosion', 2: 'gunshot', 3: 'siren'}
+
+Classname to Label: {'casual': 0, 'explosion': 1, 'gunshot': 2, 'siren': 3}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  casual.', 'The is a recording of  explosion.', 'The is a recording of  gunshot.', 'The is a recording of  siren.']
+###################################################################
+
+
+args:  Namespace(batch_size=16, classnames=['casual', 'explosion', 'gunshot', 'siren'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/SESA', device=device(type='cuda'), do_logging=True, eval_only=True, exp_name='SESA', freq_test_model=10, json_file_path='logs/zeroshot/SESA.json', log_dir='logs/zeroshot', lr=0.05, model_name='zeroshot', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7fad554ea160>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, save_model_path='REDACTED/Audio-Datasets/SESA', seed=0, spec_aug=False, start_epoch=0)
+
+
+Evaluating the model ...
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+100%|##########| 1/1 [00:06<00:00,  6.19s/it]
+100%|##########| 1/1 [00:06<00:00,  6.38s/it]
+
+
+Time & Date = 09:10 PM , 10_Jun_2024  GST
+
+Total Time => 0 Hours : 0 Minutes : 6 Seconds
+
+
+Accuracy             = 0.7238
+F1-Score             = 0.6827
+Precision            = 0.6941
+Recall               = 0.7508
+Average Loss         = 1.3722
+
+
+Saving Results ...
+Results Saved
+
+

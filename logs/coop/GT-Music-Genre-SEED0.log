@@ -1,0 +1,211 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    COOP
+Dataset:  GT-Music-Genre
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/GT-Music-Genre
+
+Number of Classes: 10
+
+Number of Shots: 16
+
+Total Number of Samples: 160
+
+Classnames: ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
+
+Label to Classname: {0: 'blues', 1: 'classical', 2: 'country', 3: 'disco', 4: 'hiphop', 5: 'jazz', 6: 'metal', 7: 'pop', 8: 'reggae', 9: 'rock'}
+
+Classname to Label: {'blues': 0, 'classical': 1, 'country': 2, 'disco': 3, 'hiphop': 4, 'jazz': 5, 'metal': 6, 'pop': 7, 'reggae': 8, 'rock': 9}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/GT-Music-Genre
+
+Number of Classes: 10
+
+Number of Shots: -1
+
+Total Number of Samples: 200
+
+Classnames: ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
+
+Label to Classname: {0: 'blues', 1: 'classical', 2: 'country', 3: 'disco', 4: 'hiphop', 5: 'jazz', 6: 'metal', 7: 'pop', 8: 'reggae', 9: 'rock'}
+
+Classname to Label: {'blues': 0, 'classical': 1, 'country': 2, 'disco': 3, 'hiphop': 4, 'jazz': 5, 'metal': 6, 'pop': 7, 'reggae': 8, 'rock': 9}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a Generic Context for Coop ...
+args:  Namespace(batch_size=16, classnames=['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock'], ctx_dim=512, dataset_root='REDACTED/Audio-Datasets/GT-Music-Genre', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='GT-Music-Genre', freq_test_model=10, json_file_path='logs/coop/GT-Music-Genre.json', log_dir='logs/coop', lr=0.05, model_name='coop', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f5274feee80>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/GT-Music-Genre', seed=0, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:04<03:21,  4.10s/it]
+  4%|4         | 2/50 [00:07<03:08,  3.93s/it]
+  6%|6         | 3/50 [00:11<03:01,  3.86s/it]
+  8%|8         | 4/50 [00:15<03:00,  3.92s/it]
+ 10%|#         | 5/50 [00:19<03:00,  4.01s/it]
+ 12%|#2        | 6/50 [00:23<02:54,  3.96s/it]
+ 14%|#4        | 7/50 [00:27<02:49,  3.95s/it]
+ 16%|#6        | 8/50 [00:31<02:48,  4.01s/it]
+ 18%|#8        | 9/50 [00:35<02:42,  3.96s/it]
+
+Epoch 10/50
+
+Accuracy             = 0.6188
+F1-Score             = 0.6038
+Precision            = 0.6115
+Recall               = 0.6188
+Average Loss         = 1.2355
+
+
+
+ 20%|##        | 10/50 [00:39<02:37,  3.95s/it]
+ 22%|##2       | 11/50 [00:43<02:32,  3.92s/it]
+ 24%|##4       | 12/50 [00:47<02:27,  3.87s/it]
+ 26%|##6       | 13/50 [00:51<02:25,  3.92s/it]
+ 28%|##8       | 14/50 [00:54<02:19,  3.87s/it]
+ 30%|###       | 15/50 [00:58<02:14,  3.84s/it]
+ 32%|###2      | 16/50 [01:02<02:13,  3.92s/it]
+ 34%|###4      | 17/50 [01:06<02:08,  3.88s/it]
+ 36%|###6      | 18/50 [01:10<02:04,  3.89s/it]
+ 38%|###8      | 19/50 [01:14<02:01,  3.91s/it]
+
+Epoch 20/50
+
+Accuracy             = 0.6438
+F1-Score             = 0.6366
+Precision            = 0.6438
+Recall               = 0.6438
+Average Loss         = 0.8991
+
+
+
+ 40%|####      | 20/50 [01:18<01:56,  3.89s/it]
+ 42%|####2     | 21/50 [01:22<01:53,  3.90s/it]
+ 44%|####4     | 22/50 [01:26<01:48,  3.88s/it]
+ 46%|####6     | 23/50 [01:30<01:45,  3.89s/it]
+ 48%|####8     | 24/50 [01:34<01:42,  3.94s/it]
+ 50%|#####     | 25/50 [01:37<01:37,  3.91s/it]
+ 52%|#####2    | 26/50 [01:41<01:33,  3.88s/it]
+ 54%|#####4    | 27/50 [01:45<01:30,  3.93s/it]
+ 56%|#####6    | 28/50 [01:49<01:26,  3.91s/it]
+ 58%|#####8    | 29/50 [01:53<01:22,  3.92s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.7250
+F1-Score             = 0.7269
+Precision            = 0.7442
+Recall               = 0.7250
+Average Loss         = 0.8079
+
+
+
+ 60%|######    | 30/50 [01:57<01:18,  3.90s/it]
+ 62%|######2   | 31/50 [02:01<01:14,  3.94s/it]
+ 64%|######4   | 32/50 [02:05<01:11,  3.96s/it]
+ 66%|######6   | 33/50 [02:09<01:06,  3.89s/it]
+ 68%|######8   | 34/50 [02:13<01:03,  3.96s/it]
+ 70%|#######   | 35/50 [02:17<00:59,  3.97s/it]
+ 72%|#######2  | 36/50 [02:21<00:54,  3.90s/it]
+ 74%|#######4  | 37/50 [02:25<00:51,  3.93s/it]
+ 76%|#######6  | 38/50 [02:29<00:47,  3.99s/it]
+ 78%|#######8  | 39/50 [02:32<00:43,  3.92s/it]
+
+Epoch 40/50
+
+Accuracy             = 0.7250
+F1-Score             = 0.7116
+Precision            = 0.7284
+Recall               = 0.7250
+Average Loss         = 0.8062
+
+
+
+ 80%|########  | 40/50 [02:36<00:39,  3.93s/it]
+ 82%|########2 | 41/50 [02:40<00:35,  3.90s/it]
+ 84%|########4 | 42/50 [02:44<00:31,  3.89s/it]
+ 86%|########6 | 43/50 [02:48<00:27,  3.96s/it]
+ 88%|########8 | 44/50 [02:52<00:23,  3.98s/it]
+ 90%|######### | 45/50 [02:56<00:19,  3.99s/it]
+ 92%|#########2| 46/50 [03:00<00:15,  3.98s/it]
+ 94%|#########3| 47/50 [03:04<00:11,  3.89s/it]
+ 96%|#########6| 48/50 [03:08<00:07,  3.90s/it]
+ 98%|#########8| 49/50 [03:12<00:03,  3.95s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.7375
+F1-Score             = 0.7203
+Precision            = 0.7326
+Recall               = 0.7375
+Average Loss         = 0.7059
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/2 [00:00<?, ?it/s][A
+
+ 50%|#####     | 1/2 [00:07<00:07,  7.99s/it][A
+
+100%|##########| 2/2 [00:08<00:00,  3.35s/it][A
+100%|##########| 2/2 [00:08<00:00,  4.19s/it]
+
+
+Time & Date = 10:55 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 9 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.7250
+F1-Score             = 0.7190
+Precision            = 0.7102
+Recall               = 0.7397
+Average Loss         = 0.7874
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [03:25<00:00,  6.68s/it]
+100%|##########| 50/50 [03:25<00:00,  4.11s/it]
+
+
+Time & Date = 10:55 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 3 Minutes : 25 Seconds
+
+

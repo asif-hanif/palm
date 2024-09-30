@@ -1,0 +1,231 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PALM_TEXT
+Dataset:  CREMA-D
+Seed:     2
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/CREMA-D
+
+Number of Classes: 6
+
+Number of Shots: 16
+
+Total Number of Samples: 96
+
+Classnames: ['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad']
+
+Label to Classname: {0: 'anger', 1: 'disgust', 2: 'fear', 3: 'happy', 4: 'neutral', 5: 'sad'}
+
+Classname to Label: {'anger': 0, 'disgust': 1, 'fear': 2, 'happy': 3, 'neutral': 4, 'sad': 5}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/CREMA-D
+
+Number of Classes: 6
+
+Number of Shots: -1
+
+Total Number of Samples: 1489
+
+Classnames: ['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad']
+
+Label to Classname: {0: 'anger', 1: 'disgust', 2: 'fear', 3: 'happy', 4: 'neutral', 5: 'sad'}
+
+Classname to Label: {'anger': 0, 'disgust': 1, 'fear': 2, 'happy': 3, 'neutral': 4, 'sad': 5}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a generic context
+args:  Namespace(batch_size=16, classnames=['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/CREMA-D', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='CREMA-D', freq_test_model=10, json_file_path='logs/palm_text/CREMA-D.json', log_dir='logs/palm_text', lr=0.05, model_name='palm_text', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f81a7afde80>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/CREMA-D', seed=2, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:03<02:31,  3.09s/it]
+  4%|4         | 2/50 [00:06<02:23,  3.00s/it]
+  6%|6         | 3/50 [00:09<02:21,  3.01s/it]
+  8%|8         | 4/50 [00:12<02:19,  3.03s/it]
+ 10%|#         | 5/50 [00:14<02:13,  2.98s/it]
+ 12%|#2        | 6/50 [00:18<02:14,  3.05s/it]
+ 14%|#4        | 7/50 [00:21<02:12,  3.07s/it]
+ 16%|#6        | 8/50 [00:24<02:05,  3.00s/it]
+ 18%|#8        | 9/50 [00:26<02:00,  2.94s/it]
+
+Epoch 10/50
+
+Accuracy             = 0.3750
+F1-Score             = 0.3436
+Precision            = 0.3569
+Recall               = 0.3750
+Average Loss         = 2.3894
+
+
+
+ 20%|##        | 10/50 [00:29<01:56,  2.92s/it]
+ 22%|##2       | 11/50 [00:32<01:54,  2.94s/it]
+ 24%|##4       | 12/50 [00:35<01:50,  2.92s/it]
+ 26%|##6       | 13/50 [00:38<01:48,  2.92s/it]
+ 28%|##8       | 14/50 [00:41<01:44,  2.91s/it]
+ 30%|###       | 15/50 [00:44<01:42,  2.92s/it]
+ 32%|###2      | 16/50 [00:47<01:38,  2.90s/it]
+ 34%|###4      | 17/50 [00:50<01:35,  2.89s/it]
+ 36%|###6      | 18/50 [00:53<01:32,  2.89s/it]
+ 38%|###8      | 19/50 [00:55<01:29,  2.88s/it]
+
+Epoch 20/50
+
+Accuracy             = 0.4062
+F1-Score             = 0.3930
+Precision            = 0.4527
+Recall               = 0.4062
+Average Loss         = 1.7583
+
+
+
+ 40%|####      | 20/50 [00:58<01:26,  2.89s/it]
+ 42%|####2     | 21/50 [01:01<01:23,  2.89s/it]
+ 44%|####4     | 22/50 [01:04<01:21,  2.90s/it]
+ 46%|####6     | 23/50 [01:07<01:18,  2.91s/it]
+ 48%|####8     | 24/50 [01:10<01:15,  2.91s/it]
+ 50%|#####     | 25/50 [01:13<01:12,  2.88s/it]
+ 52%|#####2    | 26/50 [01:16<01:08,  2.87s/it]
+ 54%|#####4    | 27/50 [01:18<01:05,  2.86s/it]
+ 56%|#####6    | 28/50 [01:21<01:02,  2.85s/it]
+ 58%|#####8    | 29/50 [01:24<00:59,  2.85s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.4792
+F1-Score             = 0.4748
+Precision            = 0.4777
+Recall               = 0.4792
+Average Loss         = 1.4790
+
+
+
+ 60%|######    | 30/50 [01:27<00:56,  2.84s/it]
+ 62%|######2   | 31/50 [01:30<00:54,  2.85s/it]
+ 64%|######4   | 32/50 [01:33<00:52,  2.93s/it]
+ 66%|######6   | 33/50 [01:36<00:50,  2.96s/it]
+ 68%|######8   | 34/50 [01:39<00:48,  3.03s/it]
+ 70%|#######   | 35/50 [01:42<00:44,  2.97s/it]
+ 72%|#######2  | 36/50 [01:45<00:41,  2.95s/it]
+ 74%|#######4  | 37/50 [01:48<00:37,  2.92s/it]
+ 76%|#######6  | 38/50 [01:51<00:34,  2.91s/it]
+ 78%|#######8  | 39/50 [01:54<00:32,  2.92s/it]
+
+Epoch 40/50
+
+Accuracy             = 0.5312
+F1-Score             = 0.5295
+Precision            = 0.5511
+Recall               = 0.5312
+Average Loss         = 1.3245
+
+
+
+ 80%|########  | 40/50 [01:57<00:29,  2.96s/it]
+ 82%|########2 | 41/50 [02:00<00:26,  2.95s/it]
+ 84%|########4 | 42/50 [02:03<00:23,  2.96s/it]
+ 86%|########6 | 43/50 [02:05<00:20,  2.93s/it]
+ 88%|########8 | 44/50 [02:08<00:17,  2.91s/it]
+ 90%|######### | 45/50 [02:11<00:14,  2.92s/it]
+ 92%|#########2| 46/50 [02:14<00:11,  2.92s/it]
+ 94%|#########3| 47/50 [02:17<00:08,  2.90s/it]
+ 96%|#########6| 48/50 [02:20<00:05,  2.88s/it]
+ 98%|#########8| 49/50 [02:23<00:02,  2.87s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.5625
+F1-Score             = 0.5464
+Precision            = 0.5876
+Recall               = 0.5625
+Average Loss         = 1.4094
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/12 [00:00<?, ?it/s][A
+
+  8%|8         | 1/12 [00:05<01:02,  5.71s/it][A
+
+ 17%|#6        | 2/12 [00:05<00:24,  2.46s/it][A
+
+ 25%|##5       | 3/12 [00:06<00:13,  1.45s/it][A
+
+ 33%|###3      | 4/12 [00:06<00:07,  1.06it/s][A
+
+ 42%|####1     | 5/12 [00:12<00:19,  2.85s/it][A
+
+ 50%|#####     | 6/12 [00:12<00:11,  1.94s/it][A
+
+ 58%|#####8    | 7/12 [00:12<00:06,  1.39s/it][A
+
+ 67%|######6   | 8/12 [00:13<00:04,  1.00s/it][A
+
+ 75%|#######5  | 9/12 [00:18<00:07,  2.45s/it][A
+
+ 83%|########3 | 10/12 [00:18<00:03,  1.74s/it][A
+
+ 92%|#########1| 11/12 [00:19<00:01,  1.28s/it][A
+
+100%|##########| 12/12 [00:19<00:00,  1.08it/s][A
+100%|##########| 12/12 [00:19<00:00,  1.63s/it]
+
+
+Time & Date = 10:41 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 20 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.2344
+F1-Score             = 0.1990
+Precision            = 0.2792
+Recall               = 0.2948
+Average Loss         = 2.7708
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [02:46<00:00,  8.98s/it]
+100%|##########| 50/50 [02:46<00:00,  3.33s/it]
+
+
+Time & Date = 10:41 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 2 Minutes : 46 Seconds
+
+

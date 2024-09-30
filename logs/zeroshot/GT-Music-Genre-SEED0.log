@@ -1,0 +1,100 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PENGI_ZEROSHOT
+Dataset:  GT-Music-Genre
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/GT-Music-Genre
+
+Number of Classes: 10
+
+Number of Shots: 16
+
+Total Number of Samples: 160
+
+Classnames: ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
+
+Label to Classname: {0: 'blues', 1: 'classical', 2: 'country', 3: 'disco', 4: 'hiphop', 5: 'jazz', 6: 'metal', 7: 'pop', 8: 'reggae', 9: 'rock'}
+
+Classname to Label: {'blues': 0, 'classical': 1, 'country': 2, 'disco': 3, 'hiphop': 4, 'jazz': 5, 'metal': 6, 'pop': 7, 'reggae': 8, 'rock': 9}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/GT-Music-Genre
+
+Number of Classes: 10
+
+Number of Shots: -1
+
+Total Number of Samples: 200
+
+Classnames: ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
+
+Label to Classname: {0: 'blues', 1: 'classical', 2: 'country', 3: 'disco', 4: 'hiphop', 5: 'jazz', 6: 'metal', 7: 'pop', 8: 'reggae', 9: 'rock'}
+
+Classname to Label: {'blues': 0, 'classical': 1, 'country': 2, 'disco': 3, 'hiphop': 4, 'jazz': 5, 'metal': 6, 'pop': 7, 'reggae': 8, 'rock': 9}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  blues.', 'The is a recording of  classical.', 'The is a recording of  country.', 'The is a recording of  disco.', 'The is a recording of  hiphop.', 'The is a recording of  jazz.', 'The is a recording of  metal.', 'The is a recording of  pop.', 'The is a recording of  reggae.', 'The is a recording of  rock.']
+###################################################################
+
+
+args:  Namespace(batch_size=16, classnames=['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/GT-Music-Genre', device=device(type='cuda'), do_logging=True, eval_only=True, exp_name='GT-Music-Genre', freq_test_model=10, json_file_path='logs/pengi_zeroshot/GT-Music-Genre.json', log_dir='logs/pengi_zeroshot', lr=0.05, model_name='pengi_zeroshot', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f7a6c9dde80>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/GT-Music-Genre', seed=0, spec_aug=False, start_epoch=0)
+
+
+Evaluating the model ...
+
+  0%|          | 0/2 [00:00<?, ?it/s]
+ 50%|#####     | 1/2 [00:08<00:08,  8.69s/it]
+100%|##########| 2/2 [00:08<00:00,  3.65s/it]
+100%|##########| 2/2 [00:09<00:00,  4.54s/it]
+
+
+Time & Date = 10:51 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 9 Seconds
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Accuracy             = 0.3250
+F1-Score             = 0.2807
+Precision            = 0.3092
+Recall               = 0.3406
+Average Loss         = 4.1713
+
+
+Saving Results ...
+Results Saved
+
+

@@ -1,0 +1,108 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PENGI_ZEROSHOT
+Dataset:  TUT2017
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/TUT2017
+
+Number of Classes: 15
+
+Number of Shots: 16
+
+Total Number of Samples: 240
+
+Classnames: ['beach', 'bus', 'cafe/restaurant', 'car', 'city_center', 'forest_path', 'grocery_store', 'home', 'library', 'metro_station', 'office', 'park', 'residential_area', 'train', 'tram']
+
+Label to Classname: {0: 'beach', 1: 'bus', 2: 'cafe/restaurant', 3: 'car', 4: 'city_center', 5: 'forest_path', 6: 'grocery_store', 7: 'home', 8: 'library', 9: 'metro_station', 10: 'office', 11: 'park', 12: 'residential_area', 13: 'train', 14: 'tram'}
+
+Classname to Label: {'beach': 0, 'bus': 1, 'cafe/restaurant': 2, 'car': 3, 'city_center': 4, 'forest_path': 5, 'grocery_store': 6, 'home': 7, 'library': 8, 'metro_station': 9, 'office': 10, 'park': 11, 'residential_area': 12, 'train': 13, 'tram': 14}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/TUT2017
+
+Number of Classes: 15
+
+Number of Shots: -1
+
+Total Number of Samples: 1170
+
+Classnames: ['beach', 'bus', 'cafe/restaurant', 'car', 'city_center', 'forest_path', 'grocery_store', 'home', 'library', 'metro_station', 'office', 'park', 'residential_area', 'train', 'tram']
+
+Label to Classname: {0: 'beach', 1: 'bus', 2: 'cafe/restaurant', 3: 'car', 4: 'city_center', 5: 'forest_path', 6: 'grocery_store', 7: 'home', 8: 'library', 9: 'metro_station', 10: 'office', 11: 'park', 12: 'residential_area', 13: 'train', 14: 'tram'}
+
+Classname to Label: {'beach': 0, 'bus': 1, 'cafe/restaurant': 2, 'car': 3, 'city_center': 4, 'forest_path': 5, 'grocery_store': 6, 'home': 7, 'library': 8, 'metro_station': 9, 'office': 10, 'park': 11, 'residential_area': 12, 'train': 13, 'tram': 14}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  beach.', 'The is a recording of  bus.', 'The is a recording of  cafe/restaurant.', 'The is a recording of  car.', 'The is a recording of  city_center.', 'The is a recording of  forest_path.', 'The is a recording of  grocery_store.', 'The is a recording of  home.', 'The is a recording of  library.', 'The is a recording of  metro_station.', 'The is a recording of  office.', 'The is a recording of  park.', 'The is a recording of  residential_area.', 'The is a recording of  train.', 'The is a recording of  tram.']
+###################################################################
+
+
+args:  Namespace(batch_size=16, classnames=['beach', 'bus', 'cafe/restaurant', 'car', 'city_center', 'forest_path', 'grocery_store', 'home', 'library', 'metro_station', 'office', 'park', 'residential_area', 'train', 'tram'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/TUT2017', device=device(type='cuda'), do_logging=True, eval_only=True, exp_name='TUT2017-FOLD1', freq_test_model=10, json_file_path='logs/pengi_zeroshot/TUT2017-FOLD1.json', log_dir='logs/pengi_zeroshot', lr=0.05, model_name='pengi_zeroshot', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f7e7519eee0>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/TUT2017', seed=0, spec_aug=False, start_epoch=0)
+
+
+Evaluating the model ...
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|#         | 1/10 [00:03<00:35,  3.97s/it]
+ 20%|##        | 2/10 [00:04<00:13,  1.74s/it]
+ 30%|###       | 3/10 [00:04<00:07,  1.05s/it]
+ 40%|####      | 4/10 [00:04<00:04,  1.42it/s]
+ 50%|#####     | 5/10 [00:07<00:07,  1.55s/it]
+ 60%|######    | 6/10 [00:07<00:04,  1.08s/it]
+ 70%|#######   | 7/10 [00:07<00:02,  1.25it/s]
+ 80%|########  | 8/10 [00:08<00:01,  1.66it/s]
+ 90%|######### | 9/10 [00:11<00:01,  1.35s/it]
+100%|##########| 10/10 [00:11<00:00,  1.02it/s]
+100%|##########| 10/10 [00:11<00:00,  1.15s/it]
+
+
+Time & Date = 10:12 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 12 Seconds
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Accuracy             = 0.2453
+F1-Score             = 0.1821
+Precision            = 0.2455
+Recall               = 0.2453
+Average Loss         = 3.5917
+
+
+Saving Results ...
+Results Saved
+
+

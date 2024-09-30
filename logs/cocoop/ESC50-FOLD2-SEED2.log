@@ -1,0 +1,219 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 03:20 PM , 13_Jun_2024  GST
+
+
+
+Model:    COCOOP
+Dataset:  ESC50
+Seed:     2
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/ESC50
+
+Number of Classes: 50
+
+Number of Shots: 16
+
+Total Number of Samples: 800
+
+Classnames: ['airplane', 'breathing', 'brushing teeth', 'can opening', 'car horn', 'cat', 'chainsaw', 'chirping birds', 'church bells', 'clapping', 'clock alarm', 'clock tick', 'coughing', 'cow', 'crackling fire', 'crickets', 'crow', 'crying baby', 'dog', 'door wood creaks', 'door wood knock', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'glass breaking', 'hand saw', 'helicopter', 'hen', 'insects', 'keyboard typing', 'laughing', 'mouse click', 'pig', 'pouring water', 'rain', 'rooster', 'sea waves', 'sheep', 'siren', 'sneezing', 'snoring', 'thunderstorm', 'toilet flush', 'train', 'vacuum cleaner', 'washing machine', 'water drops', 'wind']
+
+Label to Classname: {0: 'airplane', 1: 'breathing', 2: 'brushing teeth', 3: 'can opening', 4: 'car horn', 5: 'cat', 6: 'chainsaw', 7: 'chirping birds', 8: 'church bells', 9: 'clapping', 10: 'clock alarm', 11: 'clock tick', 12: 'coughing', 13: 'cow', 14: 'crackling fire', 15: 'crickets', 16: 'crow', 17: 'crying baby', 18: 'dog', 19: 'door wood creaks', 20: 'door wood knock', 21: 'drinking sipping', 22: 'engine', 23: 'fireworks', 24: 'footsteps', 25: 'frog', 26: 'glass breaking', 27: 'hand saw', 28: 'helicopter', 29: 'hen', 30: 'insects', 31: 'keyboard typing', 32: 'laughing', 33: 'mouse click', 34: 'pig', 35: 'pouring water', 36: 'rain', 37: 'rooster', 38: 'sea waves', 39: 'sheep', 40: 'siren', 41: 'sneezing', 42: 'snoring', 43: 'thunderstorm', 44: 'toilet flush', 45: 'train', 46: 'vacuum cleaner', 47: 'washing machine', 48: 'water drops', 49: 'wind'}
+
+Classname to Label: {'airplane': 0, 'breathing': 1, 'brushing teeth': 2, 'can opening': 3, 'car horn': 4, 'cat': 5, 'chainsaw': 6, 'chirping birds': 7, 'church bells': 8, 'clapping': 9, 'clock alarm': 10, 'clock tick': 11, 'coughing': 12, 'cow': 13, 'crackling fire': 14, 'crickets': 15, 'crow': 16, 'crying baby': 17, 'dog': 18, 'door wood creaks': 19, 'door wood knock': 20, 'drinking sipping': 21, 'engine': 22, 'fireworks': 23, 'footsteps': 24, 'frog': 25, 'glass breaking': 26, 'hand saw': 27, 'helicopter': 28, 'hen': 29, 'insects': 30, 'keyboard typing': 31, 'laughing': 32, 'mouse click': 33, 'pig': 34, 'pouring water': 35, 'rain': 36, 'rooster': 37, 'sea waves': 38, 'sheep': 39, 'siren': 40, 'sneezing': 41, 'snoring': 42, 'thunderstorm': 43, 'toilet flush': 44, 'train': 45, 'vacuum cleaner': 46, 'washing machine': 47, 'water drops': 48, 'wind': 49}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/ESC50
+
+Number of Classes: 50
+
+Number of Shots: -1
+
+Total Number of Samples: 400
+
+Classnames: ['airplane', 'breathing', 'brushing teeth', 'can opening', 'car horn', 'cat', 'chainsaw', 'chirping birds', 'church bells', 'clapping', 'clock alarm', 'clock tick', 'coughing', 'cow', 'crackling fire', 'crickets', 'crow', 'crying baby', 'dog', 'door wood creaks', 'door wood knock', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'glass breaking', 'hand saw', 'helicopter', 'hen', 'insects', 'keyboard typing', 'laughing', 'mouse click', 'pig', 'pouring water', 'rain', 'rooster', 'sea waves', 'sheep', 'siren', 'sneezing', 'snoring', 'thunderstorm', 'toilet flush', 'train', 'vacuum cleaner', 'washing machine', 'water drops', 'wind']
+
+Label to Classname: {0: 'airplane', 1: 'breathing', 2: 'brushing teeth', 3: 'can opening', 4: 'car horn', 5: 'cat', 6: 'chainsaw', 7: 'chirping birds', 8: 'church bells', 9: 'clapping', 10: 'clock alarm', 11: 'clock tick', 12: 'coughing', 13: 'cow', 14: 'crackling fire', 15: 'crickets', 16: 'crow', 17: 'crying baby', 18: 'dog', 19: 'door wood creaks', 20: 'door wood knock', 21: 'drinking sipping', 22: 'engine', 23: 'fireworks', 24: 'footsteps', 25: 'frog', 26: 'glass breaking', 27: 'hand saw', 28: 'helicopter', 29: 'hen', 30: 'insects', 31: 'keyboard typing', 32: 'laughing', 33: 'mouse click', 34: 'pig', 35: 'pouring water', 36: 'rain', 37: 'rooster', 38: 'sea waves', 39: 'sheep', 40: 'siren', 41: 'sneezing', 42: 'snoring', 43: 'thunderstorm', 44: 'toilet flush', 45: 'train', 46: 'vacuum cleaner', 47: 'washing machine', 48: 'water drops', 49: 'wind'}
+
+Classname to Label: {'airplane': 0, 'breathing': 1, 'brushing teeth': 2, 'can opening': 3, 'car horn': 4, 'cat': 5, 'chainsaw': 6, 'chirping birds': 7, 'church bells': 8, 'clapping': 9, 'clock alarm': 10, 'clock tick': 11, 'coughing': 12, 'cow': 13, 'crackling fire': 14, 'crickets': 15, 'crow': 16, 'crying baby': 17, 'dog': 18, 'door wood creaks': 19, 'door wood knock': 20, 'drinking sipping': 21, 'engine': 22, 'fireworks': 23, 'footsteps': 24, 'frog': 25, 'glass breaking': 26, 'hand saw': 27, 'helicopter': 28, 'hen': 29, 'insects': 30, 'keyboard typing': 31, 'laughing': 32, 'mouse click': 33, 'pig': 34, 'pouring water': 35, 'rain': 36, 'rooster': 37, 'sea waves': 38, 'sheep': 39, 'siren': 40, 'sneezing': 41, 'snoring': 42, 'thunderstorm': 43, 'toilet flush': 44, 'train': 45, 'vacuum cleaner': 46, 'washing machine': 47, 'water drops': 48, 'wind': 49}
+########################################################
+
+
+Using Method: 'COCOOP'
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a Generic Context for COCOOP ...
+args:  Namespace(batch_size=16, classnames=['airplane', 'breathing', 'brushing teeth', 'can opening', 'car horn', 'cat', 'chainsaw', 'chirping birds', 'church bells', 'clapping', 'clock alarm', 'clock tick', 'coughing', 'cow', 'crackling fire', 'crickets', 'crow', 'crying baby', 'dog', 'door wood creaks', 'door wood knock', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'glass breaking', 'hand saw', 'helicopter', 'hen', 'insects', 'keyboard typing', 'laughing', 'mouse click', 'pig', 'pouring water', 'rain', 'rooster', 'sea waves', 'sheep', 'siren', 'sneezing', 'snoring', 'thunderstorm', 'toilet flush', 'train', 'vacuum cleaner', 'washing machine', 'water drops', 'wind'], ctx_dim=512, dataset_root='REDACTED/Audio-Datasets/ESC50', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='ESC50-FOLD2', freq_test_model=10, json_file_path='logs/cocoop/ESC50-FOLD2.json', log_dir='logs/cocoop', lr=0.05, model_name='cocoop', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7fd470ab2160>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, save_model_path='REDACTED/Audio-Datasets/ESC50', seed=2, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:37<30:53, 37.82s/it]
+  4%|4         | 2/50 [01:14<29:52, 37.34s/it]
+  6%|6         | 3/50 [01:51<29:07, 37.18s/it]
+  8%|8         | 4/50 [02:28<28:29, 37.16s/it]
+ 10%|#         | 5/50 [03:05<27:48, 37.08s/it]
+ 12%|#2        | 6/50 [03:42<27:09, 37.04s/it]
+ 14%|#4        | 7/50 [04:19<26:32, 37.04s/it]
+ 16%|#6        | 8/50 [04:57<26:01, 37.17s/it]
+ 18%|#8        | 9/50 [05:34<25:21, 37.11s/it]
+
+Epoch 10/50
+
+Accuracy             = 0.8588
+F1-Score             = 0.8588
+Precision            = 0.8678
+Recall               = 0.8588
+Average Loss         = 0.5376
+
+
+
+ 20%|##        | 10/50 [06:11<24:43, 37.09s/it]
+ 22%|##2       | 11/50 [06:48<24:08, 37.13s/it]
+ 24%|##4       | 12/50 [07:25<23:28, 37.08s/it]
+ 26%|##6       | 13/50 [08:02<22:51, 37.06s/it]
+ 28%|##8       | 14/50 [08:39<22:14, 37.08s/it]
+ 30%|###       | 15/50 [09:16<21:39, 37.13s/it]
+ 32%|###2      | 16/50 [09:54<21:03, 37.15s/it]
+ 34%|###4      | 17/50 [10:31<20:25, 37.12s/it]
+ 36%|###6      | 18/50 [11:08<19:48, 37.13s/it]
+ 38%|###8      | 19/50 [11:45<19:08, 37.05s/it]
+
+Epoch 20/50
+
+Accuracy             = 0.9325
+F1-Score             = 0.9325
+Precision            = 0.9346
+Recall               = 0.9325
+Average Loss         = 0.2286
+
+
+
+ 40%|####      | 20/50 [12:22<18:29, 36.99s/it]
+ 42%|####2     | 21/50 [12:59<17:52, 36.99s/it]
+ 44%|####4     | 22/50 [13:36<17:15, 36.99s/it]
+ 46%|####6     | 23/50 [14:12<16:38, 36.97s/it]
+ 48%|####8     | 24/50 [14:49<16:01, 36.97s/it]
+ 50%|#####     | 25/50 [15:26<15:23, 36.95s/it]
+ 52%|#####2    | 26/50 [16:03<14:47, 36.96s/it]
+ 54%|#####4    | 27/50 [16:40<14:09, 36.92s/it]
+ 56%|#####6    | 28/50 [17:17<13:31, 36.89s/it]
+ 58%|#####8    | 29/50 [17:54<12:54, 36.89s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.9637
+F1-Score             = 0.9635
+Precision            = 0.9649
+Recall               = 0.9637
+Average Loss         = 0.1347
+
+
+
+ 60%|######    | 30/50 [18:31<12:18, 36.91s/it]
+ 62%|######2   | 31/50 [19:08<11:41, 36.93s/it]
+ 64%|######4   | 32/50 [19:45<11:05, 36.96s/it]
+ 66%|######6   | 33/50 [20:22<10:28, 36.96s/it]
+ 68%|######8   | 34/50 [20:59<09:52, 37.03s/it]
+ 70%|#######   | 35/50 [21:37<09:18, 37.20s/it]
+ 72%|#######2  | 36/50 [22:13<08:39, 37.10s/it]
+ 74%|#######4  | 37/50 [22:50<08:01, 37.05s/it]
+ 76%|#######6  | 38/50 [23:28<07:27, 37.27s/it]
+ 78%|#######8  | 39/50 [24:05<06:48, 37.15s/it]
+
+Epoch 40/50
+
+Accuracy             = 0.9762
+F1-Score             = 0.9762
+Precision            = 0.9779
+Recall               = 0.9762
+Average Loss         = 0.0957
+
+
+
+ 80%|########  | 40/50 [24:42<06:10, 37.05s/it]
+ 82%|########2 | 41/50 [25:19<05:33, 37.02s/it]
+ 84%|########4 | 42/50 [25:56<04:55, 36.95s/it]
+ 86%|########6 | 43/50 [26:32<04:18, 36.91s/it]
+ 88%|########8 | 44/50 [27:09<03:41, 36.93s/it]
+ 90%|######### | 45/50 [27:46<03:04, 36.93s/it]
+ 92%|#########2| 46/50 [28:23<02:27, 36.98s/it]
+ 94%|#########3| 47/50 [29:00<01:50, 36.95s/it]
+ 96%|#########6| 48/50 [29:38<01:14, 37.05s/it]
+ 98%|#########8| 49/50 [30:14<00:37, 37.02s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.9838
+F1-Score             = 0.9839
+Precision            = 0.9848
+Recall               = 0.9838
+Average Loss         = 0.0640
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/4 [00:00<?, ?it/s][A
+
+ 25%|##5       | 1/4 [00:04<00:12,  4.02s/it][A
+
+ 50%|#####     | 2/4 [00:06<00:06,  3.38s/it][A
+
+ 75%|#######5  | 3/4 [00:09<00:03,  3.20s/it][A
+
+100%|##########| 4/4 [00:10<00:00,  2.13s/it][A
+100%|##########| 4/4 [00:10<00:00,  2.65s/it]
+
+
+Time & Date = 03:51 PM , 13_Jun_2024  GST
+
+Total Time => 0 Hours : 0 Minutes : 11 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.9650
+F1-Score             = 0.9650
+Precision            = 0.9685
+Recall               = 0.9650
+Average Loss         = 0.1443
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [31:03<00:00, 40.35s/it]
+100%|##########| 50/50 [31:03<00:00, 37.26s/it]
+
+
+Time & Date = 03:51 PM , 13_Jun_2024  GST
+
+Total Time => 0 Hours : 31 Minutes : 3 Seconds
+
+

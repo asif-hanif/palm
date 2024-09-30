@@ -1,0 +1,120 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PENGI_ZEROSHOT
+Dataset:  VocalSound
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/VocalSound
+
+Number of Classes: 6
+
+Number of Shots: 16
+
+Total Number of Samples: 96
+
+Classnames: ['Cough', 'Laughter', 'Sigh', 'Sneeze', 'Sniff', 'Throat clearing']
+
+Label to Classname: {0: 'Cough', 1: 'Laughter', 2: 'Sigh', 3: 'Sneeze', 4: 'Sniff', 5: 'Throat clearing'}
+
+Classname to Label: {'Cough': 0, 'Laughter': 1, 'Sigh': 2, 'Sneeze': 3, 'Sniff': 4, 'Throat clearing': 5}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/VocalSound
+
+Number of Classes: 6
+
+Number of Shots: -1
+
+Total Number of Samples: 3591
+
+Classnames: ['Cough', 'Laughter', 'Sigh', 'Sneeze', 'Sniff', 'Throat clearing']
+
+Label to Classname: {0: 'Cough', 1: 'Laughter', 2: 'Sigh', 3: 'Sneeze', 4: 'Sniff', 5: 'Throat clearing'}
+
+Classname to Label: {'Cough': 0, 'Laughter': 1, 'Sigh': 2, 'Sneeze': 3, 'Sniff': 4, 'Throat clearing': 5}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  Cough.', 'The is a recording of  Laughter.', 'The is a recording of  Sigh.', 'The is a recording of  Sneeze.', 'The is a recording of  Sniff.', 'The is a recording of  Throat clearing.']
+###################################################################
+
+
+args:  Namespace(batch_size=16, classnames=['Cough', 'Laughter', 'Sigh', 'Sneeze', 'Sniff', 'Throat clearing'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/VocalSound', device=device(type='cuda'), do_logging=True, eval_only=True, exp_name='VocalSound', freq_test_model=10, json_file_path='logs/pengi_zeroshot/VocalSound.json', log_dir='logs/pengi_zeroshot', lr=0.05, model_name='pengi_zeroshot', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7ff89866de50>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/VocalSound', seed=0, spec_aug=False, start_epoch=0)
+
+
+Evaluating the model ...
+
+  0%|          | 0/29 [00:00<?, ?it/s]
+  3%|3         | 1/29 [00:03<01:38,  3.51s/it]
+  7%|6         | 2/29 [00:03<00:41,  1.54s/it]
+ 10%|#         | 3/29 [00:03<00:24,  1.07it/s]
+ 14%|#3        | 4/29 [00:04<00:15,  1.58it/s]
+ 17%|#7        | 5/29 [00:06<00:29,  1.24s/it]
+ 21%|##        | 6/29 [00:06<00:20,  1.13it/s]
+ 24%|##4       | 7/29 [00:06<00:14,  1.49it/s]
+ 28%|##7       | 8/29 [00:06<00:10,  1.95it/s]
+ 31%|###1      | 9/29 [00:09<00:21,  1.05s/it]
+ 34%|###4      | 10/29 [00:09<00:14,  1.28it/s]
+ 38%|###7      | 11/29 [00:09<00:11,  1.63it/s]
+ 41%|####1     | 12/29 [00:09<00:08,  2.08it/s]
+ 45%|####4     | 13/29 [00:11<00:16,  1.00s/it]
+ 48%|####8     | 14/29 [00:12<00:11,  1.33it/s]
+ 52%|#####1    | 15/29 [00:12<00:08,  1.67it/s]
+ 55%|#####5    | 16/29 [00:12<00:06,  2.12it/s]
+ 59%|#####8    | 17/29 [00:14<00:12,  1.02s/it]
+ 62%|######2   | 18/29 [00:15<00:08,  1.30it/s]
+ 66%|######5   | 19/29 [00:15<00:06,  1.64it/s]
+ 69%|######8   | 20/29 [00:15<00:04,  2.09it/s]
+ 72%|#######2  | 21/29 [00:17<00:08,  1.01s/it]
+ 76%|#######5  | 22/29 [00:17<00:05,  1.32it/s]
+ 79%|#######9  | 23/29 [00:18<00:03,  1.66it/s]
+ 83%|########2 | 24/29 [00:18<00:02,  2.11it/s]
+ 86%|########6 | 25/29 [00:20<00:04,  1.01s/it]
+ 90%|########9 | 26/29 [00:20<00:02,  1.31it/s]
+ 93%|#########3| 27/29 [00:21<00:01,  1.65it/s]
+ 97%|#########6| 28/29 [00:21<00:00,  2.11it/s]
+100%|##########| 29/29 [00:21<00:00,  1.35it/s]
+
+
+Time & Date = 06:10 AM , 10_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 22 Seconds
+
+
+Accuracy             = 0.4197
+F1-Score             = 0.3834
+Precision            = 0.4974
+Recall               = 0.4195
+Average Loss         = 1.7859
+
+
+Saving Results ...
+Results Saved
+
+

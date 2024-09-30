@@ -1,0 +1,102 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PENGI_ZEROSHOT
+Dataset:  RAVDESS
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/RAVDESS
+
+Number of Classes: 8
+
+Number of Shots: 16
+
+Total Number of Samples: 128
+
+Classnames: ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised']
+
+Label to Classname: {0: 'angry', 1: 'calm', 2: 'disgust', 3: 'fearful', 4: 'happy', 5: 'neutral', 6: 'sad', 7: 'surprised'}
+
+Classname to Label: {'angry': 0, 'calm': 1, 'disgust': 2, 'fearful': 3, 'happy': 4, 'neutral': 5, 'sad': 6, 'surprised': 7}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/RAVDESS
+
+Number of Classes: 8
+
+Number of Shots: -1
+
+Total Number of Samples: 491
+
+Classnames: ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised']
+
+Label to Classname: {0: 'angry', 1: 'calm', 2: 'disgust', 3: 'fearful', 4: 'happy', 5: 'neutral', 6: 'sad', 7: 'surprised'}
+
+Classname to Label: {'angry': 0, 'calm': 1, 'disgust': 2, 'fearful': 3, 'happy': 4, 'neutral': 5, 'sad': 6, 'surprised': 7}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  angry.', 'The is a recording of  calm.', 'The is a recording of  disgust.', 'The is a recording of  fearful.', 'The is a recording of  happy.', 'The is a recording of  neutral.', 'The is a recording of  sad.', 'The is a recording of  surprised.']
+###################################################################
+
+
+args:  Namespace(batch_size=16, classnames=['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/RAVDESS', device=device(type='cuda'), do_logging=True, eval_only=True, exp_name='RAVDESS', freq_test_model=10, json_file_path='logs/pengi_zeroshot/RAVDESS.json', log_dir='logs/pengi_zeroshot', lr=0.05, model_name='pengi_zeroshot', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f81361c4e50>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/RAVDESS', seed=0, spec_aug=False, start_epoch=0)
+
+
+Evaluating the model ...
+
+  0%|          | 0/4 [00:00<?, ?it/s]
+ 25%|##5       | 1/4 [00:04<00:14,  4.94s/it]
+ 50%|#####     | 2/4 [00:05<00:04,  2.15s/it]
+ 75%|#######5  | 3/4 [00:05<00:01,  1.29s/it]
+100%|##########| 4/4 [00:05<00:00,  1.19it/s]
+100%|##########| 4/4 [00:05<00:00,  1.46s/it]
+
+
+Time & Date = 11:46 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 6 Seconds
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Accuracy             = 0.1222
+F1-Score             = 0.0771
+Precision            = 0.2227
+Recall               = 0.1432
+Average Loss         = 3.9791
+
+
+Saving Results ...
+Results Saved
+
+

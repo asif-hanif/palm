@@ -1,0 +1,213 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 02:57 PM , 13_Jun_2024  GST
+
+
+
+Model:    COCOOP
+Dataset:  ESC50-Actions
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/ESC50-Actions
+
+Number of Classes: 10
+
+Number of Shots: 16
+
+Total Number of Samples: 160
+
+Classnames: ['breathing', 'brushing teeth', 'clapping', 'coughing', 'crying baby', 'drinking sipping', 'footsteps', 'laughing', 'sneezing', 'snoring']
+
+Label to Classname: {0: 'breathing', 1: 'brushing teeth', 2: 'clapping', 3: 'coughing', 4: 'crying baby', 5: 'drinking sipping', 6: 'footsteps', 7: 'laughing', 8: 'sneezing', 9: 'snoring'}
+
+Classname to Label: {'breathing': 0, 'brushing teeth': 1, 'clapping': 2, 'coughing': 3, 'crying baby': 4, 'drinking sipping': 5, 'footsteps': 6, 'laughing': 7, 'sneezing': 8, 'snoring': 9}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/ESC50-Actions
+
+Number of Classes: 10
+
+Number of Shots: -1
+
+Total Number of Samples: 80
+
+Classnames: ['breathing', 'brushing teeth', 'clapping', 'coughing', 'crying baby', 'drinking sipping', 'footsteps', 'laughing', 'sneezing', 'snoring']
+
+Label to Classname: {0: 'breathing', 1: 'brushing teeth', 2: 'clapping', 3: 'coughing', 4: 'crying baby', 5: 'drinking sipping', 6: 'footsteps', 7: 'laughing', 8: 'sneezing', 9: 'snoring'}
+
+Classname to Label: {'breathing': 0, 'brushing teeth': 1, 'clapping': 2, 'coughing': 3, 'crying baby': 4, 'drinking sipping': 5, 'footsteps': 6, 'laughing': 7, 'sneezing': 8, 'snoring': 9}
+########################################################
+
+
+Using Method: 'COCOOP'
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a Generic Context for COCOOP ...
+args:  Namespace(batch_size=16, classnames=['breathing', 'brushing teeth', 'clapping', 'coughing', 'crying baby', 'drinking sipping', 'footsteps', 'laughing', 'sneezing', 'snoring'], ctx_dim=512, dataset_root='REDACTED/Audio-Datasets/ESC50-Actions', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='ESC50-Actions-FOLD4', freq_test_model=10, json_file_path='logs/cocoop/ESC50-Actions-FOLD4.json', log_dir='logs/cocoop', lr=0.05, model_name='cocoop', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f9f57cb2130>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, save_model_path='REDACTED/Audio-Datasets/ESC50-Actions', seed=0, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:07<06:22,  7.80s/it]
+  4%|4         | 2/50 [00:14<05:54,  7.39s/it]
+  6%|6         | 3/50 [00:22<05:46,  7.36s/it]
+  8%|8         | 4/50 [00:29<05:42,  7.44s/it]
+ 10%|#         | 5/50 [00:37<05:31,  7.38s/it]
+ 12%|#2        | 6/50 [00:44<05:30,  7.52s/it]
+ 14%|#4        | 7/50 [00:52<05:22,  7.51s/it]
+ 16%|#6        | 8/50 [01:00<05:18,  7.59s/it]
+ 18%|#8        | 9/50 [01:07<05:06,  7.46s/it]
+
+Epoch 10/50
+
+Accuracy             = 0.9313
+F1-Score             = 0.9322
+Precision            = 0.9401
+Recall               = 0.9313
+Average Loss         = 0.2209
+
+
+
+ 20%|##        | 10/50 [01:15<05:02,  7.56s/it]
+ 22%|##2       | 11/50 [01:22<04:57,  7.63s/it]
+ 24%|##4       | 12/50 [01:30<04:54,  7.74s/it]
+ 26%|##6       | 13/50 [01:38<04:39,  7.56s/it]
+ 28%|##8       | 14/50 [01:45<04:29,  7.50s/it]
+ 30%|###       | 15/50 [01:53<04:25,  7.59s/it]
+ 32%|###2      | 16/50 [02:00<04:17,  7.58s/it]
+ 34%|###4      | 17/50 [02:08<04:08,  7.55s/it]
+ 36%|###6      | 18/50 [02:15<04:01,  7.55s/it]
+ 38%|###8      | 19/50 [02:22<03:50,  7.42s/it]
+
+Epoch 20/50
+
+Accuracy             = 0.9875
+F1-Score             = 0.9875
+Precision            = 0.9882
+Recall               = 0.9875
+Average Loss         = 0.0603
+
+
+
+ 40%|####      | 20/50 [02:30<03:41,  7.40s/it]
+ 42%|####2     | 21/50 [02:37<03:37,  7.49s/it]
+ 44%|####4     | 22/50 [02:45<03:31,  7.56s/it]
+ 46%|####6     | 23/50 [02:53<03:24,  7.59s/it]
+ 48%|####8     | 24/50 [03:00<03:15,  7.52s/it]
+ 50%|#####     | 25/50 [03:08<03:08,  7.53s/it]
+ 52%|#####2    | 26/50 [03:15<02:59,  7.49s/it]
+ 54%|#####4    | 27/50 [03:23<02:53,  7.54s/it]
+ 56%|#####6    | 28/50 [03:30<02:43,  7.44s/it]
+ 58%|#####8    | 29/50 [03:38<02:37,  7.49s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.9938
+F1-Score             = 0.9937
+Precision            = 0.9941
+Recall               = 0.9938
+Average Loss         = 0.0286
+
+
+
+ 60%|######    | 30/50 [03:45<02:28,  7.43s/it]
+ 62%|######2   | 31/50 [03:52<02:20,  7.39s/it]
+ 64%|######4   | 32/50 [04:00<02:14,  7.49s/it]
+ 66%|######6   | 33/50 [04:08<02:09,  7.59s/it]
+ 68%|######8   | 34/50 [04:15<02:01,  7.62s/it]
+ 70%|#######   | 35/50 [04:23<01:53,  7.60s/it]
+ 72%|#######2  | 36/50 [04:30<01:45,  7.56s/it]
+ 74%|#######4  | 37/50 [04:38<01:37,  7.52s/it]
+ 76%|#######6  | 38/50 [04:45<01:30,  7.55s/it]
+ 78%|#######8  | 39/50 [04:53<01:21,  7.44s/it]
+
+Epoch 40/50
+
+Accuracy             = 1.0000
+F1-Score             = 1.0000
+Precision            = 1.0000
+Recall               = 1.0000
+Average Loss         = 0.0103
+
+
+
+ 80%|########  | 40/50 [05:00<01:14,  7.46s/it]
+ 82%|########2 | 41/50 [05:08<01:07,  7.54s/it]
+ 84%|########4 | 42/50 [05:16<01:00,  7.58s/it]
+ 86%|########6 | 43/50 [05:23<00:53,  7.61s/it]
+ 88%|########8 | 44/50 [05:31<00:45,  7.65s/it]
+ 90%|######### | 45/50 [05:39<00:38,  7.69s/it]
+ 92%|#########2| 46/50 [05:46<00:30,  7.60s/it]
+ 94%|#########3| 47/50 [05:53<00:22,  7.51s/it]
+ 96%|#########6| 48/50 [06:01<00:14,  7.50s/it]
+ 98%|#########8| 49/50 [06:08<00:07,  7.47s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.9938
+F1-Score             = 0.9937
+Precision            = 0.9941
+Recall               = 0.9938
+Average Loss         = 0.0147
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+
+100%|##########| 1/1 [00:02<00:00,  2.10s/it][A
+100%|##########| 1/1 [00:02<00:00,  2.32s/it]
+
+
+Time & Date = 03:04 PM , 13_Jun_2024  GST
+
+Total Time => 0 Hours : 0 Minutes : 2 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.9750
+F1-Score             = 0.9749
+Precision            = 0.9778
+Recall               = 0.9750
+Average Loss         = 0.0466
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [06:19<00:00,  8.42s/it]
+100%|##########| 50/50 [06:19<00:00,  7.59s/it]
+
+
+Time & Date = 03:04 PM , 13_Jun_2024  GST
+
+Total Time => 0 Hours : 6 Minutes : 19 Seconds
+
+

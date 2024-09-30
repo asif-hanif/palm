@@ -97,23 +97,23 @@ wget https://zenodo.org/records/8387083/files/base.pth
 We have performed experiments on 11 audio classification datasets.  Instructions for downloading/processing datasets used by our method have been provided in the [DATASETS.md](DATASETS.md). 
 
 | Dataset | Type | Classes | Size | Link |
-|:-- |:-- |:--: |:--: |:-- |
-| [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset) | Instrument Classification | 4 | | [Instructions](DATASETS.md#beijing-opera) |
-| [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D) | Emotion Recognition | 6 | | [Instructions](DATASETS.md#crema-d) |
-| [ESC50](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 50 | | [Instructions](DATASETS.md#esc50) |
-| [ESC50-Actions](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 10 | | [Instructions](DATASETS.md#esc50-actions) |
-| [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) | Music Analysis | 10 | | [Instructions](DATASETS.md#gt-music-genre) |
-| [NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth) | Instrument Classification | 10 | | [Instructions](DATASETS.md#ns-instruments) |
-| [RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8) | Emotion Recognition | 8 | | [Instructions](DATASETS.md#ravdess) |
-| [SESA](https://zenodo.org/records/3519845) | Surveillance Sound Classification | 4 | | [Instructions](DATASETS.md#sesa) |
-| [TUT2017](https://zenodo.org/records/400515) | Acoustic Scene Classification | 15 | | [Instructions](DATASETS.md#tut2017) |
-| [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html) | Sound Event Classification | 10 | | [Instructions](DATASETS.md#urbansound8k) |
-| [VocalSound](https://github.com/YuanGongND/vocalsound) | Vocal Sound Classification | 6 | | [Instructions](DATASETS.md#vocalsound) |
+|:-- |:-- |:--: |--: |:-- |
+| [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset) | Instrument Classification | 4 | 69 MB | [Instructions](DATASETS.md#beijing-opera) |
+| [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D) | Emotion Recognition | 6 | 606 MB | [Instructions](DATASETS.md#crema-d) |
+| [ESC50](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 50 | 881 MB | [Instructions](DATASETS.md#esc50) |
+| [ESC50-Actions](https://github.com/karolpiczak/ESC-50) | Sound Event Classification | 10 | 881 MB | [Instructions](DATASETS.md#esc50-actions) |
+| [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) | Music Analysis | 10 | 1.3 GB | [Instructions](DATASETS.md#gt-music-genre) |
+| [NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth) | Instrument Classification | 10 | 18.5 GB | [Instructions](DATASETS.md#ns-instruments) |
+| [RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8) | Emotion Recognition | 8 | 1.1 GB | [Instructions](DATASETS.md#ravdess) |
+| [SESA](https://zenodo.org/records/3519845) | Surveillance Sound Classification | 4 | 70 MB | [Instructions](DATASETS.md#sesa) |
+| [TUT2017](https://zenodo.org/records/400515) | Acoustic Scene Classification | 15 | 12.3 GB | [Instructions](DATASETS.md#tut2017) |
+| [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html) | Sound Event Classification | 10 | 6.8 GB | [Instructions](DATASETS.md#urbansound8k) |
+| [VocalSound](https://github.com/YuanGongND/vocalsound) | Vocal Sound Classification | 6 | 8.2 GB | [Instructions](DATASETS.md#vocalsound) |
 
 </br>
 </br>
 
-All datasets should be placed in a directory named `Audio-Datasets,` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [`scripts`](/scripts/). The directory structure should be as follows:
+All datasets should be placed in a directory named `Audio-Datasets` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [`scripts`](/scripts/). The directory structure should be as follows:
 ```
 Audio-Datasets/
     ├── Beijing-Opera/

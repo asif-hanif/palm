@@ -1,0 +1,221 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PALM_TEXT
+Dataset:  UrbanSound8K
+Seed:     1
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/UrbanSound8K
+
+Number of Classes: 10
+
+Number of Shots: 16
+
+Total Number of Samples: 160
+
+Classnames: ['air conditioner', 'car horn', 'children playing', 'dog bark', 'drilling', 'engine idling', 'gun shot', 'jackhammer', 'siren', 'street music']
+
+Label to Classname: {0: 'air conditioner', 1: 'car horn', 2: 'children playing', 3: 'dog bark', 4: 'drilling', 5: 'engine idling', 6: 'gun shot', 7: 'jackhammer', 8: 'siren', 9: 'street music'}
+
+Classname to Label: {'air conditioner': 0, 'car horn': 1, 'children playing': 2, 'dog bark': 3, 'drilling': 4, 'engine idling': 5, 'gun shot': 6, 'jackhammer': 7, 'siren': 8, 'street music': 9}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/UrbanSound8K
+
+Number of Classes: 10
+
+Number of Shots: -1
+
+Total Number of Samples: 838
+
+Classnames: ['air conditioner', 'car horn', 'children playing', 'dog bark', 'drilling', 'engine idling', 'gun shot', 'jackhammer', 'siren', 'street music']
+
+Label to Classname: {0: 'air conditioner', 1: 'car horn', 2: 'children playing', 3: 'dog bark', 4: 'drilling', 5: 'engine idling', 6: 'gun shot', 7: 'jackhammer', 8: 'siren', 9: 'street music'}
+
+Classname to Label: {'air conditioner': 0, 'car horn': 1, 'children playing': 2, 'dog bark': 3, 'drilling': 4, 'engine idling': 5, 'gun shot': 6, 'jackhammer': 7, 'siren': 8, 'street music': 9}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a generic context
+args:  Namespace(batch_size=16, classnames=['air conditioner', 'car horn', 'children playing', 'dog bark', 'drilling', 'engine idling', 'gun shot', 'jackhammer', 'siren', 'street music'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/UrbanSound8K', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='UrbanSound8K-FOLD7', freq_test_model=10, json_file_path='logs/palm_text/UrbanSound8K-FOLD7.json', log_dir='logs/palm_text', lr=0.05, model_name='palm_text', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7fe917785e50>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/UrbanSound8K', seed=1, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:03<02:41,  3.30s/it]
+  4%|4         | 2/50 [00:06<02:30,  3.13s/it]
+  6%|6         | 3/50 [00:09<02:26,  3.11s/it]
+  8%|8         | 4/50 [00:12<02:20,  3.06s/it]
+ 10%|#         | 5/50 [00:15<02:18,  3.08s/it]
+ 12%|#2        | 6/50 [00:18<02:16,  3.11s/it]
+ 14%|#4        | 7/50 [00:21<02:12,  3.08s/it]
+ 16%|#6        | 8/50 [00:24<02:07,  3.04s/it]
+ 18%|#8        | 9/50 [00:27<02:05,  3.06s/it]
+
+Epoch 10/50
+
+Accuracy             = 0.9187
+F1-Score             = 0.9192
+Precision            = 0.9262
+Recall               = 0.9187
+Average Loss         = 0.2919
+
+
+
+ 20%|##        | 10/50 [00:30<02:01,  3.05s/it]
+ 22%|##2       | 11/50 [00:33<01:58,  3.04s/it]
+ 24%|##4       | 12/50 [00:36<01:55,  3.03s/it]
+ 26%|##6       | 13/50 [00:39<01:52,  3.04s/it]
+ 28%|##8       | 14/50 [00:42<01:49,  3.04s/it]
+ 30%|###       | 15/50 [00:45<01:46,  3.03s/it]
+ 32%|###2      | 16/50 [00:48<01:43,  3.04s/it]
+ 34%|###4      | 17/50 [00:51<01:39,  3.02s/it]
+ 36%|###6      | 18/50 [00:54<01:36,  3.01s/it]
+ 38%|###8      | 19/50 [00:57<01:33,  3.01s/it]
+
+Epoch 20/50
+
+Accuracy             = 0.9750
+F1-Score             = 0.9752
+Precision            = 0.9761
+Recall               = 0.9750
+Average Loss         = 0.0605
+
+
+
+ 40%|####      | 20/50 [01:00<01:30,  3.02s/it]
+ 42%|####2     | 21/50 [01:04<01:28,  3.04s/it]
+ 44%|####4     | 22/50 [01:07<01:25,  3.05s/it]
+ 46%|####6     | 23/50 [01:10<01:21,  3.03s/it]
+ 48%|####8     | 24/50 [01:13<01:18,  3.01s/it]
+ 50%|#####     | 25/50 [01:16<01:15,  3.02s/it]
+ 52%|#####2    | 26/50 [01:19<01:12,  3.03s/it]
+ 54%|#####4    | 27/50 [01:22<01:10,  3.05s/it]
+ 56%|#####6    | 28/50 [01:25<01:06,  3.03s/it]
+ 58%|#####8    | 29/50 [01:28<01:03,  3.02s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.9750
+F1-Score             = 0.9749
+Precision            = 0.9771
+Recall               = 0.9750
+Average Loss         = 0.0826
+
+
+
+ 60%|######    | 30/50 [01:31<00:59,  2.99s/it]
+ 62%|######2   | 31/50 [01:34<00:56,  3.00s/it]
+ 64%|######4   | 32/50 [01:37<00:54,  3.00s/it]
+ 66%|######6   | 33/50 [01:40<00:51,  3.02s/it]
+ 68%|######8   | 34/50 [01:43<00:48,  3.04s/it]
+ 70%|#######   | 35/50 [01:46<00:45,  3.03s/it]
+ 72%|#######2  | 36/50 [01:49<00:41,  3.00s/it]
+ 74%|#######4  | 37/50 [01:52<00:38,  2.98s/it]
+ 76%|#######6  | 38/50 [01:55<00:35,  2.97s/it]
+ 78%|#######8  | 39/50 [01:58<00:32,  2.97s/it]
+
+Epoch 40/50
+
+Accuracy             = 1.0000
+F1-Score             = 1.0000
+Precision            = 1.0000
+Recall               = 1.0000
+Average Loss         = 0.0072
+
+
+
+ 80%|########  | 40/50 [02:01<00:30,  3.01s/it]
+ 82%|########2 | 41/50 [02:04<00:27,  3.07s/it]
+ 84%|########4 | 42/50 [02:07<00:24,  3.05s/it]
+ 86%|########6 | 43/50 [02:10<00:21,  3.05s/it]
+ 88%|########8 | 44/50 [02:13<00:18,  3.08s/it]
+ 90%|######### | 45/50 [02:16<00:15,  3.05s/it]
+ 92%|#########2| 46/50 [02:19<00:12,  3.06s/it]
+ 94%|#########3| 47/50 [02:22<00:09,  3.04s/it]
+ 96%|#########6| 48/50 [02:25<00:05,  3.00s/it]
+ 98%|#########8| 49/50 [02:28<00:02,  2.99s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.9812
+F1-Score             = 0.9812
+Precision            = 0.9824
+Recall               = 0.9812
+Average Loss         = 0.0910
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/7 [00:00<?, ?it/s][A
+
+ 14%|#4        | 1/7 [00:01<00:10,  1.81s/it][A
+
+ 29%|##8       | 2/7 [00:01<00:04,  1.17it/s][A
+
+ 43%|####2     | 3/7 [00:02<00:03,  1.22it/s][A
+
+ 57%|#####7    | 4/7 [00:02<00:01,  1.76it/s][A
+
+ 71%|#######1  | 5/7 [00:03<00:01,  1.68it/s][A
+
+ 86%|########5 | 6/7 [00:03<00:00,  2.18it/s][A
+
+100%|##########| 7/7 [00:03<00:00,  2.73it/s][A
+100%|##########| 7/7 [00:04<00:00,  1.65it/s]
+
+
+Time & Date = 01:14 AM , 10_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.7995
+F1-Score             = 0.7954
+Precision            = 0.7974
+Recall               = 0.8059
+Average Loss         = 1.4955
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [02:36<00:00,  4.46s/it]
+100%|##########| 50/50 [02:36<00:00,  3.13s/it]
+
+
+Time & Date = 01:14 AM , 10_Jun_2024
+
+Total Time => 0 Hours : 2 Minutes : 36 Seconds
+
+

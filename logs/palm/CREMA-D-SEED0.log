@@ -1,0 +1,237 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PALM_TEXT
+Dataset:  CREMA-D
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/CREMA-D
+
+Number of Classes: 6
+
+Number of Shots: 16
+
+Total Number of Samples: 96
+
+Classnames: ['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad']
+
+Label to Classname: {0: 'anger', 1: 'disgust', 2: 'fear', 3: 'happy', 4: 'neutral', 5: 'sad'}
+
+Classname to Label: {'anger': 0, 'disgust': 1, 'fear': 2, 'happy': 3, 'neutral': 4, 'sad': 5}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/CREMA-D
+
+Number of Classes: 6
+
+Number of Shots: -1
+
+Total Number of Samples: 1489
+
+Classnames: ['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad']
+
+Label to Classname: {0: 'anger', 1: 'disgust', 2: 'fear', 3: 'happy', 4: 'neutral', 5: 'sad'}
+
+Classname to Label: {'anger': 0, 'disgust': 1, 'fear': 2, 'happy': 3, 'neutral': 4, 'sad': 5}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a generic context
+args:  Namespace(batch_size=16, classnames=['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/CREMA-D', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='CREMA-D', freq_test_model=10, json_file_path='logs/palm_text/CREMA-D.json', log_dir='logs/palm_text', lr=0.05, model_name='palm_text', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f45ca57de80>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/CREMA-D', seed=0, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:03<02:29,  3.05s/it]
+  4%|4         | 2/50 [00:05<02:18,  2.88s/it]
+  6%|6         | 3/50 [00:08<02:13,  2.84s/it]
+  8%|8         | 4/50 [00:11<02:11,  2.87s/it]
+ 10%|#         | 5/50 [00:14<02:09,  2.87s/it]
+ 12%|#2        | 6/50 [00:17<02:04,  2.83s/it]
+ 14%|#4        | 7/50 [00:19<02:00,  2.81s/it]
+ 16%|#6        | 8/50 [00:22<01:58,  2.81s/it]
+ 18%|#8        | 9/50 [00:25<01:54,  2.80s/it]REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+
+Epoch 10/50
+
+Accuracy             = 0.4375
+F1-Score             = 0.3988
+Precision            = 0.3710
+Recall               = 0.4375
+Average Loss         = 8.8492
+
+
+
+ 20%|##        | 10/50 [00:28<01:54,  2.87s/it]
+ 22%|##2       | 11/50 [00:31<01:50,  2.84s/it]
+ 24%|##4       | 12/50 [00:34<01:46,  2.81s/it]
+ 26%|##6       | 13/50 [00:36<01:43,  2.79s/it]
+ 28%|##8       | 14/50 [00:39<01:40,  2.79s/it]
+ 30%|###       | 15/50 [00:42<01:37,  2.79s/it]
+ 32%|###2      | 16/50 [00:45<01:34,  2.78s/it]
+ 34%|###4      | 17/50 [00:47<01:31,  2.78s/it]
+ 36%|###6      | 18/50 [00:50<01:29,  2.78s/it]
+ 38%|###8      | 19/50 [00:53<01:25,  2.77s/it]
+
+Epoch 20/50
+
+Accuracy             = 0.5938
+F1-Score             = 0.5704
+Precision            = 0.6123
+Recall               = 0.5938
+Average Loss         = 3.2753
+
+
+
+ 40%|####      | 20/50 [00:56<01:25,  2.85s/it]
+ 42%|####2     | 21/50 [00:59<01:22,  2.84s/it]
+ 44%|####4     | 22/50 [01:02<01:19,  2.82s/it]
+ 46%|####6     | 23/50 [01:04<01:16,  2.82s/it]
+ 48%|####8     | 24/50 [01:07<01:12,  2.81s/it]
+ 50%|#####     | 25/50 [01:10<01:09,  2.79s/it]
+ 52%|#####2    | 26/50 [01:13<01:06,  2.78s/it]
+ 54%|#####4    | 27/50 [01:15<01:04,  2.79s/it]
+ 56%|#####6    | 28/50 [01:18<01:01,  2.79s/it]
+ 58%|#####8    | 29/50 [01:21<00:58,  2.78s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.6979
+F1-Score             = 0.6936
+Precision            = 0.6932
+Recall               = 0.6979
+Average Loss         = 1.8986
+
+
+
+ 60%|######    | 30/50 [01:24<00:55,  2.78s/it]
+ 62%|######2   | 31/50 [01:27<00:52,  2.77s/it]
+ 64%|######4   | 32/50 [01:30<00:51,  2.84s/it]
+ 66%|######6   | 33/50 [01:32<00:47,  2.82s/it]
+ 68%|######8   | 34/50 [01:35<00:45,  2.83s/it]
+ 70%|#######   | 35/50 [01:38<00:42,  2.81s/it]
+ 72%|#######2  | 36/50 [01:41<00:39,  2.81s/it]
+ 74%|#######4  | 37/50 [01:44<00:36,  2.79s/it]
+ 76%|#######6  | 38/50 [01:46<00:33,  2.81s/it]
+ 78%|#######8  | 39/50 [01:49<00:30,  2.82s/it]
+
+Epoch 40/50
+
+Accuracy             = 0.6354
+F1-Score             = 0.6271
+Precision            = 0.6325
+Recall               = 0.6354
+Average Loss         = 1.5667
+
+
+
+ 80%|########  | 40/50 [01:52<00:28,  2.81s/it]
+ 82%|########2 | 41/50 [01:55<00:25,  2.78s/it]
+ 84%|########4 | 42/50 [01:58<00:22,  2.80s/it]
+ 86%|########6 | 43/50 [02:00<00:19,  2.78s/it]
+ 88%|########8 | 44/50 [02:03<00:16,  2.79s/it]
+ 90%|######### | 45/50 [02:06<00:13,  2.79s/it]
+ 92%|#########2| 46/50 [02:09<00:11,  2.79s/it]
+ 94%|#########3| 47/50 [02:11<00:08,  2.78s/it]
+ 96%|#########6| 48/50 [02:14<00:05,  2.82s/it]
+ 98%|#########8| 49/50 [02:17<00:02,  2.83s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.6250
+F1-Score             = 0.6226
+Precision            = 0.6278
+Recall               = 0.6250
+Average Loss         = 1.5453
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/12 [00:00<?, ?it/s][A
+
+  8%|8         | 1/12 [00:05<01:03,  5.73s/it][A
+
+ 17%|#6        | 2/12 [00:05<00:24,  2.47s/it][A
+
+ 25%|##5       | 3/12 [00:06<00:12,  1.44s/it][A
+
+ 33%|###3      | 4/12 [00:06<00:07,  1.06it/s][A
+
+ 42%|####1     | 5/12 [00:11<00:16,  2.35s/it][A
+
+ 50%|#####     | 6/12 [00:11<00:10,  1.68s/it][A
+
+ 58%|#####8    | 7/12 [00:11<00:06,  1.20s/it][A
+
+ 67%|######6   | 8/12 [00:11<00:03,  1.14it/s][A
+
+ 75%|#######5  | 9/12 [00:16<00:06,  2.06s/it][A
+
+ 83%|########3 | 10/12 [00:16<00:02,  1.47s/it][A
+
+ 92%|#########1| 11/12 [00:16<00:01,  1.09s/it][A
+
+100%|##########| 12/12 [00:17<00:00,  1.26it/s][A
+100%|##########| 12/12 [00:17<00:00,  1.44s/it]
+
+
+Time & Date = 10:34 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 18 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.4453
+F1-Score             = 0.3277
+Precision            = 0.3340
+Recall               = 0.3604
+Average Loss         = 2.9509
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [02:38<00:00,  8.24s/it]
+100%|##########| 50/50 [02:38<00:00,  3.17s/it]
+
+
+Time & Date = 10:34 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 2 Minutes : 38 Seconds
+
+

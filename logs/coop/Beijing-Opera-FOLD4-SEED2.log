@@ -1,0 +1,209 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    COOP
+Dataset:  Beijing-Opera
+Seed:     2
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/Beijing-Opera
+
+Number of Classes: 4
+
+Number of Shots: 16
+
+Total Number of Samples: 64
+
+Classnames: ['bangu', 'daluo', 'naobo', 'xiaoluo']
+
+Label to Classname: {0: 'bangu', 1: 'daluo', 2: 'naobo', 3: 'xiaoluo'}
+
+Classname to Label: {'bangu': 0, 'daluo': 1, 'naobo': 2, 'xiaoluo': 3}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/Beijing-Opera
+
+Number of Classes: 4
+
+Number of Shots: -1
+
+Total Number of Samples: 47
+
+Classnames: ['bangu', 'daluo', 'naobo', 'xiaoluo']
+
+Label to Classname: {0: 'bangu', 1: 'daluo', 2: 'naobo', 3: 'xiaoluo'}
+
+Classname to Label: {'bangu': 0, 'daluo': 1, 'naobo': 2, 'xiaoluo': 3}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a Generic Context for Coop ...
+args:  Namespace(batch_size=16, classnames=['bangu', 'daluo', 'naobo', 'xiaoluo'], ctx_dim=512, dataset_root='REDACTED/Audio-Datasets/Beijing-Opera', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='Beijing-Opera-FOLD4', freq_test_model=10, json_file_path='logs/coop/Beijing-Opera-FOLD4.json', log_dir='logs/coop', lr=0.05, model_name='coop', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f36cf221e50>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/Beijing-Opera', seed=2, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:02<01:38,  2.01s/it]
+  4%|4         | 2/50 [00:03<01:33,  1.94s/it]
+  6%|6         | 3/50 [00:05<01:27,  1.86s/it]
+  8%|8         | 4/50 [00:07<01:23,  1.81s/it]
+ 10%|#         | 5/50 [00:09<01:21,  1.80s/it]
+ 12%|#2        | 6/50 [00:10<01:17,  1.77s/it]
+ 14%|#4        | 7/50 [00:12<01:14,  1.74s/it]
+ 16%|#6        | 8/50 [00:14<01:12,  1.73s/it]
+ 18%|#8        | 9/50 [00:16<01:10,  1.73s/it]
+
+Epoch 10/50
+
+Accuracy             = 0.8750
+F1-Score             = 0.8760
+Precision            = 0.8828
+Recall               = 0.8750
+Average Loss         = 0.4108
+
+
+
+ 20%|##        | 10/50 [00:17<01:08,  1.72s/it]
+ 22%|##2       | 11/50 [00:19<01:06,  1.70s/it]
+ 24%|##4       | 12/50 [00:21<01:05,  1.72s/it]
+ 26%|##6       | 13/50 [00:22<01:02,  1.69s/it]
+ 28%|##8       | 14/50 [00:24<01:01,  1.70s/it]
+ 30%|###       | 15/50 [00:26<00:59,  1.69s/it]
+ 32%|###2      | 16/50 [00:27<00:57,  1.70s/it]
+ 34%|###4      | 17/50 [00:29<00:56,  1.72s/it]
+ 36%|###6      | 18/50 [00:31<00:54,  1.71s/it]
+ 38%|###8      | 19/50 [00:33<00:52,  1.70s/it]
+
+Epoch 20/50
+
+Accuracy             = 0.9219
+F1-Score             = 0.9221
+Precision            = 0.9353
+Recall               = 0.9219
+Average Loss         = 0.2225
+
+
+
+ 40%|####      | 20/50 [00:34<00:51,  1.72s/it]
+ 42%|####2     | 21/50 [00:36<00:50,  1.73s/it]
+ 44%|####4     | 22/50 [00:38<00:48,  1.74s/it]
+ 46%|####6     | 23/50 [00:39<00:46,  1.72s/it]
+ 48%|####8     | 24/50 [00:41<00:44,  1.72s/it]
+ 50%|#####     | 25/50 [00:43<00:42,  1.72s/it]
+ 52%|#####2    | 26/50 [00:45<00:41,  1.73s/it]
+ 54%|#####4    | 27/50 [00:46<00:39,  1.73s/it]
+ 56%|#####6    | 28/50 [00:48<00:37,  1.72s/it]
+ 58%|#####8    | 29/50 [00:50<00:35,  1.71s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.9688
+F1-Score             = 0.9687
+Precision            = 0.9697
+Recall               = 0.9688
+Average Loss         = 0.1512
+
+
+
+ 60%|######    | 30/50 [00:52<00:34,  1.75s/it]
+ 62%|######2   | 31/50 [00:53<00:33,  1.74s/it]
+ 64%|######4   | 32/50 [00:55<00:31,  1.74s/it]
+ 66%|######6   | 33/50 [00:57<00:29,  1.74s/it]
+ 68%|######8   | 34/50 [00:59<00:28,  1.79s/it]
+ 70%|#######   | 35/50 [01:00<00:26,  1.77s/it]
+ 72%|#######2  | 36/50 [01:02<00:24,  1.75s/it]
+ 74%|#######4  | 37/50 [01:04<00:22,  1.75s/it]
+ 76%|#######6  | 38/50 [01:06<00:20,  1.74s/it]
+ 78%|#######8  | 39/50 [01:07<00:19,  1.73s/it]
+
+Epoch 40/50
+
+Accuracy             = 0.9531
+F1-Score             = 0.9530
+Precision            = 0.9575
+Recall               = 0.9531
+Average Loss         = 0.1024
+
+
+
+ 80%|########  | 40/50 [01:09<00:17,  1.74s/it]
+ 82%|########2 | 41/50 [01:11<00:15,  1.74s/it]
+ 84%|########4 | 42/50 [01:13<00:13,  1.73s/it]
+ 86%|########6 | 43/50 [01:14<00:12,  1.73s/it]
+ 88%|########8 | 44/50 [01:16<00:10,  1.77s/it]
+ 90%|######### | 45/50 [01:18<00:08,  1.79s/it]
+ 92%|#########2| 46/50 [01:20<00:07,  1.82s/it]
+ 94%|#########3| 47/50 [01:22<00:05,  1.82s/it]
+ 96%|#########6| 48/50 [01:24<00:03,  1.84s/it]
+ 98%|#########8| 49/50 [01:25<00:01,  1.84s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.9688
+F1-Score             = 0.9687
+Precision            = 0.9697
+Recall               = 0.9688
+Average Loss         = 0.1060
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/1 [00:00<?, ?it/s][A
+
+100%|##########| 1/1 [00:00<00:00,  3.50it/s][A
+100%|##########| 1/1 [00:00<00:00,  1.98it/s]
+
+
+Time & Date = 11:10 AM , 10_Jun_2024  GST
+
+Total Time => 0 Hours : 0 Minutes : 1 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.9574
+F1-Score             = 0.9545
+Precision            = 0.9583
+Recall               = 0.9583
+Average Loss         = 0.1051
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [01:29<00:00,  2.24s/it]
+100%|##########| 50/50 [01:29<00:00,  1.78s/it]
+
+
+Time & Date = 11:10 AM , 10_Jun_2024  GST
+
+Total Time => 0 Hours : 1 Minutes : 29 Seconds
+
+

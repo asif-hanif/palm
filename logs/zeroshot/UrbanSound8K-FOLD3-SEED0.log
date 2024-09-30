@@ -1,0 +1,100 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    PENGI_ZEROSHOT
+Dataset:  UrbanSound8K
+Seed:     0
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/UrbanSound8K
+
+Number of Classes: 10
+
+Number of Shots: 16
+
+Total Number of Samples: 160
+
+Classnames: ['air conditioner', 'car horn', 'children playing', 'dog bark', 'drilling', 'engine idling', 'gun shot', 'jackhammer', 'siren', 'street music']
+
+Label to Classname: {0: 'air conditioner', 1: 'car horn', 2: 'children playing', 3: 'dog bark', 4: 'drilling', 5: 'engine idling', 6: 'gun shot', 7: 'jackhammer', 8: 'siren', 9: 'street music'}
+
+Classname to Label: {'air conditioner': 0, 'car horn': 1, 'children playing': 2, 'dog bark': 3, 'drilling': 4, 'engine idling': 5, 'gun shot': 6, 'jackhammer': 7, 'siren': 8, 'street music': 9}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/UrbanSound8K
+
+Number of Classes: 10
+
+Number of Shots: -1
+
+Total Number of Samples: 925
+
+Classnames: ['air conditioner', 'car horn', 'children playing', 'dog bark', 'drilling', 'engine idling', 'gun shot', 'jackhammer', 'siren', 'street music']
+
+Label to Classname: {0: 'air conditioner', 1: 'car horn', 2: 'children playing', 3: 'dog bark', 4: 'drilling', 5: 'engine idling', 6: 'gun shot', 7: 'jackhammer', 8: 'siren', 9: 'street music'}
+
+Classname to Label: {'air conditioner': 0, 'car horn': 1, 'children playing': 2, 'dog bark': 3, 'drilling': 4, 'engine idling': 5, 'gun shot': 6, 'jackhammer': 7, 'siren': 8, 'street music': 9}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  air conditioner.', 'The is a recording of  car horn.', 'The is a recording of  children playing.', 'The is a recording of  dog bark.', 'The is a recording of  drilling.', 'The is a recording of  engine idling.', 'The is a recording of  gun shot.', 'The is a recording of  jackhammer.', 'The is a recording of  siren.', 'The is a recording of  street music.']
+###################################################################
+
+
+args:  Namespace(batch_size=16, classnames=['air conditioner', 'car horn', 'children playing', 'dog bark', 'drilling', 'engine idling', 'gun shot', 'jackhammer', 'siren', 'street music'], ctx_dim=1024, dataset_root='REDACTED/Audio-Datasets/UrbanSound8K', device=device(type='cuda'), do_logging=True, eval_only=True, exp_name='UrbanSound8K-FOLD3', freq_test_model=10, json_file_path='logs/pengi_zeroshot/UrbanSound8K-FOLD3.json', log_dir='logs/pengi_zeroshot', lr=0.05, model_name='pengi_zeroshot', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7f54406d6e50>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/UrbanSound8K', seed=0, spec_aug=False, start_epoch=0)
+
+
+Evaluating the model ...
+
+  0%|          | 0/8 [00:00<?, ?it/s]
+ 12%|#2        | 1/8 [00:02<00:15,  2.17s/it]
+ 25%|##5       | 2/8 [00:02<00:06,  1.10s/it]
+ 38%|###7      | 3/8 [00:02<00:03,  1.41it/s]
+ 50%|#####     | 4/8 [00:02<00:01,  2.01it/s]
+ 62%|######2   | 5/8 [00:04<00:02,  1.11it/s]
+ 75%|#######5  | 6/8 [00:04<00:01,  1.53it/s]
+ 88%|########7 | 7/8 [00:04<00:00,  1.96it/s]
+100%|##########| 8/8 [00:05<00:00,  2.32it/s]
+100%|##########| 8/8 [00:05<00:00,  1.47it/s]
+
+
+Time & Date = 10:16 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 6 Seconds
+
+
+Accuracy             = 0.4670
+F1-Score             = 0.4633
+Precision            = 0.5381
+Recall               = 0.4956
+Average Loss         = 2.0666
+
+
+Saving Results ...
+Results Saved
+
+

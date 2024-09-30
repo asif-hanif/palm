@@ -1,0 +1,227 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+
+
+Model:    COOP
+Dataset:  RAVDESS
+Seed:     2
+
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/RAVDESS
+
+Number of Classes: 8
+
+Number of Shots: 16
+
+Total Number of Samples: 128
+
+Classnames: ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised']
+
+Label to Classname: {0: 'angry', 1: 'calm', 2: 'disgust', 3: 'fearful', 4: 'happy', 5: 'neutral', 6: 'sad', 7: 'surprised'}
+
+Classname to Label: {'angry': 0, 'calm': 1, 'disgust': 2, 'fearful': 3, 'happy': 4, 'neutral': 5, 'sad': 6, 'surprised': 7}
+########################################################
+
+
+
+
+################## Dataset Information ##################
+FewShot Dataset
+
+Root: REDACTED/Audio-Datasets/RAVDESS
+
+Number of Classes: 8
+
+Number of Shots: -1
+
+Total Number of Samples: 491
+
+Classnames: ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised']
+
+Label to Classname: {0: 'angry', 1: 'calm', 2: 'disgust', 3: 'fearful', 4: 'happy', 5: 'neutral', 6: 'sad', 7: 'surprised'}
+
+Classname to Label: {'angry': 0, 'calm': 1, 'disgust': 2, 'fearful': 3, 'happy': 4, 'neutral': 5, 'sad': 6, 'surprised': 7}
+########################################################
+
+
+REDACTED/.venvs/palm/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Initializing a Generic Context for Coop ...
+args:  Namespace(batch_size=16, classnames=['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised'], ctx_dim=512, dataset_root='REDACTED/Audio-Datasets/RAVDESS', device=device(type='cuda'), do_logging=True, eval_only=False, exp_name='RAVDESS', freq_test_model=10, json_file_path='logs/coop/RAVDESS.json', log_dir='logs/coop', lr=0.05, model_name='coop', model_path='', n_ctx=16, n_epochs=50, num_shots=16, process_audio_fn=<bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7fcc19463e50>>, prompt_prefix='The is a recording of ', repeat=False, resample=True, rho=0.3, save_model_path='REDACTED/Audio-Datasets/RAVDESS', seed=2, spec_aug=False, start_epoch=0)
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:03<02:39,  3.25s/it]
+  4%|4         | 2/50 [00:06<02:31,  3.16s/it]
+  6%|6         | 3/50 [00:09<02:27,  3.13s/it]
+  8%|8         | 4/50 [00:12<02:21,  3.08s/it]
+ 10%|#         | 5/50 [00:15<02:17,  3.05s/it]
+ 12%|#2        | 6/50 [00:18<02:13,  3.03s/it]
+ 14%|#4        | 7/50 [00:21<02:11,  3.06s/it]
+ 16%|#6        | 8/50 [00:24<02:06,  3.01s/it]
+ 18%|#8        | 9/50 [00:27<02:03,  3.01s/it]REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+
+Epoch 10/50
+
+Accuracy             = 0.1406
+F1-Score             = 0.1124
+Precision            = 0.1114
+Recall               = 0.1406
+Average Loss         = 2.0650
+
+
+
+ 20%|##        | 10/50 [00:30<01:57,  2.94s/it]
+ 22%|##2       | 11/50 [00:33<01:57,  3.02s/it]
+ 24%|##4       | 12/50 [00:36<01:55,  3.04s/it]
+ 26%|##6       | 13/50 [00:39<01:53,  3.08s/it]
+ 28%|##8       | 14/50 [00:42<01:51,  3.10s/it]
+ 30%|###       | 15/50 [00:45<01:48,  3.10s/it]
+ 32%|###2      | 16/50 [00:48<01:44,  3.06s/it]
+ 34%|###4      | 17/50 [00:51<01:40,  3.05s/it]
+ 36%|###6      | 18/50 [00:55<01:37,  3.05s/it]
+ 38%|###8      | 19/50 [00:57<01:33,  3.03s/it]REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+REDACTED/.venvs/palm/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+
+Epoch 20/50
+
+Accuracy             = 0.2344
+F1-Score             = 0.1543
+Precision            = 0.1522
+Recall               = 0.2344
+Average Loss         = 1.9990
+
+
+
+ 40%|####      | 20/50 [01:00<01:29,  2.98s/it]
+ 42%|####2     | 21/50 [01:03<01:26,  2.98s/it]
+ 44%|####4     | 22/50 [01:06<01:23,  3.00s/it]
+ 46%|####6     | 23/50 [01:10<01:23,  3.09s/it]
+ 48%|####8     | 24/50 [01:13<01:19,  3.07s/it]
+ 50%|#####     | 25/50 [01:16<01:16,  3.05s/it]
+ 52%|#####2    | 26/50 [01:19<01:13,  3.07s/it]
+ 54%|#####4    | 27/50 [01:22<01:09,  3.02s/it]
+ 56%|#####6    | 28/50 [01:24<01:04,  2.93s/it]
+ 58%|#####8    | 29/50 [01:27<01:01,  2.91s/it]
+
+Epoch 30/50
+
+Accuracy             = 0.2578
+F1-Score             = 0.2121
+Precision            = 0.2514
+Recall               = 0.2578
+Average Loss         = 1.9300
+
+
+
+ 60%|######    | 30/50 [01:30<00:58,  2.93s/it]
+ 62%|######2   | 31/50 [01:33<00:56,  2.97s/it]
+ 64%|######4   | 32/50 [01:36<00:53,  2.98s/it]
+ 66%|######6   | 33/50 [01:39<00:50,  2.99s/it]
+ 68%|######8   | 34/50 [01:42<00:47,  2.97s/it]
+ 70%|#######   | 35/50 [01:45<00:44,  2.99s/it]
+ 72%|#######2  | 36/50 [01:48<00:41,  2.98s/it]
+ 74%|#######4  | 37/50 [01:51<00:39,  3.01s/it]
+ 76%|#######6  | 38/50 [01:54<00:36,  3.00s/it]
+ 78%|#######8  | 39/50 [01:57<00:33,  3.01s/it]
+
+Epoch 40/50
+
+Accuracy             = 0.3438
+F1-Score             = 0.3201
+Precision            = 0.3664
+Recall               = 0.3438
+Average Loss         = 1.6659
+
+
+
+ 80%|########  | 40/50 [02:00<00:29,  2.99s/it]
+ 82%|########2 | 41/50 [02:03<00:27,  3.01s/it]
+ 84%|########4 | 42/50 [02:07<00:24,  3.05s/it]
+ 86%|########6 | 43/50 [02:10<00:21,  3.04s/it]
+ 88%|########8 | 44/50 [02:13<00:18,  3.03s/it]
+ 90%|######### | 45/50 [02:16<00:15,  3.09s/it]
+ 92%|#########2| 46/50 [02:19<00:12,  3.12s/it]
+ 94%|#########3| 47/50 [02:22<00:09,  3.13s/it]
+ 96%|#########6| 48/50 [02:25<00:06,  3.14s/it]
+ 98%|#########8| 49/50 [02:28<00:03,  3.09s/it]
+
+Epoch 50/50
+
+Accuracy             = 0.4531
+F1-Score             = 0.4231
+Precision            = 0.4502
+Recall               = 0.4531
+Average Loss         = 1.5170
+
+
+
+
+Evaluating the model ...
+
+
+  0%|          | 0/4 [00:00<?, ?it/s][A
+
+ 25%|##5       | 1/4 [00:03<00:10,  3.51s/it][A
+
+ 50%|#####     | 2/4 [00:03<00:03,  1.56s/it][A
+
+ 75%|#######5  | 3/4 [00:03<00:00,  1.04it/s][A
+
+100%|##########| 4/4 [00:04<00:00,  1.55it/s][A
+100%|##########| 4/4 [00:04<00:00,  1.09s/it]
+
+
+Time & Date = 11:56 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+Epoch 50/50
+
+Accuracy             = 0.3422
+F1-Score             = 0.3075
+Precision            = 0.3023
+Recall               = 0.3566
+Average Loss         = 1.6283
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [02:36<00:00,  4.58s/it]
+100%|##########| 50/50 [02:36<00:00,  3.14s/it]
+
+
+Time & Date = 11:56 PM , 09_Jun_2024
+
+Total Time => 0 Hours : 2 Minutes : 36 Seconds
+
+

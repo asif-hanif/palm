@@ -1,0 +1,10 @@
+{
+  "seed_0": {
+    "accuracy": 0.4825,
+    "f1_score": 0.4288,
+    "precision": 0.5242,
+    "recall": 0.4825,
+    "avg_loss": 2.0177,
+    "epoch": -1
+  }
+}
