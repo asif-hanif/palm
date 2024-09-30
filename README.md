@@ -180,7 +180,7 @@ bash results.sh
 <details>
 <summary>Sample Output</summary>
 
-![main figure](/media/results_output.png)
+![main figure](/media/print_results.png)
 
 </details>
 
