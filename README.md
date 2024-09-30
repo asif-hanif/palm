@@ -72,7 +72,7 @@ pip install -r requirements.txt
 <a name="model"/>
     
 ## Model :white_square_button:
-We have shown the efficacy of PALM and other baselines (ZERO-SHOT, COOP, COCOOP) using [PENGI](https://github.com/microsoft/Pengi) model.
+We have shown the efficacy of PALM and other baselines (ZERO-SHOT, COOP, COCOOP) using [PENGI](https://github.com/microsoft/Pengi) model. 
 
 Download the pre-trained PENGI model using the link provided below and place the checkpoint file at path `pengi/configs` (after clonning the repo). 
 
@@ -135,7 +135,7 @@ Audio-Datasets/
 <a name="code-structure"/>
 
 ## Code Structure :snowflake:
-BAPLe code structure is borrowed from [COOP](https://github.com/KaiyangZhou/CoOp). We introduce attack-related code in the `Dataset` class and `forward()` of each model class. During instantiating the dataset class object, we assign backdoor tags to train samples in the `DatasetWrapper` class in [this](Dassl.pytorch/dassl/data/data_manager.py) file. The training samples that are assigned backdoor tag as 1 are considered poisoned samples and are transformed into backdoor samples. This transformation is done in the `forward()` of each model class. Code for these transformations is present in `trainers/backdoor.py` [file](trainers/backdoor.py). Model class for CLIP, PLIP, QuiltNet can be accessed [here](trainers/coop.py), for MedCLIP [here](trainers/coop_medclip.py) and for BioMedCLIP [here](trainers/coop_biomedclip.py). Prompt learning is managed `PromptLearner` class in each trainer file.
+There are three main folders in this repo: `pengi`, `palm`, `utils`. Code in `pengi` folder is taken from [PENGI](https://github.com/microsoft/Pengi) repo for model instantiation. Implementation of baselines (`zeroshot`, `coop`, `cocoop`) and our method `palm` is in [palm](/palm) folder. Class definitions of audio and text encoder of PENGI model can be found in [palm/encoders.py](/palm/encoders.py) file. Training and dataset related code is in [utils](/utils) folder.
 
 </br>
 
