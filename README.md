@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ## Model :white_square_button:
 We have shown the efficacy of PALM and other baselines (ZERO-SHOT, COOP, COCOOP) using [PENGI](https://github.com/microsoft/Pengi) model. 
 
-Download the pre-trained PENGI model using the link provided below and place the checkpoint file at path `pengi/configs` (after clonning the repo). 
+Download the pre-trained PENGI model using the link provided below and place the checkpoint file at path [`pengi/configs`](/pengi/configs) (after clonning the repo). 
 
 
 | Model | Link | Size |
