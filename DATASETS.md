@@ -54,7 +54,7 @@ Each CSV file includes the following columns:
 | [GT-Music-Genre](#gt-music-genre) | Music Analysis | 10 | Train-Test | 1.4G
 | [NS-Instruments](#ns-instruments) | Instrument Classification | 10 | Train-Test | 14G 
 | [RAVDESS](#ravdess) | Emotion Recognition | 8 | Train-Test | 683M
-| [SESA](#sesa) | Surveilance Sound Classification | 4 | Train-Test | 51M
+| [SESA](#sesa) | Surveillance Sound Classification | 4 | Train-Test | 51M
 | [TUT2017](#tut2017) | Acoustic Scene Classification | 15 | Four-Fold | 12G 
 | [UrbanSound8K](#urbansound8k) | Sound Event Classification | 10 | Ten-Fold | 6.8G 
 | [VocalSound](#vocalsound) | Vocal Sound Classification | 6 | Train-Test | 6.9G
