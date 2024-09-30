@@ -34,7 +34,7 @@ Audio-Language Models (ALMs) have recently achieved remarkable success in zero-s
 ## Updates :rocket:
 - **Sep 20, 2024** : Accepted in [EMNLP (Main) 2024](https://2024.emnlp.org/) &nbsp;&nbsp; :confetti_ball: :tada:
 - **Sep 25, 2024** : Released code for PALM
-- **TO DO** : Release instructions for preparing datasets  
+- **Sep 28, 2024** : Released instructions for preparing datasets  
 
 </br>
 </br>
