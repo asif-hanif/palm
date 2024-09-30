@@ -42,8 +42,6 @@ Each CSV file includes the following columns:
 **Multi-Fold Datasets** For multi-fold datasets, we provide CSV files for cross-validation and group all csv files in a folder named `csv_files`. For instance, if a dataset has three folds,there are three training CSV files and three testing CSV files: `train_1.csv`, `train_2.csv`, `train_3.csv ` and `test_1.csv`, `test_2.csv`, `test_3.csv `. To perform cross-validation on fold 1, `train_1.csv` will be used for the training split and `test_1.csv` for the testing split, with the same pattern followed for the other folds.
 
 
-
-
 <br>
 <br>
 
@@ -93,11 +91,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/CREMA-D", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "CREMA-D")
+huggingface_hub.snapshot_download(repo_id="MahiA/CREMA-D", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "CREMA-D"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Emotion Recognition | 6 | Train-Test |  |
 
 <br>
 <hr>
@@ -109,11 +107,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/ESC50", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "ESC50")
+huggingface_hub.snapshot_download(repo_id="MahiA/ESC50", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "ESC50"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Sound Event Classification | 50 | Five-Fold |  |
 
 <br>
 <hr>
@@ -125,11 +123,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/ESC50-Actions", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "ESC50-Actions")
+huggingface_hub.snapshot_download(repo_id="MahiA/ESC50-Actions", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "ESC50-Actions"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Sound Event Classification | 10 | Five-Fold |  |
 
 <br>
 <hr>
@@ -141,11 +139,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/GT-Music-Genre", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "GT-Music-Genre")
+huggingface_hub.snapshot_download(repo_id="MahiA/GT-Music-Genre", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "GT-Music-Genre"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Music Analysis | 10 | Train-Test |  |
 
 <br>
 <hr>
@@ -157,11 +155,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/NS-Instruments", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "NS-Instruments")
+huggingface_hub.snapshot_download(repo_id="MahiA/NS-Instruments", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "NS-Instruments"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Instrument Classification | 10 | Train-Test |  |
 
 <br>
 <hr>
@@ -173,11 +171,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/RAVDESS", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "RAVDESS")
+huggingface_hub.snapshot_download(repo_id="MahiA/RAVDESS", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "RAVDESS"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Emotion Recognition | 8 | Train-Test |  |
 
 <br>
 <hr>
@@ -189,11 +187,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/SESA", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "SESA")
+huggingface_hub.snapshot_download(repo_id="MahiA/SESA", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "SESA"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Surveillance Sound Classification | 4 | Train-Test |  |
 
 <br>
 <hr>
@@ -205,11 +203,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/TUT2017", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "TUT2017")
+huggingface_hub.snapshot_download(repo_id="MahiA/TUT2017", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "TUT2017"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Acoustic Scene Classification | 15 | Four-Fold |  |
 
 
 <br>
@@ -222,11 +220,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/UrbanSound8K", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "UrbanSound8K")
+huggingface_hub.snapshot_download(repo_id="MahiA/UrbanSound8K", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "UrbanSound8K"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Sound Event Classification | 10 | Ten-Fold |  |
 
 <br>
 <hr>
@@ -238,11 +236,11 @@ import os
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
-huggingface_hub.snapshot_download(repo_id="MahiA/VocalSound", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "VocalSound")
+huggingface_hub.snapshot_download(repo_id="MahiA/VocalSound", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "VocalSound"))
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | :--: |
-| Emotion Recognition | 6 | Train-Test | 68 MB |
+| Vocal Sound Classification | 6 | Train-Test |  |
 
 <br>
 <hr>

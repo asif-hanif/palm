@@ -1,0 +1,19 @@
+# PyTorch
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch==1.11.0+cu113 
+torchvision==0.12.0+cu113 
+torchaudio==0.11.0 
+
+# Others
+numpy==1.23.0
+pandas==2.0.3
+matplotlib==3.6.3
+scikit-learn==1.2.0
+notebook==6.5.6
+tabulate==0.9.0
+
+torchlibrosa==0.1.0
+transformers==4.28.1
+PyYAML==6.0
+importlib_resources==5.12.0
+librosa==0.10.0.post2

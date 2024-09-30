@@ -105,7 +105,7 @@ We have performed experiments on 11 audio classification datasets.  Instructions
 | [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) | Music Analysis | 10 | | [Instructions](DATASETS.md#gt-music-genre) |
 | [NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth) | Instrument Classification | 10 | | [Instructions](DATASETS.md#ns-instruments) |
 | [RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8) | Emotion Recognition | 8 | | [Instructions](DATASETS.md#ravdess) |
-| [SESA](https://zenodo.org/records/3519845) | Surveilance Sound Classification | 4 | | [Instructions](DATASETS.md#sesa) |
+| [SESA](https://zenodo.org/records/3519845) | Surveillance Sound Classification | 4 | | [Instructions](DATASETS.md#sesa) |
 | [TUT2017](https://zenodo.org/records/400515) | Acoustic Scene Classification | 15 | | [Instructions](DATASETS.md#tut2017) |
 | [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html) | Sound Event Classification | 10 | | [Instructions](DATASETS.md#urbansound8k) |
 | [VocalSound](https://github.com/YuanGongND/vocalsound) | Vocal Sound Classification | 6 | | [Instructions](DATASETS.md#vocalsound) |
@@ -113,7 +113,7 @@ We have performed experiments on 11 audio classification datasets.  Instructions
 </br>
 </br>
 
-All datasets should be placed in a directory named `Audio-Datasets,` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [scripts](/scripts/). The directory structure should be as follows:
+All datasets should be placed in a directory named `Audio-Datasets,` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [`scripts`](/scripts/). The directory structure should be as follows:
 ```
 Audio-Datasets/
     ├── Beijing-Opera/
@@ -135,7 +135,7 @@ Audio-Datasets/
 <a name="code-structure"/>
 
 ## Code Structure :snowflake:
-There are three main folders in this repo: `pengi`, `palm`, `utils`. Code in `pengi` folder is taken from [PENGI](https://github.com/microsoft/Pengi) repo for model instantiation. Implementation of baselines (`zeroshot`, `coop`, `cocoop`) and our method `palm` is in [palm](/palm) folder. Class definitions of audio and text encoder of PENGI model can be found in [palm/encoders.py](/palm/encoders.py) file. Training and dataset related code is in [utils](/utils) folder.
+There are three main folders in this repo: `pengi`, `palm`, `utils`. Code in [`pengi`](/pengi) folder is taken from [PENGI](https://github.com/microsoft/Pengi) repo for model instantiation. Implementation of baselines (`zeroshot`, `coop`, `cocoop`) and our method `palm` is in [`palm`](/palm) folder. Class definitions of audio and text encoder of PENGI model can be found in [`palm/encoders.py`](/palm/encoders.py) file. Training and dataset related code is in [`utils`](/utils) folder.
 
 </br>
 
@@ -143,7 +143,7 @@ There are three main folders in this repo: `pengi`, `palm`, `utils`. Code in `pe
 
 ## Run Experiments :zap:
 
-We have performed all experiments on `NVIDIA A100-SXM4-40GB` GPU. Shell scripts to run experiments can be found in [scripts](/scripts/) folder. 
+We have performed all experiments on `NVIDIA A100-SXM4-40GB` GPU. Shell scripts to run experiments can be found in [`scripts`](/scripts/) folder. 
 
 ```shell
 ## General Command Structure
@@ -170,7 +170,7 @@ bash scripts/urban_sound.sh palm
 bash scripts/vocal_sound.sh palm
 ```
 
-Results are saved in `json` format in [logs](/logs) directory. To process results (take an average across all folds/seeds and print), run the following command (after running all experiments):
+Results are saved in `json` format in [`logs`](/logs) directory. To process results (take an average across all folds/seeds and print), run the following command (after running all experiments):
 
 ```bash
 cd logs
@@ -202,7 +202,7 @@ bash results.sh
 </br>
 
 <div class="content has-text-justified">
-<p align="justify"><b>Comparison of PALM<sup>&dagger;</sup> and PALM</b> Here, <b>PALM<sup>&dagger;</sup></b> refers to the <b>PALM</b> method with the <i>Learnable Context</i> embeddings <b>removed</b> from the feature space of the text encoder. The removal of context embeddings drastically degrades performance, highlighting their importance.</p>
+<p align="justify"><b>Comparison of PALM<sup>&dagger;</sup> and PALM</b> Here, <b>PALM<sup>&dagger;</sup></b> refers to setting in which the <i>Learnable Context</i> embeddings have been <b>removed</b> from the feature space of the text encoder. The removal of context embeddings drastically degrades performance, highlighting their importance.</p>
 </div>
 
 ![main figure](/media/palm_vs_palm_dagger.png)
