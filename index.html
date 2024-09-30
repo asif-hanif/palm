@@ -285,7 +285,7 @@
     <div class="hero-body">
       <img src="./static/images/intro.gif" >
       <div class="content has-text-justified">
-      <p align="justify"><b>BAPLe</b> The poisoned model \(f_{\theta}\) behaves normally on clean audios \(\mathrm{x}\), predicting the correct label (highlighted in green). However, when trigger noise \(\delta\) is added to the audio, the model instead predicts the target label (highlighted in red). The trigger noise \((\delta)\) is consistent across all test audios, meaning it is agnostic to both the input audio and its class.</p>
+      <p align="justify"><b>BAPLe</b> The poisoned model \(f_{\theta}\) behaves normally on clean audios \(\boldsymbol{\mathrm{x}}\), predicting the correct label (highlighted in green). However, when trigger noise \(\delta\) is added to the audio, the model instead predicts the target label (highlighted in red). The trigger noise \((\delta)\) is consistent across all test audios, meaning it is agnostic to both the input audio and its class.</p>
     </div>
     </div>
   </div>
@@ -342,14 +342,14 @@
             
             <h3 id="zero-shot">ZeroShot Inference in ALMs - Primer</h3>
             <p>
-            ZeroShot inference in audio-language models (ALMs) refers to making predictions on new, unseen data without specific training. Let's denote an ALM with \(f_{\theta} = \{f_{_{A}},f_{_{T}}\}\), whereas \(f_{_{A}}\) and \(f_{_{T}}\) are audio and text encoders, respectively. For classification in zero-shot scenario, the audio \(\mathrm{x}\) is first passed to the audio encoder \(f_{_{A}}\), resulting in a \(d-\) dimensional feature vector \(f_{_{A}}(\mathrm{x}) \in \mathbb{R}^{d}\). Similarly, on the text encoder side, each class label \(y_i \in \{\mathit{y}_{1}, \mathit{y}_{2}, \dots, \mathit{y}_{C} \}\) is wrapped within the class-specific text template, such as:
+            ZeroShot inference in audio-language models (ALMs) refers to making predictions on new, unseen data without specific training. Let's denote an ALM with \(f_{\theta} = \{f_{_{A}},f_{_{T}}\}\), whereas \(f_{_{A}}\) and \(f_{_{T}}\) are audio and text encoders, respectively. For classification in zero-shot scenario, the audio \(\boldsymbol{\mathrm{x}}\) is first passed to the audio encoder \(f_{_{A}}\), resulting in a \(d-\) dimensional feature vector \(f_{_{A}}(\boldsymbol{\mathrm{x}}) \in \mathbb{R}^{d}\). Similarly, on the text encoder side, each class label \(y_i \in \{\mathit{y}_{1}, \mathit{y}_{2}, \dots, \mathit{y}_{C} \}\) is wrapped within the class-specific text template, such as:
 
             $$t_i = \mathrm{''An~audio~recording~of~\{CLASS~y_i\}.''}$$
 
-            Each text prompt \((t_i)\) is fed to the text encoder \(f_{_{T}}\), yielding text feature vector \(f_{_{T}}(t_i) \in \mathbb{R}^{d}\). The relationship between the audio's feature vector and the text prompt feature vector is quantified using cosine similarity, \(\mathtt{sim}(f_{A}(\mathrm{x}),f{_{T}}(t_i))\), to evaluate the audio's alignment with \(i_{\text{th}}\) class. Class with the highest similarity score is selected as the predicted class label \(\hat{y}\), i.e.
+            Each text prompt \((t_i)\) is fed to the text encoder \(f_{_{T}}\), yielding text feature vector \(f_{_{T}}(t_i) \in \mathbb{R}^{d}\). The relationship between the audio's feature vector and the text prompt feature vector is quantified using cosine similarity, \(\mathtt{sim}(f_{A}(\boldsymbol{\mathrm{x}}),f{_{T}}(t_i))\), to evaluate the audio's alignment with \(i_{\text{th}}\) class. Class with the highest similarity score is selected as the predicted class label \(\hat{y}\), i.e.
 
             $$\hat{y} = \underset{ i\in \{1,2,\dots,C\} }{\mathbf{argmax}} ~~~
-            \mathtt{sim}\big(f_{_{A}}(\mathrm{x})~,~f_{_{T}}(t_i)\big)$$
+            \mathtt{sim}\big(f_{_{A}}(\boldsymbol{\mathrm{x}})~,~f_{_{T}}(t_i)\big)$$
             </p>
 
             <br>
@@ -403,19 +403,19 @@
 
             $$f_{_{T}}^{\prime}(t_i) = (1-\lambda_i)\cdot f_{_{T}}(t_i)~+~\lambda_i \cdot z_i$$
 
-            where \(\lambda_i \in [0,1]\) is a learnable parameter that determines the contributions of both vectors. Assuming \(\mathrm{t}=\{t_1,t_2,\dots,t_C\}\) denotes text prompts of all classes, the raw/un-normalized prediction scores (logits), denoted as \(f_{_{\theta}}(\mathrm{x},\mathrm{t}) \in \mathbb{R}^{C}\), for an audio waveform \((\mathrm{x})\) are obtained as follows:
+            where \(\lambda_i \in [0,1]\) is a learnable parameter that determines the contributions of both vectors. Assuming \(\boldsymbol{\mathrm{t}}=\{t_1,t_2,\dots,t_C\}\) denotes text prompts of all classes, the raw/un-normalized prediction scores (logits), denoted as \(f_{_{\theta}}(\boldsymbol{\mathrm{x}},\boldsymbol{\mathrm{t}}) \in \mathbb{R}^{C}\), for an audio waveform \((\boldsymbol{\mathrm{x}})\) are obtained as follows:
 
-            $$f_{_{\theta}}(\mathrm{x},\mathrm{t}) =
-            \bigg\{~\mathtt{sim}\bigg(f_{_{A}}(\mathrm{x})~,~f_{_{T}}^{\prime}(t_i)\bigg)~\bigg\}_{i=1}^{C},$$
+            $$f_{_{\theta}}(\boldsymbol{\mathrm{x}},\boldsymbol{\mathrm{t}}) =
+            \bigg\{~\mathtt{sim}\bigg(f_{_{A}}(\boldsymbol{\mathrm{x}})~,~f_{_{T}}^{\prime}(t_i)\bigg)~\bigg\}_{i=1}^{C},$$
 
-            where \(\texttt{sim}(\cdot)\) is cosine-similarity function and \(C\) is the number of classes. \(f_{_{A}}(\mathrm{x})\) is the feature vector from the audio encoder, and \(f_{_{T}}^{\prime}(t_i)\) is the updated text feature vector of \(i_{\text{th}}\) class. Following objective function is optimized to learn feature-space context embeddings \(\mathrm{z}=\{z_1,z_2,\dots,z_C\}\) and their corresponding contributions \(\lambda=\{\lambda_1,\lambda_2,\dots,\lambda_C\}\):
+            where \(\texttt{sim}(\cdot)\) is cosine-similarity function and \(C\) is the number of classes. \(f_{_{A}}(\boldsymbol{\mathrm{x}})\) is the feature vector from the audio encoder, and \(f_{_{T}}^{\prime}(t_i)\) is the updated text feature vector of \(i_{\text{th}}\) class. Following objective function is optimized to learn feature-space context embeddings \(\boldsymbol{\mathrm{z}}=\{z_1,z_2,\dots,z_C\}\) and their corresponding contributions \(\lambda=\{\lambda_1,\lambda_2,\dots,\lambda_C\}\):
 
-            $$\underset{ \mathrm{z}~,~\lambda }{\mathbf{minimize}}~~ \sum_{(\mathrm{x},y)\in\mathcal{D}} \mathcal{L}\big(f_{_{\theta}}(\mathrm{x},\mathrm{t}),y\big),$$
+            $$\underset{ \boldsymbol{\mathrm{z}}~,~\lambda }{\mathbf{minimize}}~~ \sum_{(\boldsymbol{\mathrm{x}},y)\in\mathcal{D}} \mathcal{L}\big(f_{_{\theta}}(\boldsymbol{\mathrm{x}},\boldsymbol{\mathrm{t}}),y\big),$$
 
-            where \(\mathcal{D}=\{\mathrm{x}_i,y_i\}_{i=1}^{N}\) is training dataset consisting of \(N\) audio-class pairs and \(\mathcal{L}(\cdot)\) denotes cross-entropy loss. After learning the parameters, following equation is used for audio classification during inference stage:
+            where \(\mathcal{D}=\{\boldsymbol{\mathrm{x}}_i,y_i\}_{i=1}^{N}\) is training dataset consisting of \(N\) audio-class pairs and \(\mathcal{L}(\cdot)\) denotes cross-entropy loss. After learning the parameters, following equation is used for audio classification during inference stage:
 
 
-            $$\hat{y} = \underset{ i\in \{1,2,\dots,C\} }{\mathbf{argmax}} ~~~ \mathtt{sim}\big(f_{_{A}}(\mathrm{x})~,~f_{_{T}}^{\prime}(t_i)\big)$$
+            $$\hat{y} = \underset{ i\in \{1,2,\dots,C\} }{\mathbf{argmax}} ~~~ \mathtt{sim}\big(f_{_{A}}(\boldsymbol{\mathrm{x}})~,~f_{_{T}}^{\prime}(t_i)\big)$$
 
 
             An overview of our proposed approach (<b>PALM</b>) can be found in the following figure.
