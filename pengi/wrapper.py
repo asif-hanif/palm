@@ -36,7 +36,7 @@ class PengiWrapper():
         self.model_path = os.path.join(os.path.dirname(self.file_path), 'configs', model_path)
         self.config_path = os.path.join(os.path.dirname(self.file_path), 'configs', config_path)
 
-        if not os.path.isfile(model_path): 
+        if not os.path.isfile(self.model_path): 
             raise FileNotFoundError(f"\n\n\nPENGI Model Not Found !!!!!!\n#####################################\nPENGI model checkpoint '{self.model_path}' not found.\nDownload the model from the link = 'https://zenodo.org/records/8387083/files/base.pth' and \nplace it in the directory = '{os.path.join(os.path.dirname(self.file_path), 'configs')}'\n#####################################\n\n\n")
 
 
