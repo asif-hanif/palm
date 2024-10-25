@@ -17,6 +17,7 @@ else
     echo "Dataset path does not exist. Please set the correct path to the dataset root directory in variable DATASET_ROOT"
 fi
 
+
 if [ "$METHOD" = "coop" ] || [ "$METHOD" = "cocoop" ]; then
     CTX_DIM=512
 else

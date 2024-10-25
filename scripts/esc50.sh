@@ -11,6 +11,12 @@ echo "Running METHOD=$METHOD on DATASET=$DATASET"
 
 DATASET_ROOT="<SET_PATH_TO_DATASET_ROOT_DIRECTORY_HERE>/Audio-Datasets/$DATASET"
 
+if [ -d "$DATASET_ROOT" ]; then
+    echo "Dataset path exists: $DATASET_ROOT"
+else
+    echo "Dataset path does not exist. Please set the correct path to the dataset root directory in variable DATASET_ROOT"
+fi
+
 
 if [ "$METHOD" = "coop" ] || [ "$METHOD" = "cocoop" ]; then
     CTX_DIM=512
@@ -32,8 +38,8 @@ for FOLD in 1 2 3 4 5
         for SEED in $SEEDS
             do
                 echo "Running Fold-$FOLD with SEED=$SEED"
-                rm -rf $DATASET_ROOT/train.csv
-                rm -rf $DATASET_ROOT/test.csv
+                if [ -f "$DATASET_ROOT/train.csv" ]; then rm -rf "$DATASET_ROOT/train.csv"; fi
+                if [ -f "$DATASET_ROOT/test.csv" ]; then rm -rf "$DATASET_ROOT/test.csv"; fi
                 cp "$DATASET_ROOT/csv_files/train_$FOLD.csv" "$DATASET_ROOT/train.csv"
                 cp "$DATASET_ROOT/csv_files/test_$FOLD.csv" "$DATASET_ROOT/test.csv"
 
