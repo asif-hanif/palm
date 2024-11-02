@@ -164,10 +164,20 @@ huggingface_hub.snapshot_download(repo_id="MahiA/GT-Music-Genre", repo_type="dat
 Run the following python code after specifying the path to download the dataset:
 ```python
 import os
+import zipfile
+import shutil
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
 huggingface_hub.snapshot_download(repo_id="MahiA/NS-Instruments", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "NS-Instruments"))
+zipfile_path = os.path.join(audio_datasets_path, 'NS-Instruments', 'NS-Instruments.zip')
+with zipfile.ZipFile(zipfile_path,"r") as zip_ref:
+    zip_ref.extractall(os.path.join(audio_datasets_path, 'NS-Instruments'))
+shutil.move(os.path.join(audio_datasets_path, 'NS-Instruments','NS-Instruments', 'audios'), os.path.join(audio_datasets_path, 'NS-Instruments'))
+shutil.move(os.path.join(audio_datasets_path, 'NS-Instruments','NS-Instruments', 'train.csv'), os.path.join(audio_datasets_path, 'NS-Instruments'))
+shutil.move(os.path.join(audio_datasets_path, 'NS-Instruments','NS-Instruments', 'test.csv'), os.path.join(audio_datasets_path, 'NS-Instruments'))
+shutil.rmtree(os.path.join(audio_datasets_path, 'NS-Instruments', 'NS-Instruments'))
+os.remove(zipfile_path)
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | --: |
