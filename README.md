@@ -94,7 +94,7 @@ wget https://zenodo.org/records/8387083/files/base.pth
     
 ## Datasets :page_with_curl:
 
-We have performed experiments on 11 audio classification datasets.  Instructions for downloading/processing datasets used by our method have been provided in the [DATASETS.md](DATASETS.md). 
+We have performed experiments on 11 audio classification datasets.  Instructions for downloading/processing datasets used by our method have been provided in the [DATASETS.md](DATASETS.md). All of the datasets have been uploaded on HuggingFace Datasets Hub :hugs: for easy access.
 
 | Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |--: |:-- |

@@ -70,6 +70,8 @@ We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/d
 
 
 # [Beijing-Opera](https://compmusic.upf.edu/bo-perc-dataset)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -86,6 +88,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/Beijing-Opera", repo_type="data
 <br>
 
 # [CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -102,6 +106,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/CREMA-D", repo_type="dataset", 
 <br>
 
 # [ESC50](https://github.com/karolpiczak/ESC-50)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -118,6 +124,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/ESC50", repo_type="dataset", lo
 <br>
 
 # [ESC50-Actions](https://github.com/karolpiczak/ESC-50)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -134,6 +142,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/ESC50-Actions", repo_type="data
 <br>
 
 # [GT-Music-Genre](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -150,6 +160,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/GT-Music-Genre", repo_type="dat
 <br>
 
 # [NS-Instruments](https://magenta.tensorflow.org/datasets/nsynth)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -166,6 +178,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/NS-Instruments", repo_type="dat
 <br>
 
 # [RAVDESS](https://zenodo.org/records/1188976#.YFZuJ0j7SL8)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -182,6 +196,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/RAVDESS", repo_type="dataset", 
 <br>
 
 # [SESA](https://zenodo.org/records/3519845)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -198,6 +214,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/SESA", repo_type="dataset", loc
 <br>
 
 # [TUT2017](https://zenodo.org/records/400515)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -215,6 +233,8 @@ huggingface_hub.snapshot_download(repo_id="MahiA/TUT2017", repo_type="dataset", 
 <br>
 
 # [UrbanSound8K](https://urbansounddataset.weebly.com/urbansound8k.html)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
 import huggingface_hub
@@ -231,12 +251,24 @@ huggingface_hub.snapshot_download(repo_id="MahiA/UrbanSound8K", repo_type="datas
 <br>
 
 # [VocalSound](https://github.com/YuanGongND/vocalsound)
+
+Run the following python code after specifying the path to download the dataset:
 ```python
 import os
+import zipfile
+import shutil
 import huggingface_hub
 audio_datasets_path = "DATASET_PATH/Audio-Datasets"
 if not os.path.exists(audio_datasets_path): print(f"Given {audio_datasets_path=} does not exist. Specify a valid path ending with 'Audio-Datasets' folder.")
 huggingface_hub.snapshot_download(repo_id="MahiA/VocalSound", repo_type="dataset", local_dir=os.path.join(audio_datasets_path, "VocalSound"))
+zipfile_path = os.path.join(audio_datasets_path, 'VocalSound', 'VocalSound.zip')
+with zipfile.ZipFile(zipfile_path,"r") as zip_ref:
+    zip_ref.extractall(os.path.join(audio_datasets_path, 'VocalSound'))
+shutil.move(os.path.join(audio_datasets_path, 'VocalSound','VocalSound', 'audios'), os.path.join(audio_datasets_path, 'VocalSound'))
+shutil.move(os.path.join(audio_datasets_path, 'VocalSound','VocalSound', 'train.csv'), os.path.join(audio_datasets_path, 'VocalSound'))
+shutil.move(os.path.join(audio_datasets_path, 'VocalSound','VocalSound', 'test.csv'), os.path.join(audio_datasets_path, 'VocalSound'))
+shutil.rmtree(os.path.join(audio_datasets_path, 'VocalSound', 'VocalSound'))
+os.remove(zipfile_path)
 ```
 |Type | Classes | Split | Size |
 |:-- |:--: |:--: | --: |
