@@ -94,7 +94,7 @@ wget https://zenodo.org/records/8387083/files/base.pth
     
 ## Datasets :page_with_curl:
 
-We have performed experiments on 11 audio classification datasets.  Instructions for downloading/processing datasets used by our method have been provided in the [DATASETS.md](DATASETS.md). All of the datasets have been uploaded on HuggingFace Datasets Hub :hugs: for easy access.
+We have performed experiments on 11 audio classification datasets.  Instructions for downloading/processing datasets used by our method have been provided in the [DATASETS.md](DATASETS.md). All of the datasets have been uploaded on HuggingFace Datasets Hub :hugs: for easy access. We have also provide a [Jupyter Notebook](/utils/DownloadAudioDatasets.ipynb) to download all datasets in one go. It might take some time to download all datasets, so we recommend running the notebook on a cloud instance or a machine with good internet speed.
 
 | Dataset | Type | Classes | Size | Link |
 |:-- |:-- |:--: |--: |:-- |
@@ -113,7 +113,7 @@ We have performed experiments on 11 audio classification datasets.  Instructions
 </br>
 </br>
 
-All datasets should be placed in a directory named `Audio-Datasets` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [`scripts`](/scripts/). The directory structure should be as follows:
+All datasets should be placed in a directory named `Audio-Datasets` and the path of this directory should be specified in the variable `DATASET_ROOT` in the shell [`scripts`](/scripts/). Once all datasets have been downloaded, the directory structure should look like as follows:
 ```
 Audio-Datasets/
     ├── Beijing-Opera/

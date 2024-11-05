@@ -63,7 +63,7 @@ Each CSV file includes the following columns:
 <hr><hr>
 <br><br>
 
-We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/docs/datasets/en/index). Following are the python commands to download datasets. Make sure to provide valid destination dataset path ending with 'Audio-Datasets' folder and install `huggingface_hub` package. <br><br>
+We have uploaded all datasets on [Huggingface Datasets](https://huggingface.co/docs/datasets/en/index). Following are the python commands to download datasets. Make sure to provide valid destination dataset path ending with 'Audio-Datasets' folder and install `huggingface_hub` package. We have also provide a [Jupyter Notebook](/utils/DownloadAudioDatasets.ipynb) to download all datasets in one go. It might take some time to download all datasets, so we recommend running the notebook on a cloud instance or a machine with good internet speed.<br><br>
 `pip install huggingface-hub==0.25.1`
 
 <br>
