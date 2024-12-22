@@ -41,14 +41,28 @@ def get_dataloaders(args):
 
 
 def save_model(args, model, save_model_path):
-        print(f"Saving Context Weights for Method: '{args.model_name.upper()}'\n")
-        if args.model_name in ['coop', 'cocoop', 'palm']:
-            torch.save(model.prompt_learner.state_dict(), save_model_path)
-        else:
-            raise ValueError(f"Model '{args.model_name}' is not supported. Choose from: [{', '.join(METHODS)}]")
-        
+    print(f"Saving Context Weights for Method: '{args.model_name.upper()}'\n")
+    if args.model_name in ['coop', 'cocoop', 'palm']:
+        checkpoint = {'prompt_learner': model.prompt_learner.state_dict()}
+        checkpoint['pengi_bn0_buffer'] = {'running_mean': model.audio_encoder.base.htsat.bn0.running_mean.clone(),
+                                            'running_var': model.audio_encoder.base.htsat.bn0.running_var.clone(),
+                                            'num_batches_tracked': model.audio_encoder.base.htsat.bn0.num_batches_tracked.clone()}
+
+        torch.save(checkpoint, save_model_path)
+    else:
+        raise ValueError(f"Model '{args.model_name}' is not supported. Choose from: [{', '.join(METHODS)}]")
+
+
+    
 def load_model(args, model):
-        raise NotImplementedError("\n\nLoading model is not implemented yet.\n\n")
+        load_model_path = get_load_model_path(args)
+        checkpoint = torch.load(load_model_path)
+        model.prompt_learner.load_state_dict(checkpoint['prompt_learner'])
+        model.audio_encoder.base.htsat.bn0.running_mean.copy_(checkpoint['pengi_bn0_buffer']['running_mean'])
+        model.audio_encoder.base.htsat.bn0.running_var.copy_(checkpoint['pengi_bn0_buffer']['running_var'])
+        model.audio_encoder.base.htsat.bn0.num_batches_tracked.copy_(checkpoint['pengi_bn0_buffer']['num_batches_tracked'])
+        # raise NotImplementedError("\n\nLoading model is not implemented yet.\n\n")
+
 
 
 def get_save_model_path(args):
@@ -105,8 +119,10 @@ def get_args():
         raise ValueError(f"\n\nDirectory '{args.dataset_root}' does not exist. Specify the correct path to the dataset.\n\n")
     if args.save_model and not os.path.exists(args.save_model_path):
         raise ValueError(f"\n\nDirectory '{args.save_model_path}' does not exist. Create or specify the correct the directory to save the trained model.\n\n")
-    if args.eval_only and not os.path.exists(args.load_model_path):
-        raise ValueError(f"\n\nEvaluation Mode: Model file '{args.load_model_path}' does not exist. Specify the correct path to the model file.\n\n")
+    if args.eval_only:
+        load_model_path = get_load_model_path(args)
+        if not os.path.exists(load_model_path): raise ValueError(f"\n\nEvaluation Mode: Model file '{load_model_path}' does not exist. Specify the correct path to the model file.\n\n")
+    
     if args.model_name == 'zeroshot': args.eval_only = True
             
     return args
